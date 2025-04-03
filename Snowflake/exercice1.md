@@ -425,7 +425,7 @@ Vérifiez que votre table JSON_WEATHER_DATA a été créée. Au bas de la feuill
 #### Créer un external stage:
 
 ```
-create stage nyc_weather url = 's3://logbrain-datalake/datasets/weather-nyc';
+create stage nyc_weather url = 's3://logbrain-datalake/datasets/weather-nyc-json';
 
 ```
 
@@ -453,31 +453,46 @@ select * from json_weather_data limit 10;
 
 créez une vue des données météorologiques JSON non structurées dans une vue en colonnes afin qu'il soit plus facile à comprendre et à interroger pour les analystes. 
 
+
+Parcourir le JSON:
+```
+select
+  v:time::timestamp as observation_time,
+  v:city.id::int as city_id,
+  v:city.name::string as city_name,
+  v:city.country::string as country,
+  v:city.coord.lat::float as city_lat,
+  v:city.coord.lon::float as city_lon,
+  v:clouds.all::int as clouds,
+  (v:main.temp::float)-273.15 as temp_avg,
+  (v:main.temp_min::float)-273.15 as temp_min,
+  (v:main.temp_max::float)-273.15 as temp_max,
+  v:weather[0].main::string as weather,
+  v:weather[0].description::string as weather_desc,
+  v:weather[0].icon::string as weather_icon,
+  v:wind.deg::float as wind_dir,
+  v:wind.speed::float as wind_speed
+from json_weather_data
+where city_id = 5128638;
+```
 ```
 create view json_weather_data_view as
-select v[1]:"coco" as coco,
-        v[1]:"country" as country,
-        v[1]:"dwpt" as dwpt,
-        v[1]:"elevation" as elevation,
-        v[1]:"icao" as icao,
-        v[1]:"latitude" as latitude,
-        v[1]:"longitude" as longitude,
-        v[1]:"name" as name,
-        v[1]:"obsTime" as obsTime,
-        v[1]:"prcp" as prcp,
-        v[1]:"pres" as pres,
-        v[1]:"region" as region,
-        v[1]:"rhum" as rhum,
-        v[1]:"snow" as snow,
-        v[1]:"station" as station,
-        v[1]:"temp" as temp,
-        v[1]:"timezone" as timezone,
-        v[1]:"tsun" as tsun,
-        v[1]:"wdir" as wdir,
-        v[1]:"weatherCondition" as wheatherCondition,
-        v[1]:"wmo" as wmo,
-        v[1]:"wpgt" as wpgt,
-        v[1]:"wspd" as wspd
+select
+  v:time::timestamp as observation_time,
+  v:city.id::int as city_id,
+  v:city.name::string as city_name,
+  v:city.country::string as country,
+  v:city.coord.lat::float as city_lat,
+  v:city.coord.lon::float as city_lon,
+  v:clouds.all::int as clouds,
+  (v:main.temp::float)-273.15 as temp_avg,
+  (v:main.temp_min::float)-273.15 as temp_min,
+  (v:main.temp_max::float)-273.15 as temp_max,
+  v:weather[0].main::string as weather,
+  v:weather[0].description::string as weather_desc,
+  v:weather[0].icon::string as weather_icon,
+  v:wind.deg::float as wind_dir,
+  v:wind.speed::float as wind_speed
 from json_weather_data;
 ```
 
@@ -496,11 +511,11 @@ limit 20;
 Nous allons maintenant joindre les données météorologiques JSON à nos données CITIBIKE.PUBLIC.TRIPS pour déterminer le réponse à notre question initiale sur l'impact de la météo sur le nombre de trajets.  
 
 ```
-select WHEATHERCONDITION as WHEATHERCONDITION ,count(*) as num_trips
+select weather as WHEATHERCONDITION ,count(*) as num_trips
 from citibike.public.trips
 left outer join json_weather_data_view
 on date(observation_time) = date(starttime)
-where WHEATHERCONDITION is not null
+where weather is not null
 group by 1 order by 2 desc;
 
 ```
