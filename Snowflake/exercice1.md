@@ -521,9 +521,9 @@ Nous allons maintenant joindre les données météorologiques JSON à nos donné
 ```
 select weather_condition as weather_condition ,count(*) as num_trips
 from citibike.public.trips
-left outer join json_weather_data_view
+left outer join weather.public.json_weather_data_view
 on date(obs_time) = date(starttime)
-where weather is not null
+where weather_condition is not null
 group by 1 order by 2 desc;
 
 ```
