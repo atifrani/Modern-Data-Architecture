@@ -197,14 +197,7 @@ Dans la feuille de calcul, exécutez la commande suivante pour créer le format 
 
 
 ```
-create or replace file format csv type='csv'
-  compression = 'auto' field_delimiter = ','
-  record_delimiter = '\n'  skip_header = 0
-  field_optionally_enclosed_by = '\042' trim_space = false
-  error_on_column_count_mismatch = false escape = 'none'
-  escape_unenclosed_field = '\134'
-  date_format = 'auto' timestamp_format = 'auto'
-  null_if = ('') comment = 'file format for ingesting csv';
+CREATE FILE FORMAT csv TYPE = 'CSV' FIELD_DELIMITER = ',' RECORD_DELIMITER = '\n' SKIP_HEADER = 1;
 
 ```  
 
