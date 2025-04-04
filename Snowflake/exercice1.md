@@ -256,7 +256,7 @@ Assurez-vous que le contexte de la feuille de calcul est correctement défini :
 Exécutez les instructions suivantes dans la feuille de calcul pour charger les données intermédiaires dans la table. Cela peut prendre jusqu'à 60 secondes.  
 
 ``` 
-copy into trips from @citibike_trips file_format=csv PATTERN = '.*csv.*' ;
+copy into trips from @citibike_csv file_format=csv PATTERN = '.*csv.*' ;
 
 ``` 
 
