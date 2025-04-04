@@ -167,6 +167,12 @@ Dans la boîte de dialogue « Créer un objet sécurisable » qui s'ouvre, rem
 nom_stage : **citibike_trips**  
 URL : **s3://logbrain-datalake/datasets/citibike-trips-csv/**  
 
+
+```
+-- Create external S3 stage 
+create stage citibike_csv  URL ='s3://logbrain-datalake/datasets/citibike-trips-csv/';
+```
+
 Remarque : Assurez-vous d'inclure la barre oblique finale (/) à la fin de l'URL, sinon vous rencontrerez des erreurs plus tard lors du chargement des données à partir du compartiment. Assurez-vous également d'avoir supprimé l'instruction 'credentials = (...)' qui n'est pas obligatoire. La commande create stage devrait ressembler exactement à celle présentée ci-dessus.  
 
 Le compartiment S3 de cet atelier est public, vous pouvez donc laisser les options d'informations d'identification vides dans l'instruction. Dans un scénario réel, le compartiment utilisé pour une étape externe nécessiterait probablement des informations clés.  
