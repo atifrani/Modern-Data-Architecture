@@ -60,3 +60,9 @@ product_name varchar,
 product_description varchar,
 product_price float,
 product_image varchar );
+
+
+Now, let's create a new tables:
+
+Create table top_product (product_id, product_name, category_name, month, year, sales )
+Create table top_customer (customer_id, customer_name, customer_street, customer_city,customer_zipcode, month, year, sales )
