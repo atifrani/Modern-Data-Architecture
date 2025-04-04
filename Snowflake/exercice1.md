@@ -455,44 +455,53 @@ créez une vue des données météorologiques JSON non structurées dans une vue
 
 Parcourir le JSON:
 ```
-select
-  v:time::timestamp as observation_time,
-  v:city.id::int as city_id,
-  v:city.name::string as city_name,
-  v:city.country::string as country,
-  v:city.coord.lat::float as city_lat,
-  v:city.coord.lon::float as city_lon,
-  v:clouds.all::int as clouds,
-  (v:main.temp::float)-273.15 as temp_avg,
-  (v:main.temp_min::float)-273.15 as temp_min,
-  (v:main.temp_max::float)-273.15 as temp_max,
-  v:weather[0].main::string as weather,
-  v:weather[0].description::string as weather_desc,
-  v:weather[0].icon::string as weather_icon,
-  v:wind.deg::float as wind_dir,
-  v:wind.speed::float as wind_speed
-from json_weather_data
-where city_id = 5128638;
+select   v:country from json_weather_data;
+
+select   v[1]:country from json_weather_data; 
 ```
+
+Mise à plat de la colonne V:
+```
+CREATE or REPLACE file format json 
+type = 'JSON'
+STRIP_OUTER_ARRAY=TRUE;
+```
+
+Importer les données à nouveau:
+
+```
+truncate json_weather_data;
+
+copy into json_weather_data from @nyc_weather file_format = json;
+```
+
+```
+select   v:country from json_weather_data;
+
+-- Charger quelques champs
+select 
+v:country::string as country,
+v:latitude::float as latitude,
+v:longitude::float as longitude,
+v:name::string as city_name,
+v:obsTime::timestamp as obs_time,
+v:region::string as region_name,
+v:weatherCondition::string as weather_condition
+from json_weather_data
+```
+
+
 ```
 create view json_weather_data_view as
-select
-  v:time::timestamp as observation_time,
-  v:city.id::int as city_id,
-  v:city.name::string as city_name,
-  v:city.country::string as country,
-  v:city.coord.lat::float as city_lat,
-  v:city.coord.lon::float as city_lon,
-  v:clouds.all::int as clouds,
-  (v:main.temp::float)-273.15 as temp_avg,
-  (v:main.temp_min::float)-273.15 as temp_min,
-  (v:main.temp_max::float)-273.15 as temp_max,
-  v:weather[0].main::string as weather,
-  v:weather[0].description::string as weather_desc,
-  v:weather[0].icon::string as weather_icon,
-  v:wind.deg::float as wind_dir,
-  v:wind.speed::float as wind_speed
-from json_weather_data;
+select 
+v:country::string as country,
+v:latitude::float as latitude,
+v:longitude::float as longitude,
+v:name::string as city_name,
+v:obsTime::timestamp as obs_time,
+v:region::string as region_name,
+v:weatherCondition::string as weather_condition
+from json_weather_data
 ```
 
 #### Exécutez la requête suivantes sur le View:  
@@ -500,7 +509,7 @@ from json_weather_data;
 ```
 
 select * from json_weather_data_view
-where date(obsTime) = '2018-01-01'
+where date(obs_time) = '2018-01-01'
 limit 20;
 
 ```
@@ -513,7 +522,7 @@ Nous allons maintenant joindre les données météorologiques JSON à nos donné
 select weather as WHEATHERCONDITION ,count(*) as num_trips
 from citibike.public.trips
 left outer join json_weather_data_view
-on date(observation_time) = date(starttime)
+on date(obs_time) = date(starttime)
 where weather is not null
 group by 1 order by 2 desc;
 
