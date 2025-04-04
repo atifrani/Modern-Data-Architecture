@@ -74,7 +74,7 @@ null_if = ('');
 
 CREATE or replace FILE FORMAT csv_without_header 
 TYPE = 'CSV' 
-FIELD_DELIMITER = ',' 
+FIELD_DELIMITER = '\t' 
 RECORD_DELIMITER = '\n' 
 SKIP_HEADER = 0
 field_optionally_enclosed_by = '\042'
