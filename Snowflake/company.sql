@@ -11,13 +11,11 @@ category_name varchar
 );
 
 -- create table customers:
-create table retaildb.public.customers
+create or replace table retaildb.public.customers
 (
 customer_id integer not null,
 customer_fname varchar,
 customer_lname varchar,
-customer_email varchar,
-customer_password varchar,
 customer_street varchar,
 customer_city varchar,
 customer_state varchar,
@@ -61,8 +59,31 @@ product_description varchar,
 product_price float,
 product_image varchar );
 
+-- create stage
+create stage company_csv URL ='s3://logbrain-datalake/datasets/company';
 
-Now, let's create a new tables:
+list @company_csv;
 
-Create table top_product (product_id, product_name, category_name, month, year, sales )
-Create table top_customer (customer_id, customer_name, customer_street, customer_city,customer_zipcode, month, year, sales )
+-- Create file format
+CREATE or replace FILE FORMAT csv_with_header 
+TYPE = 'CSV' 
+FIELD_DELIMITER = '\t' 
+RECORD_DELIMITER = '\n' 
+SKIP_HEADER = 1
+null_if = ('');
+
+CREATE or replace FILE FORMAT csv_without_header 
+TYPE = 'CSV' 
+FIELD_DELIMITER = ',' 
+RECORD_DELIMITER = '\n' 
+SKIP_HEADER = 0
+field_optionally_enclosed_by = '\042'
+null_if = ('')
+;
+
+-- load data into customers table
+copy into customers  from @company_csv file_format=csv_with_header PATTERN = '.*customers.*' ;
+
+select * from customers;
+
+
