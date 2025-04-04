@@ -519,7 +519,7 @@ limit 20;
 Nous allons maintenant joindre les données météorologiques JSON à nos données CITIBIKE.PUBLIC.TRIPS pour déterminer le réponse à notre question initiale sur l'impact de la météo sur le nombre de trajets.  
 
 ```
-select weather as WHEATHERCONDITION ,count(*) as num_trips
+select weather_condition as weather_condition ,count(*) as num_trips
 from citibike.public.trips
 left outer join json_weather_data_view
 on date(obs_time) = date(starttime)
