@@ -115,5 +115,24 @@ select * from orders;
 
 Now, let's create a new tables/datamarts:
 
-Create table top_product (product_id, product_name, category_name, month, year, sales )
-Create table top_customer (customer_id, customer_name, customer_street, customer_city,customer_zipcode, month, year, sales )
+-- Create table top_product (product_id, product_name, category_name, month, year, sales )
+```
+create table top_product as 
+select 
+products.product_id,
+products.product_name,
+products.PRODUCT_CATEGORY_ID,
+month(orders.order_date) as month,
+year(orders.order_date) as year,
+sum(order_item_price) as sales
+from 
+products join order_items on products.product_id = order_items.order_item_product_id 
+join orders on orders.order_id = order_items.order_item_order_id
+group by products.product_id,
+products.product_name,
+products.PRODUCT_CATEGORY_ID,
+month,
+year;
+```
+  
+-- Create table top_customer (customer_id, customer_name, customer_street, customer_city,customer_zipcode, month, year, sales )
