@@ -59,4 +59,5 @@ product_category_id integer,
 product_name varchar,
 product_description varchar,
 product_price float,
-product_image varchar );
+product
+_image varchar );

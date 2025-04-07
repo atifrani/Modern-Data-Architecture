@@ -99,7 +99,7 @@ CREATE WAREHOUSE IF NOT EXISTS DATAPIPELINES_WH
 4. Create Cloud Storage Integration:  
 
 ```
-create or replace storage integration s3int
+create or replace storage integration citibike_snowpipe_integration
 type = external_stage
 storage_provider = s3
 enabled = true
@@ -134,6 +134,7 @@ CREATE OR REPLACE TABLE MANAGE_DB.PUBLIC.movie_titles (
   description STRING )
 ```
 7. Create file format object
+
 ```
 CREATE OR REPLACE file format MANAGE_DB.file_formats.csv_fileformat
     type = csv
@@ -144,20 +145,23 @@ CREATE OR REPLACE file format MANAGE_DB.file_formats.csv_fileformat
 ```
     
  8. Create stage object with integration object & file format object
+
  ```
 CREATE OR REPLACE stage MANAGE_DB.external_stages.csv_folder
     URL = 's3://<your-bucket-name>/<your-path>/'
-    STORAGE_INTEGRATION = s3_int
+    STORAGE_INTEGRATION = citibike_snowpipe_integration
     FILE_FORMAT = MANAGE_DB.file_formats.csv_fileformat
 ```
 
 9. Use Copy command   
+
 ```    
 COPY INTO MANAGE_DB.PUBLIC.movie_titles
     FROM @MANAGE_DB.external_stages.csv_folder
 ``` 
     
-10. Create file format object
+10. Update file format object
+
 ```
 CREATE OR REPLACE file format MANAGE_DB.file_formats.csv_fileformat
     type = csv
@@ -166,13 +170,28 @@ CREATE OR REPLACE file format MANAGE_DB.file_formats.csv_fileformat
     null_if = ('NULL','null')
     empty_field_as_null = TRUE    
     FIELD_OPTIONALLY_ENCLOSED_BY = '"'    
-      
-SELECT * FROM MANAGE_DB.PUBLIC.movie_titles
 ```
-    
+
+11. Trancate table: 
+```   
+truncate MANAGE_DB.PUBLIC.movie_titles
+```   
+
+12. Use Copy command again:  
+
+```    
+COPY INTO MANAGE_DB.PUBLIC.movie_titles
+    FROM @MANAGE_DB.external_stages.csv_folder
+```
+
+13. Read table
+```
+select * from MANAGE_DB.PUBLIC.movie_titles;
+
+```  
 ## Snowpipe:
 
-1. Create table first
+1. Create employees table
 ```
 CREATE OR REPLACE TABLE MANAGE_DB.PUBLIC.employees (
   id INT,
@@ -184,7 +203,8 @@ CREATE OR REPLACE TABLE MANAGE_DB.PUBLIC.employees (
   )
 ```
     
-2.Create file format object
+2. Create file format object if not exist:
+
 ```
 CREATE OR REPLACE file format MANAGE_DB.file_formats.csv_fileformat
     type = csv
@@ -193,7 +213,6 @@ CREATE OR REPLACE file format MANAGE_DB.file_formats.csv_fileformat
     null_if = ('NULL','null')
     empty_field_as_null = TRUE;
 ```
-    
     
  3. Create stage object with integration object & file format object
  ```
@@ -208,21 +227,17 @@ CREATE OR REPLACE stage MANAGE_DB.external_stages.csv_folder
 LIST @MANAGE_DB.external_stages.csv_folder  
 ```
 
-5. Create schema to keep things organized
-```
-CREATE OR REPLACE SCHEMA MANAGE_DB.pipes
-```
+5. Define pipe
 
-6. Define pipe
 ```
-CREATE OR REPLACE pipe MANAGE_DB.pipes.employee_pipe
+CREATE OR REPLACE pipe MANAGE_DB.public.employee_pipe
 auto_ingest = TRUE
 AS
 COPY INTO MANAGE_DB.PUBLIC.employees
 FROM @MANAGE_DB.external_stages.csv_folder  
 ```
 
-7. Describe pipe
+6. Describe pipe
 ```
 DESC pipe employee_pipe
 ```
@@ -230,7 +245,7 @@ DESC pipe employee_pipe
 SELECT * FROM MANAGE_DB.PUBLIC.employees    
 ```
 
-8. Configure notification:  
+7. Configure notification:  
 
 Review the Snowpipe definition and make a note of the notification channel value.   
 
@@ -238,12 +253,12 @@ Review the Snowpipe definition and make a note of the notification channel value
 show pipes;
 ```
 
-Copy the SQS notification Arn to the bucket notification sqs arn ** auto_ingest_snowflake  **.  
+Copy the SQS notification Arn to the bucket notification sqs arn **auto_ingest_snowflake**.  
 
 9. Manage pipes:
 
 ```
-DESC pipe MANAGE_DB.pipes.employee_pipe;
+DESC pipe MANAGE_DB.public.employee_pipe;
 
 SHOW PIPES;
 
@@ -251,20 +266,21 @@ SHOW PIPES like '%employee%'
 
 SHOW PIPES in database MANAGE_DB
 
-SHOW PIPES in schema MANAGE_DB.pipes
+SHOW PIPES in schema MANAGE_DB.public
 
 SHOW PIPES like '%employee%' in Database MANAGE_DB
 ```
 
-
 ## TASKS:
 
 1. create new database
+
 ```
 CREATE OR REPLACE TRANSIENT DATABASE TASK_DB;
 ```
 
-2.Prepare table
+2. Prepare table:
+
 ```
 CREATE OR REPLACE TABLE CUSTOMERS (
     CUSTOMER_ID INT AUTOINCREMENT START = 1 INCREMENT =1,
@@ -272,22 +288,27 @@ CREATE OR REPLACE TABLE CUSTOMERS (
     CREATE_DATE DATE)
     
  ```   
-3. Create task
+
+3. Create task:
+
 ```
 CREATE OR REPLACE TASK CUSTOMER_INSERT
     WAREHOUSE = COMPUTE_WH
     SCHEDULE = '1 MINUTE'
     AS 
     INSERT INTO CUSTOMERS(CREATE_DATE) VALUES(CURRENT_TIMESTAMP);
- ```   
+```   
+
 ```
 SHOW TASKS;
 ```
-4. Task starting and suspending
+
+4. Task starting and suspending:
+
 ```
 ALTER TASK CUSTOMER_INSERT RESUME;
-ALTER TASK CUSTOMER_INSERT SUSPEND;
 
+ALTER TASK CUSTOMER_INSERT SUSPEND;
 
 SELECT * FROM CUSTOMERS
 ```
@@ -295,11 +316,10 @@ SELECT * FROM CUSTOMERS
 ```
 CREATE OR REPLACE TASK CUSTOMER_INSERT
     WAREHOUSE = COMPUTE_WH
-    SCHEDULE = '60 MINUTE'
+    SCHEDULE = '1 MINUTE'
     AS 
     INSERT INTO CUSTOMERS(CREATE_DATE) VALUES(CURRENT_TIMESTAMP);
 ```
-  
   
 ```
 CREATE OR REPLACE TASK CUSTOMER_INSERT
@@ -319,18 +339,20 @@ CREATE OR REPLACE TASK CUSTOMER_INSERT
 # * * * * *
 
 
-
-
 5. Every minute
+
 ``` 
 SCHEDULE = 'USING CRON * * * * * UTC'
 ``` 
 
-6. Every day at 6am UTC timezone
+6. Every day at 6am UTC timezone:
+
 ``` 
 SCHEDULE = 'USING CRON 0 6 * * * UTC'
 ``` 
-7. Every hour starting at 9 AM and ending at 5 PM on Sundays 
+
+7. Every hour starting at 9 AM and ending at 5 PM on Sundays:
+
 ``` 
 SCHEDULE = 'USING CRON 0 9-17 * * SUN America/Los_Angeles'
 ``` 
@@ -338,7 +360,7 @@ SCHEDULE = 'USING CRON 0 9-17 * * SUN America/Los_Angeles'
 ``` 
 CREATE OR REPLACE TASK CUSTOMER_INSERT
     WAREHOUSE = COMPUTE_WH
-    SCHEDULE = 'USING CRON 0 9,17 * * * UTC'
+    SCHEDULE = 'USING CRON 0 9-17 * * * UTC'
     AS 
     INSERT INTO CUSTOMERS(CREATE_DATE) VALUES(CURRENT_TIMESTAMP);
 ``` 
@@ -351,7 +373,9 @@ SHOW TASKS;
 
 SELECT * FROM CUSTOMERS;
 ``` 
+
 9. Prepare a second table
+
 ``` 
 CREATE OR REPLACE TABLE CUSTOMERS2 (
     CUSTOMER_ID INT,
@@ -360,11 +384,13 @@ CREATE OR REPLACE TABLE CUSTOMERS2 (
 ```  
     
 10. Suspend parent task
+
 ``` 
 ALTER TASK CUSTOMER_INSERT SUSPEND;
 ``` 
 
 11. Create a child task
+
 ``` 
 CREATE OR REPLACE TASK CUSTOMER_INSERT2
     WAREHOUSE = COMPUTE_WH
@@ -374,6 +400,7 @@ CREATE OR REPLACE TASK CUSTOMER_INSERT2
 ```     
     
 12. Prepare a third table
+
 ``` 
 CREATE OR REPLACE TABLE CUSTOMERS3 (
     CUSTOMER_ID INT,
@@ -383,6 +410,7 @@ CREATE OR REPLACE TABLE CUSTOMERS3 (
 ```   
 
 13. Create a child task
+
 ``` 
 CREATE OR REPLACE TASK CUSTOMER_INSERT3
     WAREHOUSE = COMPUTE_WH
@@ -397,30 +425,38 @@ SHOW TASKS;
 ALTER TASK CUSTOMER_INSERT 
 SET SCHEDULE = '1 MINUTE'
 ``` 
+
 13. Resume tasks (first root task)
+
 ``` 
 ALTER TASK CUSTOMER_INSERT RESUME;
 ALTER TASK CUSTOMER_INSERT2 RESUME;
 ALTER TASK CUSTOMER_INSERT3 RESUME;
 ``` 
+
 ``` 
 SELECT * FROM CUSTOMERS2
 
 SELECT * FROM CUSTOMERS3
 ``` 
-14. Suspend tasks again
+
+14. Suspend tasks again:
+
 ``` 
 ALTER TASK CUSTOMER_INSERT SUSPEND;
 ALTER TASK CUSTOMER_INSERT2 SUSPEND;
 ALTER TASK CUSTOMER_INSERT3 SUSPEND;
 
 ``` 
+
 ## Streams: INSERT
+
 ```
 CREATE OR REPLACE TRANSIENT DATABASE STREAMS_DB;
 ```
 
-1. Create example table
+1. Create sales table
+
 ``` 
 create or replace table sales_raw_staging(
   id varchar,
@@ -428,9 +464,10 @@ create or replace table sales_raw_staging(
   price varchar,
   amount varchar,
   store_id varchar);
-
 ```
-2. insert values 
+
+2. insert values :
+
 ```
 insert into sales_raw_staging 
     values
@@ -440,16 +477,24 @@ insert into sales_raw_staging
         (4,'Orange Juice',1.89,1,2),
         (5,'Cereals',5.98,2,1);  
 ```
+
+* Create store table
+
 ```
 create or replace table store_table(
   store_id number,
   location varchar,
   employees number);
 ```
+
+* insert values
+
 ```
 INSERT INTO STORE_TABLE VALUES(1,'Chicago',33);
 INSERT INTO STORE_TABLE VALUES(2,'London',12);
 ```
+
+* Create final sales table
 
 ```
 create or replace table sales_final_table(
@@ -461,7 +506,8 @@ create or replace table sales_final_table(
   location varchar,
   employees int);
 ```
-3. Insert into final table  
+3. Insert into final table
+
 ```
 INSERT INTO sales_final_table 
     SELECT 
@@ -477,9 +523,11 @@ INSERT INTO sales_final_table
 ```
 
 4. Create a stream object
+
 ```
 create or replace stream sales_stream on table sales_raw_staging;
 ```
+
 ```
 SHOW STREAMS;
 
@@ -487,15 +535,19 @@ DESC STREAM sales_stream;
 ```
 
 5. Get changes on data using stream (INSERTS)
+
 ```
 select * from sales_stream;
 
 select * from sales_raw_staging;
 
+select * from sales_final_table;
+
 ```     
                                  
 
 6. insert values 
+
 ```
 insert into sales_raw_staging  
     values
@@ -504,6 +556,7 @@ insert into sales_raw_staging
 ```      
 
 7. Get changes on data using stream (INSERTS)
+
 ```
 select * from sales_stream;
 
@@ -528,11 +581,10 @@ INSERT INTO sales_final_table
 ```
 
 10. Get changes on data using stream (INSERTS)
+
 ```
 select * from sales_stream;
-
 ```
-
 
 11. insert values 
 ```
@@ -626,7 +678,6 @@ SELECT * FROM SALES_STREAM;
 
 ```
 
-
 ## Streams: DELETE
         
 ```      
@@ -638,9 +689,7 @@ SELECT * FROM SALES_STREAM;
 
 DELETE FROM SALES_RAW_STAGING
 WHERE PRODUCT = 'Lemon';
-```     
-        
-        
+```           
         
 1. Process stream          
 
