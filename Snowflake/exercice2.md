@@ -79,12 +79,6 @@ Vous n'avez pas besoin de créer votre propre bucket S3. Le bucket qui sera util
 CREATE DATABASE IF NOT EXISTS MANAGE_DB;
 ```
 
-Switch Context:
-```
-USE MANAGE_DB.PUBLIC;
-USE WAREHOUSE DATAPIPELINES_WH;
-```
-
 2. Switch Context:  
 ```
 USE ROLE ACCOUNTADMIN;
@@ -95,6 +89,11 @@ CREATE WAREHOUSE IF NOT EXISTS DATAPIPELINES_WH
     WITH WAREHOUSE_SIZE = 'XSMALL' 
     AUTO_SUSPEND = 60 
     AUTO_RESUME = TRUE;
+```
+Switch warehouse:
+```
+USE MANAGE_DB.PUBLIC;
+USE WAREHOUSE DATAPIPELINES_WH;
 ```
 4. Create Cloud Storage Integration:  
 
