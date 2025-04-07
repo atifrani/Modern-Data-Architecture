@@ -167,6 +167,12 @@ Dans la boîte de dialogue « Créer un objet sécurisable » qui s'ouvre, rem
 nom_stage : **citibike_trips**  
 URL : **s3://logbrain-datalake/datasets/citibike-trips-csv/**  
 
+
+```
+-- Create external S3 stage 
+create stage citibike_csv  URL ='s3://logbrain-datalake/datasets/citibike-trips-csv/';
+```
+
 Remarque : Assurez-vous d'inclure la barre oblique finale (/) à la fin de l'URL, sinon vous rencontrerez des erreurs plus tard lors du chargement des données à partir du compartiment. Assurez-vous également d'avoir supprimé l'instruction 'credentials = (...)' qui n'est pas obligatoire. La commande create stage devrait ressembler exactement à celle présentée ci-dessus.  
 
 Le compartiment S3 de cet atelier est public, vous pouvez donc laisser les options d'informations d'identification vides dans l'instruction. Dans un scénario réel, le compartiment utilisé pour une étape externe nécessiterait probablement des informations clés.  
@@ -191,14 +197,7 @@ Dans la feuille de calcul, exécutez la commande suivante pour créer le format 
 
 
 ```
-create or replace file format csv type='csv'
-  compression = 'auto' field_delimiter = ','
-  record_delimiter = '\n'  skip_header = 0
-  field_optionally_enclosed_by = '\042' trim_space = false
-  error_on_column_count_mismatch = false escape = 'none'
-  escape_unenclosed_field = '\134'
-  date_format = 'auto' timestamp_format = 'auto'
-  null_if = ('') comment = 'file format for ingesting csv';
+CREATE FILE FORMAT csv TYPE = 'CSV' FIELD_DELIMITER = ',' RECORD_DELIMITER = '\n' SKIP_HEADER = 1;
 
 ```  
 
@@ -257,7 +256,7 @@ Assurez-vous que le contexte de la feuille de calcul est correctement défini :
 Exécutez les instructions suivantes dans la feuille de calcul pour charger les données intermédiaires dans la table. Cela peut prendre jusqu'à 60 secondes.  
 
 ``` 
-copy into trips from @citibike_trips file_format=csv PATTERN = '.*csv.*' ;
+copy into trips from @citibike_csv file_format=csv PATTERN = '.*csv.*' ;
 
 ``` 
 
@@ -456,44 +455,53 @@ créez une vue des données météorologiques JSON non structurées dans une vue
 
 Parcourir le JSON:
 ```
-select
-  v:time::timestamp as observation_time,
-  v:city.id::int as city_id,
-  v:city.name::string as city_name,
-  v:city.country::string as country,
-  v:city.coord.lat::float as city_lat,
-  v:city.coord.lon::float as city_lon,
-  v:clouds.all::int as clouds,
-  (v:main.temp::float)-273.15 as temp_avg,
-  (v:main.temp_min::float)-273.15 as temp_min,
-  (v:main.temp_max::float)-273.15 as temp_max,
-  v:weather[0].main::string as weather,
-  v:weather[0].description::string as weather_desc,
-  v:weather[0].icon::string as weather_icon,
-  v:wind.deg::float as wind_dir,
-  v:wind.speed::float as wind_speed
-from json_weather_data
-where city_id = 5128638;
+select   v:country from json_weather_data;
+
+select   v[1]:country from json_weather_data; 
 ```
+
+Mise à plat de la colonne V:
+```
+CREATE or REPLACE file format json 
+type = 'JSON'
+STRIP_OUTER_ARRAY=TRUE;
+```
+
+Importer les données à nouveau:
+
+```
+truncate json_weather_data;
+
+copy into json_weather_data from @nyc_weather file_format = json;
+```
+
+```
+select   v:country from json_weather_data;
+
+-- Charger quelques champs
+select 
+v:country::string as country,
+v:latitude::float as latitude,
+v:longitude::float as longitude,
+v:name::string as city_name,
+v:obsTime::timestamp as obs_time,
+v:region::string as region_name,
+v:weatherCondition::string as weather_condition
+from json_weather_data
+```
+
+
 ```
 create view json_weather_data_view as
-select
-  v:time::timestamp as observation_time,
-  v:city.id::int as city_id,
-  v:city.name::string as city_name,
-  v:city.country::string as country,
-  v:city.coord.lat::float as city_lat,
-  v:city.coord.lon::float as city_lon,
-  v:clouds.all::int as clouds,
-  (v:main.temp::float)-273.15 as temp_avg,
-  (v:main.temp_min::float)-273.15 as temp_min,
-  (v:main.temp_max::float)-273.15 as temp_max,
-  v:weather[0].main::string as weather,
-  v:weather[0].description::string as weather_desc,
-  v:weather[0].icon::string as weather_icon,
-  v:wind.deg::float as wind_dir,
-  v:wind.speed::float as wind_speed
-from json_weather_data;
+select 
+v:country::string as country,
+v:latitude::float as latitude,
+v:longitude::float as longitude,
+v:name::string as city_name,
+v:obsTime::timestamp as obs_time,
+v:region::string as region_name,
+v:weatherCondition::string as weather_condition
+from json_weather_data
 ```
 
 #### Exécutez la requête suivantes sur le View:  
@@ -501,7 +509,7 @@ from json_weather_data;
 ```
 
 select * from json_weather_data_view
-where date(obsTime) = '2018-01-01'
+where date(obs_time) = '2018-01-01'
 limit 20;
 
 ```
@@ -511,11 +519,11 @@ limit 20;
 Nous allons maintenant joindre les données météorologiques JSON à nos données CITIBIKE.PUBLIC.TRIPS pour déterminer le réponse à notre question initiale sur l'impact de la météo sur le nombre de trajets.  
 
 ```
-select weather as WHEATHERCONDITION ,count(*) as num_trips
+select weather_condition as weather_condition ,count(*) as num_trips
 from citibike.public.trips
-left outer join json_weather_data_view
-on date(observation_time) = date(starttime)
-where weather is not null
+left outer join weather.public.json_weather_data_view
+on date(obs_time) = date(starttime)
+where weather_condition is not null
 group by 1 order by 2 desc;
 
 ```

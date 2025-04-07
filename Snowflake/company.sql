@@ -1,7 +1,6 @@
 -- create retail-db database
 create database retaildb;
 
-
 -- create table categories:
 create table retaildb.public.categories
 (
@@ -11,13 +10,11 @@ category_name varchar
 );
 
 -- create table customers:
-create table retaildb.public.customers
+create or replace table retaildb.public.customers
 (
 customer_id integer not null,
 customer_fname varchar,
 customer_lname varchar,
-customer_email varchar,
-customer_password varchar,
 customer_street varchar,
 customer_city varchar,
 customer_state varchar,
@@ -59,5 +56,4 @@ product_category_id integer,
 product_name varchar,
 product_description varchar,
 product_price float,
-product
-_image varchar );
+product_image varchar );

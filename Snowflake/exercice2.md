@@ -61,7 +61,7 @@ Le diagramme suivant montre le flux d'intégration pour une étape S3 :
 * Étape 4 : Récupérer l'utilisateur AWS IAM pour votre compte Snowflake  
 * Étape 5 : Accorder à l'utilisateur IAM les autorisations d'accès aux objets du compartiment S3  
 
-Vous avez pas besoin de créer votre propre bucket S3. Le bucket qui sera utilisé dans ce lab est ** logbrain-private-datalake **. Les données seront sotckées dans le dossier **  citibike_snowpipe **.   
+Vous n'avez pas besoin de créer votre propre bucket S3. Le bucket qui sera utilisé dans ce lab est ** logbrain-private-datalake **. Les données seront sotckées dans le dossier **  citibike_snowpipe **.   
 
 * Pour Configurer les autorisations d'accès pour le bucket S3. [AWS]
     Suivez les instructions décrites dans la documentation Snowflake en utilisant le lien ci-dessous.  
@@ -79,12 +79,6 @@ Vous avez pas besoin de créer votre propre bucket S3. Le bucket qui sera utilis
 CREATE DATABASE IF NOT EXISTS MANAGE_DB;
 ```
 
-Switch Context:
-```
-USE MANAGE_DB.PUBLIC;
-USE WAREHOUSE DATAPIPELINES_WH;
-```
-
 2. Switch Context:  
 ```
 USE ROLE ACCOUNTADMIN;
@@ -95,6 +89,11 @@ CREATE WAREHOUSE IF NOT EXISTS DATAPIPELINES_WH
     WITH WAREHOUSE_SIZE = 'XSMALL' 
     AUTO_SUSPEND = 60 
     AUTO_RESUME = TRUE;
+```
+Switch warehouse:
+```
+USE MANAGE_DB.PUBLIC;
+USE WAREHOUSE DATAPIPELINES_WH;
 ```
 4. Create Cloud Storage Integration:  
 

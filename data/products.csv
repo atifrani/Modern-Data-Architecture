@@ -1,0 +1,1115 @@
+prod_id	brand	name	price	cost	shipping_wt
+1273641	Chestnut	USB Card Reader	1839	1275	1
+1273642	Ultramegaco	USB Card Reader	1949	721	1
+1273643	McDowell	USB Card Reader	2149	845	1
+1273644	Dualcore	USB Card Reader	2029	763	1
+1273645	Orion	USB Card Reader	1909	1234	1
+1273646	DevNull	USB Card Reader	1929	817	1
+1273647	Gigabux	Composite AV Cable (12 in.)	2549	1762	1
+1273648	Tyrell	Composite AV Cable (12 in.)	2349	1125	1
+1273649	TPS	Composite AV Cable (12 in.)	2619	2086	1
+1273650	Orion	Composite AV Cable (24 in.)	2289	2252	1
+1273651	Gigabux	Composite AV Cable (24 in.)	2419	1555	1
+1273652	Ultramegaco	Composite AV Cable (24 in.)	2329	1602	1
+1273653	ElCheapo	Composite AV Cable (24 in.)	2489	982	1
+1273654	ElCheapo	Composite AV Cable (24 in.)	2189	1669	1
+1273655	Duff	Composite AV Cable (36 in.)	2539	1384	1
+1273656	ElCheapo	Composite AV Cable (36 in.)	2489	1605	1
+1273657	Tyrell	Composite AV Cable (36 in.)	2409	1831	1
+1273658	Tyrell	Composite AV Cable (36 in.)	2239	1928	1
+1273659	Orion	Composite AV Cable (72 in.)	2289	973	1
+1273660	Orion	Composite AV Cable (72 in.)	2339	1003	1
+1273661	Duff	Composite AV Cable (72 in.)	2589	1174	1
+1273662	Tyrell	USB Power Adapter (single)	1249	1155	1
+1273663	Dualcore	USB Power Adapter (single)	1259	536	1
+1273664	Dualcore	Dual USB Power Adapter	2019	1900	1
+1273665	ElCheapo	Dual USB Power Adapter	2109	898	1
+1273666	Dualcore	Dual USB Power Adapter	2159	2145	1
+1273667	ElCheapo	Dual USB Power Adapter (auto)	2969	2521	1
+1273668	Dualcore	Dual USB Power Adapter (auto)	3009	1912	1
+1273669	Tyrell	Quad USB Power Adapter	4069	3203	1
+1273670	Bigdeal	Quad USB Power Adapter	3959	2136	1
+1273671	ElCheapo	High Speed HDMI Cable (24 in.)	2009	1184	1
+1273672	XYZ	High Speed HDMI Cable (24 in.)	2179	1038	1
+1273673	Bigdeal	High Speed HDMI Cable (36 in.)	2919	1078	1
+1273674	Megachango	High Speed HDMI Cable (36 in.)	3019	1673	1
+1273675	Duff	High Speed HDMI Cable (48 in.)	4209	1738	1
+1273676	Duff	High Speed HDMI Cable (48 in.)	4029	1818	1
+1273677	ElCheapo	High Speed HDMI Cable (60 in.)	4749	4053	1
+1273678	Ultramegaco	High Speed HDMI Cable (60 in.)	5049	2576	1
+1273679	XYZ	High Speed HDMI Cable (60 in.)	5369	4884	1
+1273680	Dualcore	High Speed HDMI Cable (72 in.)	5839	2963	1
+1273681	XYZ	High Speed HDMI Cable (72 in.)	6519	3712	1
+1273682	ACME	Mini-Stereo to RCA Audio Cable	1449	500	1
+1273683	McDowell	Headphone Adapter (1/4 in. to 1/8 in.)	769	452	1
+1273684	McDowell	Headphone Adapter (1/4 in. to 1/8 in.)	839	670	1
+1273685	ACME	Headphone Adapter (1/4 in. to 1/8 in.)	769	408	1
+1273686	ElCheapo	Headphone Adapter (1/4 in. to 1/8 in.)	779	736	1
+1273687	McDowell	Digital Optical Audio Cable	2689	2030	1
+1273688	ElCheapo	Mobile Bluetooth Keyboard and Stand for Tablets	7009	3975	3
+1273689	Orion	Netbook Case	2709	2352	2
+1273690	Megachango	Netbook Case	2759	1117	2
+1273691	Chestnut	Case for Notebook Computer	4839	2741	3
+1273692	XYZ	Case for Notebook Computer	5009	4009	3
+1273693	Ultramegaco	Case for Notebook Computer	4869	3338	3
+1273694	Ultramegaco	Case for Notebook Computer	4499	4493	3
+1273695	Orion	Case for Notebook Computer	4419	1820	3
+1273696	Megachango	Case for Notebook Computer	4189	1628	3
+1273697	XYZ	Case for Notebook Computer	4719	4314	3
+1273698	Bigdeal	Sleeve for Mini Tablet - Red	1689	1169	1
+1273699	Tyrell	Sleeve for Mini Tablet - Blue	1519	1006	1
+1273700	Tyrell	Sleeve for Mini Tablet - Blue	1599	810	1
+1273701	ACME	Sleeve for Mini Tablet - Green	1479	643	1
+1273702	Megachango	Sleeve for Mini Tablet - Black	1509	1466	1
+1273703	Megachango	Sleeve for Mini Tablet - Black	1629	691	1
+1273704	Tyrell	Sleeve for Mini Tablet - Gray	1639	1132	1
+1273705	Tyrell	Sleeve for Mini Tablet - Gray	1729	997	1
+1273706	Megachango	Sleeve for Tablet - Red	1979	1070	1
+1273707	Orion	Sleeve for Tablet - Blue	2129	1708	1
+1273708	Megachango	Sleeve for Tablet - Blue	1999	1951	1
+1273709	Bigdeal	Sleeve for Tablet - Green	1849	1164	1
+1273710	Megachango	Sleeve for Tablet - Black	1979	728	1
+1273711	DevNull	Sleeve for Tablet - Black	2079	1022	1
+1273712	Tyrell	Sleeve for Tablet - Gray	2039	1052	1
+1273713	XYZ	Sleeve for Tablet - Gray	1999	1002	1
+1273714	XYZ	Sleeve for Tablet - Leather	3159	1692	1
+1273715	ACME	Sleeve for Tablet - Leather	3239	1332	1
+1273716	Bigdeal	Screen Cleaning Cloth (white)	1669	1279	1
+1273717	Duff	Screen Cleaning Cloth (white)	1969	1445	1
+1273718	ACME	Screen Cleaning Cloth (black)	1889	1612	1
+1273719	Ultramegaco	Screen Cleaning Cloth (gray)	1839	1672	1
+1273720	Chestnut	Executive Stylus and Pen	4849	3374	2
+1273721	Chestnut	6-cell Battery	4019	2008	3
+1273722	DevNull	6-cell Battery	4599	2392	3
+1273723	Orion	6-cell Battery	4359	2879	3
+1273724	XYZ	8-cell Battery	5769	2023	3
+1273725	Megachango	8-cell Battery	6409	4011	3
+1273726	Chestnut	8-cell Battery	6549	3667	3
+1273727	Dualcore	Compact Charger	3859	3565	3
+1273728	Chestnut	Compact Charger	3529	1988	3
+1273729	DevNull	Compact Charger	4139	2968	3
+1273730	Dualcore	Compact Charger	3949	2684	3
+1273731	TPS	Compact Charger	3859	3228	3
+1273732	ACME	Compact Charger	3619	3424	3
+1273733	Tyrell	Auto Charger	4079	1600	2
+1273734	ElCheapo	Auto Charger	3989	2164	2
+1273735	Tyrell	Auto Charger	4329	4127	2
+1273736	Megachango	Auto Charger	4339	3430	2
+1273737	DevNull	Batteries (AA, 2 pack)	389	248	1
+1273738	Duff	Batteries (AA, 2 pack)	379	282	1
+1273739	DevNull	Batteries (AA, 2 pack)	399	151	1
+1273740	Gigabux	Batteries (AA, 4 pack)	669	481	2
+1273741	Bigdeal	Batteries (AA, 4 pack)	689	299	2
+1273742	Chestnut	Batteries (AA, 4 pack)	729	441	2
+1273743	TPS	Batteries (AA, 4 pack)	719	289	2
+1273744	ACME	Batteries (AA, 4 pack)	729	585	2
+1273745	Chestnut	Batteries (AAA, 4 pack)	759	652	2
+1273746	Orion	Batteries (AAA, 4 pack)	749	704	2
+1273747	Duff	Batteries (AAA, 4 pack)	659	643	2
+1273748	Orion	Batteries (AAA, 4 pack)	749	435	2
+1273749	ElCheapo	Batteries (AAA, 4 pack)	749	664	2
+1273750	Bigdeal	Batteries (AAA, 4 pack)	649	437	2
+1273751	TPS	Batteries (AAA, 2 pack)	389	254	1
+1273752	Bigdeal	Batteries (AAA, 2 pack)	389	385	1
+1273753	Duff	Batteries (AAA, 2 pack)	399	296	1
+1273754	Dualcore	Batteries (AAA, 2 pack)	439	177	1
+1273755	Duff	Batteries (AAA, 2 pack)	379	181	1
+1273756	Ultramegaco	Batteries (C, 2 pack)	809	612	2
+1273757	Dualcore	Batteries (C, 2 pack)	739	505	2
+1273758	DevNull	Batteries (D, 2 pack)	989	783	2
+1273759	Gigabux	Batteries (D, 2 pack)	959	353	2
+1273760	Orion	Batteries (D, 2 pack)	1089	884	2
+1273761	Tyrell	Batteries (9V, 1 pack)	609	482	2
+1273762	Tyrell	Batteries (9V, 1 pack)	639	414	2
+1273763	Ultramegaco	Batteries (9V, 1 pack)	629	444	2
+1273764	TPS	Batteries (9V, 1 pack)	599	209	2
+1273765	Ultramegaco	Rechargeable Batteries (AA, 4 pack)	2799	1584	2
+1273766	Duff	Rechargeable Batteries (AA, 4 pack)	2759	1963	2
+1273767	Megachango	Rechargeable Batteries (AA, 4 pack)	3059	1777	2
+1273768	Megachango	Rechargeable Batteries (AAA, 4 pack)	2959	1179	2
+1273769	XYZ	Rechargeable Batteries (AAA, 4 pack)	2979	2740	2
+1273770	Orion	Rechargeable Batteries (AAA, 4 pack)	2789	1506	2
+1273771	Duff	Rechargeable Batteries (C, 2 pack)	1889	972	2
+1273772	ACME	Rechargeable Batteries (C, 2 pack)	1919	1679	2
+1273773	Chestnut	Rechargeable Batteries (D, 2 pack)	2039	926	2
+1273774	DevNull	Rechargeable Batteries (D, 2 pack)	2029	1513	2
+1273775	McDowell	Rechargeable Batteries (9V, 1 pack)	1379	1063	2
+1273776	McDowell	Rechargeable Batteries (9V, 1 pack)	1389	921	2
+1273777	Bigdeal	Rechargeable Batteries (9V, 1 pack)	1259	1016	2
+1273778	Duff	Keyboard (basic PC101)	2799	2711	3
+1273779	Gigabux	Keyboard (basic PC101)	2979	2208	3
+1273780	Gigabux	Keyboard (basic PC101)	3079	2806	3
+1273781	Orion	Keyboard (basic PC101)	2659	1990	3
+1273782	Dualcore	Keyboard (basic PC101)	3009	2722	3
+1273783	ElCheapo	Keyboard (basic PC101)	3079	2372	3
+1273784	TPS	Keyboard (basic PC104)	3459	3357	3
+1273785	Chestnut	Keyboard (basic PC104)	3649	2726	3
+1273786	Orion	Keyboard (basic PC104)	3789	1312	3
+1273787	Megachango	Keyboard (basic PC104)	3209	1097	3
+1273788	Bigdeal	Keyboard (gamer PC104)	9469	6246	3
+1273789	McDowell	Keyboard (gamer PC104)	8659	5624	3
+1273790	Tyrell	Keyboard (gamer PC104)	8389	5272	3
+1273791	Ultramegaco	Keyboard (wireless, with trackball)	13689	12681	3
+1273792	Chestnut	Keyboard (wireless, with nub)	13709	8518	3
+1273793	Tyrell	Wired mouse (two button)	3269	2132	1
+1273794	XYZ	Wired mouse (two button)	3139	1456	1
+1273795	Orion	Wired mouse (three button)	3939	1934	1
+1273796	Chestnut	Wired mouse (three button)	4199	3854	1
+1273797	TPS	Wired mouse (three button)	4029	1644	1
+1273798	Ultramegaco	Wired mouse (three button, with wheel)	4019	3075	1
+1273799	Gigabux	Wired mouse (three button, with wheel)	4419	3640	1
+1273800	XYZ	Wired mouse (three button, with wheel)	4739	2416	1
+1273801	ElCheapo	Wireless laser mouse (three button, with wheel)	3949	3348	1
+1273802	TPS	Wireless laser mouse (three button, with wheel)	3719	2062	1
+1273803	Ultramegaco	Wireless laser mouse (three button, with wheel)	4069	2016	1
+1273804	ACME	Trackball	5159	3874	2
+1273805	DevNull	Trackball	4949	2881	2
+1273806	TPS	Trackball (wireless)	7859	6780	2
+1273807	TPS	Trackball (wireless)	7549	6649	2
+1273808	Orion	Joystick	2619	1785	1
+1273809	TPS	Joystick	2309	860	1
+1273810	Megachango	Joystick	2319	861	1
+1273811	Gigabux	Joystick	2249	822	1
+1273812	Megachango	Gamepad	2239	1768	1
+1273813	XYZ	Gamepad	2289	1405	1
+1273814	ACME	Wheel Control	4349	2997	1
+1273815	Gigabux	Wheel Control	4209	2260	1
+1273816	XYZ	VR Headset	68399	48629	5
+1273817	Dualcore	VR Glove	41529	15104	3
+1273818	Ultramegaco	Battery Charger	3249	2358	2
+1273819	DevNull	Battery Charger	3199	1519	2
+1273820	Gigabux	Battery Charger	3319	2012	2
+1273821	XYZ	Battery Charger	3299	1151	2
+1273822	Bigdeal	Battery Charger	3469	1271	2
+1273823	Orion	Battery Charger	3179	1983	2
+1273824	Gigabux	UPS 2500 Watt (rackmount)	47879	28489	88
+1273825	Bigdeal	UPS 2500 Watt (rackmount)	47679	47377	88
+1273826	McDowell	UPS 1500 Watt	19629	9718	45
+1273827	DevNull	UPS 1500 Watt	17289	10751	45
+1273828	Bigdeal	UPS 1500 Watt	17909	7159	45
+1273829	McDowell	UPS 1200 Watt	15249	13378	34
+1273830	Duff	UPS 1200 Watt	16249	12499	34
+1273831	ACME	UPS 1000 Watt	15069	5303	23
+1273832	Megachango	UPS 1000 Watt	13169	6660	23
+1273833	Gigabux	UPS 1000 Watt	13209	11214	23
+1273834	Megachango	UPS 800 Watt	12429	12330	19
+1273835	TPS	UPS 800 Watt	13799	11035	19
+1273836	Tyrell	UPS 800 Watt	13119	9422	19
+1273837	Tyrell	UPS 500 Watt	8489	3372	18
+1273838	DevNull	UPS 500 Watt	8699	4899	18
+1273839	ElCheapo	Surge Protector (8-Outlet)	2499	1152	2
+1273840	Dualcore	Surge Protector (8-Outlet)	2429	970	2
+1273841	TPS	Surge Protector (8-Outlet)	2579	1076	2
+1273842	Bigdeal	Surge Protector (8-Outlet)	2369	2047	2
+1273843	DevNull	Surge Protector (6-Outlet)	2109	1485	2
+1273844	Dualcore	Surge Protector (6-Outlet)	2269	1245	2
+1273845	Dualcore	Surge Protector (6-Outlet)	2209	1364	2
+1273846	Orion	Surge Protector (6-Outlet, angled plug)	2429	1854	2
+1273847	Ultramegaco	Surge Protector (6-Outlet, angled plug)	2599	2559	2
+1273848	Duff	Surge Protector (4-Outlet)	1749	815	2
+1273849	Megachango	Surge Protector (4-Outlet)	1909	1458	2
+1273850	Gigabux	Surge Protector (4-Outlet)	1889	1876	2
+1273851	Dualcore	Extension cord (18 in.)	1329	1264	1
+1273852	Dualcore	Extension cord (18 in.)	1249	882	1
+1273853	Dualcore	Extension cord (18 in.)	1369	1269	1
+1273854	Dualcore	Extension cord (36 in.)	1969	1281	2
+1273855	DevNull	Extension cord (36 in.)	2029	1135	2
+1273856	Ultramegaco	Extension cord (36 in.)	1759	1363	2
+1273857	DevNull	Extension cord (36 in.)	1979	729	2
+1273858	Dualcore	Extension cord (36 in.)	1789	1049	2
+1273859	Chestnut	Extension cord (36 in., heavy duty)	2919	1153	3
+1273860	XYZ	Extension cord (36 in., heavy duty)	3069	2977	3
+1273861	McDowell	Extension cord (36 in., heavy duty)	2939	1346	3
+1273862	Chestnut	Extension cord (36 in., heavy duty)	2849	1586	3
+1273863	XYZ	Extension cord (36 in., heavy duty)	3029	2749	3
+1273864	Chestnut	Extension cord (60 in.)	2389	1052	2
+1273865	Bigdeal	Extension cord (60 in.)	2359	849	2
+1273866	Tyrell	Extension cord (60 in.)	2609	1637	2
+1273867	Orion	Extension cord (72 in.)	3179	1391	2
+1273868	Megachango	Extension cord (72 in.)	3029	1636	2
+1273869	Orion	Extension cord (72 in.)	2809	1302	2
+1273870	McDowell	Extension cord (10 ft., outdoor)	4219	2611	3
+1273871	ElCheapo	Extension cord (10 ft., outdoor)	3839	3787	3
+1273872	Orion	Extension cord (20 ft., outdoor)	4639	2796	4
+1273873	Dualcore	Extension cord (20 ft., outdoor)	5049	3245	4
+1273874	ACME	Extension cord (20 ft., outdoor)	5439	2710	4
+1273875	Ultramegaco	Extension cord (50 ft., outdoor)	7329	5929	5
+1273876	McDowell	Extension cord (50 ft., outdoor)	7019	5739	5
+1273877	Duff	Laptop Cooling Pad	4209	3036	1
+1273878	XYZ	Laptop Cooling Pad	4879	2263	1
+1273879	ElCheapo	Laptop Cooling Pad	4309	4001	1
+1273880	ACME	Laptop Cooling Pad	4279	4234	1
+1273881	XYZ	USB 2.0 4-Port Mini Hub	2329	1085	1
+1273882	XYZ	USB 2.0 4-Port Mini Hub	2119	1360	1
+1273883	Ultramegaco	USB 2.0 4-Port Mini Hub	2369	872	1
+1273884	TPS	USB 2.0 4-Port Mini Hub	2109	1997	1
+1273885	McDowell	USB 2.0 4-Port Mini Hub	2129	1861	1
+1273886	Orion	USB 3.0 4-Port Ultra Mini Hub	4459	3600	1
+1273887	Chestnut	USB 3.0 4-Port Ultra Mini Hub	4079	3787	1
+1273888	Tyrell	USB 3.0 4-Port Ultra Mini Hub	4379	4176	1
+1273889	Chestnut	USB 3.0 4-Port Ultra Mini Hub	4679	2084	1
+1273890	Dualcore	USB 4-Port Powered Desktop Hub	2719	1012	2
+1273891	TPS	USB 4-Port Powered Desktop Hub	2369	1406	2
+1273892	McDowell	USB 4-Port Powered Desktop Hub	2349	2263	2
+1273893	DevNull	USB 4-Port Powered Desktop Hub	2569	1075	2
+1273894	Dualcore	USB 4-Port Powered Desktop Hub	2619	1827	2
+1273895	Orion	USB 7-Port Powered Desktop Hub	4239	2898	2
+1273896	Bigdeal	USB 7-Port Powered Desktop Hub	3679	2543	2
+1273897	ACME	Stylus for PDA	1929	855	1
+1273898	ElCheapo	Stylus for PDA	2049	844	1
+1273899	DevNull	Stylus for PDA	2109	1877	1
+1273900	ElCheapo	3.5mm Mini Male to RCA Phono Female Adapter	379	130	1
+1273901	Tyrell	3.5mm Mini Male to RCA Phono Female Adapter	419	415	1
+1273902	Duff	3.5mm Mini Male to RCA Phono Female Adapter	409	261	1
+1273903	Bigdeal	1/4 in. Standard Phone Female to Female Adapter	429	163	1
+1273904	Gigabux	1/4 in. Standard Phone Female to Female Adapter	399	397	1
+1273905	DevNull	1/4 in. Standard Phone Female to Female Adapter	399	354	1
+1273906	Gigabux	1/4 in. Standard Phone Female to Female Adapter	399	229	1
+1273907	XYZ	3.5mm Mini Male to Standard Phone Female	279	154	1
+1273908	Dualcore	3.5mm Mini Male to Standard Phone Female	299	255	1
+1273909	Tyrell	3.5mm Mini Male to Standard Phone Female	289	200	1
+1273910	ElCheapo	3.5mm Mini Male to Standard Phone Female	309	211	1
+1273911	DevNull	3.5mm Mini Male to Standard Phone Female	299	271	1
+1273912	ACME	3.5mm Mini Male to Standard Phone Female	279	153	1
+1273913	Orion	3.5mm Mini Male to Standard Phone Female	319	191	1
+1273914	Bigdeal	RCA Phono Male to 3-Pin XLR Female Adapter	709	595	1
+1273915	Bigdeal	RCA Phono Male to 3-Pin XLR Female Adapter	659	295	1
+1273916	ElCheapo	RCA Phono Male to Mini Female Adapter	379	320	1
+1273917	Chestnut	RCA Phono Male to Mini Female Adapter	419	263	1
+1273918	Gigabux	RCA Phono Male to Mini Female Adapter	419	198	1
+1273919	McDowell	RCA Phono Male to Mini Female Adapter	389	134	1
+1273920	Gigabux	RCA Phono Male to Mini Female Adapter	409	404	1
+1273921	DevNull	RCA Phono Male to Mini Female Adapter	419	298	1
+1273922	ElCheapo	1/4 in. Standard Phone Male to 3-Pin XLR Female Adapter	639	582	1
+1273923	Duff	RCA Phono Female to Female, Barrel Adapter	499	413	1
+1273924	Ultramegaco	RCA Phono Female to Female, Barrel Adapter	519	241	1
+1273925	McDowell	RCA Phono Female to Female, Barrel Adapter	529	440	1
+1273926	Chestnut	RCA Phono Female to Female, Barrel Adapter	469	389	1
+1273927	Megachango	RCA Phono Female to Female, Barrel Adapter	489	443	1
+1273928	DevNull	3-Pin XLR Male to RCA Phono Female Adapter	919	872	1
+1273929	XYZ	3-Pin XLR Male to RCA Phono Female Adapter	949	446	1
+1273930	DevNull	RCA Phono Male to 1/4 in. Standard Phone Female Adapter	609	296	1
+1273931	Dualcore	RCA Phono Male to 1/4 in. Standard Phone Female Adapter	559	453	1
+1273932	Gigabux	RCA Phono Male to 1/4 in. Standard Phone Female Adapter	629	579	1
+1273933	DevNull	RCA Phono Male to 1/4 in. Standard Phone Female Adapter	579	282	1
+1273934	McDowell	3-Pin XLR Male to 1/4 in. Standard Phone Female Adapter	859	589	1
+1273935	Megachango	3-Pin XLR Male to 1/4 in. Standard Phone Female Adapter	879	797	1
+1273936	Chestnut	3.5mm Mini Female to Female, Barrel Adapter	319	160	1
+1273937	ElCheapo	3.5mm Mini Female to Female, Barrel Adapter	279	124	1
+1273938	TPS	3.5mm Mini Female to Female, Barrel Adapter	289	190	1
+1273939	DevNull	3.5mm Mini Female to Female, Barrel Adapter	299	177	1
+1273940	McDowell	3.5mm Mini Female to Female, Barrel Adapter	329	268	1
+1273941	Gigabux	3-Pin XLR Male to Male, Barrel Adapter	749	551	1
+1273942	Tyrell	3-Pin XLR Male to Male, Barrel Adapter	749	649	1
+1273943	ElCheapo	1/4 in. Standard Phone Male to RCA Phono Female Adapter	369	189	1
+1273944	ACME	1/4 in. Standard Phone Male to RCA Phono Female Adapter	409	202	1
+1273945	Megachango	1/4 in. Standard Phone Male to RCA Phono Female Adapter	379	346	1
+1273946	Chestnut	3-Pin XLR Female to Female, Barrel Adapter	859	666	1
+1273947	Bigdeal	3-Pin XLR Female to Female, Barrel Adapter	779	566	1
+1273948	Ultramegaco	1/4 in. Standard Phone Male to 3.5mm Mini Female Adapter	309	126	1
+1273949	TPS	1/4 in. Standard Phone Male to 3.5mm Mini Female Adapter	289	163	1
+1273950	Dualcore	1/4 in. Standard Phone Male to 3.5mm Mini Female Adapter	279	155	1
+1273951	XYZ	1/4 in. Standard Phone Male to 3.5mm Mini Female Adapter	279	122	1
+1273952	Chestnut	1/4 in. Standard Phone Male to 3.5mm Mini Female Adapter	299	130	1
+1273953	Chestnut	1/4 in. Standard Phone Male to 3.5mm Mini Female Adapter	289	123	1
+1273954	Megachango	1/4 in. Standard Phone Male to 3.5mm Mini Female Adapter	309	113	1
+1273955	ElCheapo	BNC Plug to UHF Jack	559	464	1
+1273956	Duff	BNC Plug to UHF Jack	559	534	1
+1273957	Duff	BNC Jack to UHF Plug	579	320	1
+1273958	ACME	BNC Jack to UHF Plug	619	385	1
+1273959	Bigdeal	Phono Plug to BNC Jack	609	321	1
+1273960	Ultramegaco	Phono Plug to BNC Jack	599	315	1
+1273961	DevNull	Phono Plug to UHF Jack	549	404	1
+1273962	ACME	Phono Plug to UHF Jack	619	300	1
+1273963	Tyrell	Phono Plug to UHF Jack	659	409	1
+1273964	Duff	Phono Plug to UHF Jack	649	488	1
+1273965	DevNull	Phono Plug to F Jack	599	222	1
+1273966	DevNull	Phono Plug to F Jack	629	597	1
+1273967	Tyrell	Phono Plug to F Jack	609	354	1
+1273968	XYZ	F Jack Male-to-Male Cable (6 in.)	619	548	1
+1273969	Dualcore	F Jack Male-to-Male Cable (6 in.)	649	441	1
+1273970	Megachango	F Jack Male-to-Male Cable (12 in.)	939	835	1
+1273971	Tyrell	F Jack Male-to-Male Cable (12 in.)	969	378	1
+1273972	Tyrell	F Jack Male-to-Male Cable (12 in.)	819	637	1
+1273973	Orion	F Jack Male-to-Male Cable (12 in.)	959	793	1
+1273974	Chestnut	F Jack Male-to-Male Cable (18 in.)	1369	901	1
+1273975	ACME	F Jack Male-to-Male Cable (18 in.)	1199	438	1
+1273976	TPS	F Jack Male-to-Male Cable (18 in.)	1229	1201	1
+1273977	Tyrell	F Jack Male-to-Male Cable (24 in.)	1519	650	1
+1273978	XYZ	F Jack Male-to-Male Cable (24 in.)	1519	927	1
+1273979	Ultramegaco	F Jack Male-to-Male Cable (36 in.)	1949	1027	2
+1273980	Megachango	F Jack Male-to-Male Cable (36 in.)	1749	793	2
+1273981	DevNull	F Jack Male-to-Male Cable (36 in.)	1909	1878	2
+1273982	Duff	F Jack Male-to-Male Cable (36 in.)	1819	1669	2
+1273983	Chestnut	F Jack Male-to-Male Cable (36 in.)	2019	1092	2
+1273984	Ultramegaco	F Jack Male-to-Male Cable (36 in.)	1909	1643	2
+1273985	Tyrell	F Jack Male-to-Male Cable (60 in.)	2489	1461	2
+1273986	ElCheapo	F Jack Male-to-Male Cable (60 in.)	2779	2562	2
+1273987	Ultramegaco	F Jack Male-to-Male Cable (60 in.)	2629	1153	2
+1273988	Megachango	F Jack Male-to-Male Cable (60 in.)	2519	866	2
+1273989	DevNull	F Jack Male-to-Male Cable (72 in.)	2849	1425	3
+1273990	Chestnut	Phono Jack to BNC Plug	539	406	1
+1273991	Tyrell	Phono Jack to BNC Plug	529	440	1
+1273992	McDowell	Phono Jack to UHF Plug	649	417	1
+1273993	DevNull	Phono Jack to UHF Plug	599	275	1
+1273994	Gigabux	Phono Jack to UHF Plug	619	316	1
+1273995	Duff	Phono Jack to F Plug	459	235	1
+1273996	Gigabux	Phono Jack to F Plug	509	470	1
+1273997	McDowell	Phono Jack to F Plug	469	459	1
+1273998	TPS	BNC Jack to Angled Plug	659	470	1
+1273999	Orion	BNC Jack to Angled Plug	759	303	1
+1274000	McDowell	S-Video Female-to-Female Cable (12 in.)	729	329	1
+1274001	DevNull	S-Video Female-to-Female Cable (12 in.)	849	342	1
+1274002	McDowell	S-Video Female-to-Female Cable (24 in.)	1449	1392	1
+1274003	Megachango	S-Video Female-to-Female Cable (24 in.)	1619	1332	1
+1274004	Chestnut	S-Video Female-to-Female Cable (24 in.)	1549	564	1
+1274005	Chestnut	S-Video Female-to-Female Cable (24 in.)	1439	980	1
+1274006	Duff	S-Video Female-to-Female Cable (24 in.)	1559	1339	1
+1274007	McDowell	S-Video Female-to-Female Cable (36 in.)	1739	1325	2
+1274008	Tyrell	8GB DDR3-1333 (PC3-10600) Desktop Memory Kit (2x4GB)	49	29	2
+1274009	Tyrell	8GB DDR3-1333 (PC3-10600) Desktop Memory Kit (2x4GB)	59	42	2
+1274010	Bigdeal	8GB DDR3-1333 (PC3-10600) Desktop Memory Kit (2x4GB)	59	28	2
+1274011	DevNull	8GB DDR3-1333 (PC3-10600) Desktop Memory Kit (2x4GB)	59	54	2
+1274012	XYZ	8GB DDR3-1333 (PC3-10600) Desktop Memory Kit (2x4GB)	59	55	2
+1274013	Chestnut	8GB DDR3-1333 (PC3-10600) Desktop Memory Kit (2x4GB)	49	38	2
+1274014	Tyrell	16GB DDR3-1600 (PC3-12800) Dual Channel Desktop Memory Kit (2x8GB)	149	102	2
+1274015	TPS	16GB DDR3-1600 (PC3-12800) Dual Channel Desktop Memory Kit (2x8GB)	159	55	2
+1274016	McDowell	16GB DDR3-1600 (PC3-12800) Dual Channel Desktop Memory Kit (2x8GB)	169	145	2
+1274017	Orion	16GB DDR3-1600 (PC3-12800) Dual Channel Desktop Memory Kit (2x8GB)	169	103	2
+1274018	Ultramegaco	16GB DDR3-1600 (PC3-12800) Dual Channel Desktop Memory Kit (2x8GB)	159	82	2
+1274019	Ultramegaco	8GB DDR3-1600 (PC3-12800) Dual Channel Desktop Memory Kit (2x4GB)	119	108	2
+1274020	TPS	8GB DDR3-1600 (PC3-12800) Dual Channel Desktop Memory Kit (2x4GB)	129	70	2
+1274021	Dualcore	8GB DDR3-1600 (PC3-12800) Dual Channel Desktop Memory Kit (2x4GB)	119	119	2
+1274022	Megachango	8GB DDR3-1600 (PC3-12800) Dual Channel Desktop Memory Kit (2x4GB)	119	69	2
+1274023	TPS	4GB DDR3-1333 (PC3-10600) Desktop Memory Kit (2x2GB)	29	23	2
+1274024	Megachango	4GB DDR3-1333 (PC3-10600) Desktop Memory Kit (2x2GB)	39	31	2
+1274025	TPS	4GB DDR3-1333 (PC3-10600) Desktop Memory Kit (2x2GB)	29	12	2
+1274026	TPS	4GB DDR3-1333 (PC3-10600) Desktop Memory Kit (2x2GB)	29	23	2
+1274027	DevNull	4GB DDR3-1333 (PC3-10600) Desktop Memory Kit (2x2GB)	39	17	2
+1274028	Ultramegaco	1GB DDR2-667 (PC2-5300) Desktop Memory Kit (2x512MB)	29	24	2
+1274029	TPS	1GB DDR2-667 (PC2-5300) Desktop Memory Kit (2x512MB)	19	17	2
+1274030	Megachango	1GB DDR2-667 (PC2-5300) Desktop Memory Kit (2x512MB)	29	19	2
+1274031	Duff	1GB DDR2-667 (PC2-5300) Desktop Memory Kit (2x512MB)	19	7	2
+1274032	Dualcore	Basic Headphone	2049	1769	2
+1274033	Lemmon	Basic Headphone	1939	1805	2
+1274034	Dorx	Basic Headphone	2029	1790	2
+1274035	Dualcore	Sports Headphone	3039	2378	2
+1274036	Dualcore	Sports Headphone	3139	2680	2
+1274037	ElCheapo	Gamer Headphone	7669	6031	3
+1274038	Lemmon	Gamer Headphone	7789	7348	3
+1274039	Lemmon	Gamer Headphone	8109	6685	3
+1274040	Wernham	Stereo PC Headset	4199	3347	2
+1274041	ElCheapo	Stereo PC Headset	3839	2425	2
+1274042	Chatter Audio	Multimedia Headset	5739	5576	3
+1274043	Terrapin Sands	Multimedia Headset	5519	3559	3
+1274044	Dualcore	Multimedia Headset	5609	4962	3
+1274045	Chatter Audio	Multimedia Headset	5529	3520	3
+1274046	Wernham	Multi-Performance PC Headset	5179	3618	4
+1274047	Dualcore	Multi-Performance PC Headset	5129	4775	4
+1274048	Lemmon	DSP PC Headset	5119	5008	3
+1274049	Dorx	Stereo USB Headset	2829	1933	3
+1274050	Terrapin Sands	Stereo USB Headset	2719	2447	3
+1274051	ElCheapo	Stereo USB Headset	2709	1923	3
+1274052	Weisenheimer	Portable transistor radio (AM-only)	2069	1406	5
+1274053	Dualcore	Portable transistor radio (AM/FM)	3019	2973	5
+1274054	Terrapin Sands	Portable transistor radio (AM/FM)	2929	2441	5
+1274055	Lemmon	Portable transistor radio (AM/FM)	2909	2063	5
+1274056	Chatter Audio	Portable CD Player	4099	3776	5
+1274057	Terrapin Sands	Portable CD Player	4159	2987	5
+1274058	Dualcore	Portable CD Player	3819	2565	5
+1274059	Dorx	Portable CD Player	4079	3957	5
+1274060	Lemmon	Stereo Component CD Player	20229	17425	9
+1274061	Chatter Audio	Stereo Component CD Player	19869	19868	9
+1274062	Weisenheimer	Stereo Component CD Player	19179	15443	9
+1274063	ElCheapo	Stereo Component Turntable	29759	25344	12
+1274064	Dualcore	Stereo Component Turntable	29419	23024	12
+1274065	Wernham	Stereo Component Cassette Player	10229	7067	9
+1274066	Dualcore	Stereo Component 8-Track Player	6919	6292	11
+1274067	Wernham	Stereo Component Streaming Media Player	18759	18000	7
+1274068	Weisenheimer	Stereo Component Streaming Media Player	17969	16013	7
+1274069	Dualcore	Portable Cassette Player	3069	2448	3
+1274070	Dualcore	Portable Cassette Player	2999	2485	3
+1274071	ElCheapo	MP3 Player (4 GB internal memory)	8299	7448	2
+1274072	Dualcore	MP3 Player (4 GB internal memory)	7699	7591	2
+1274073	Weisenheimer	MP3 Player (4 GB internal memory)	8039	7718	2
+1274074	Terrapin Sands	MP3 Player (8 GB internal memory)	9739	7825	2
+1274075	Terrapin Sands	MP3 Player (8 GB internal memory)	10169	7109	2
+1274076	Terrapin Sands	MP3 Player (8 GB internal memory)	10349	7203	2
+1274077	Dualcore	MP3 Player (8 GB internal memory)	9669	6264	2
+1274078	Terrapin Sands	MP3 Player (16 GB internal memory)	12539	8716	2
+1274079	Chatter Audio	MP3 Player (16 GB internal memory)	12619	9587	2
+1274080	Dorx	MP3 Player (16 GB internal memory)	12819	12812	2
+1274081	ElCheapo	MP3 Player (16 GB internal memory)	12369	11733	2
+1274082	ElCheapo	MP3 Player (16 GB internal memory)	13099	9423	2
+1274083	Dualcore	MP3 Player (16 GB internal memory)	13119	11998	2
+1274084	Weisenheimer	MP3 Player (16 GB internal memory)	12859	12743	2
+1274085	Lemmon	MP3 Player (16 GB internal memory)	12899	11468	2
+1274086	Weisenheimer	MP3 Player (16 GB internal memory)	13429	12676	2
+1274087	Lemmon	MP3 Player (16 GB internal memory)	13619	9470	2
+1274088	Chatter Audio	MP3 Player (16 GB internal memory)	12609	9884	2
+1274089	ElCheapo	MP3 Player (32 GB internal memory)	17669	11206	2
+1274090	Chatter Audio	MP3 Player (32 GB internal memory)	18669	14370	2
+1274091	Chatter Audio	MP3 Player (32 GB internal memory)	17999	15463	2
+1274092	Lemmon	MP3 Player (64 GB internal memory)	26469	26403	2
+1274093	Wernham	MP3 Player (64 GB internal memory)	26819	23625	2
+1274094	Weisenheimer	Subwoofer (15 in.)	19059	12160	41
+1274095	Lemmon	Subwoofer (12 in.)	16509	10481	35
+1274096	Weisenheimer	Subwoofer (12 in.)	16469	10787	35
+1274097	Terrapin Sands	Subwoofer (12 in.)	17269	17053	35
+1274098	ElCheapo	All-weather Speakers	28169	20100	9
+1274099	Weisenheimer	Amplified Multimedia Speakers	8799	8412	5
+1274100	ElCheapo	Amplified Multimedia Speakers	9039	6988	5
+1274101	Terrapin Sands	Amplified Multimedia Speakers	8559	7530	5
+1274102	Terrapin Sands	Amplified Multimedia Speakers	8839	7245	5
+1274103	ElCheapo	High-range Premium Speakers	45639	41588	11
+1274104	Dorx	High-range Premium Speakers	46699	39953	11
+1274105	Chatter Audio	Microphone (model U47)	18439	17515	5
+1274106	Weisenheimer	Wireless Microphone	12839	12829	3
+1274107	Wernham	Wireless Microphone	13189	10892	3
+1274108	Terrapin Sands	Wireless Microphone	13179	12369	3
+1274109	Dorx	Digital Recorder (pocket size)	8899	6532	2
+1274110	Lemmon	Digital Recorder (pocket size)	8749	7655	2
+1274111	ElCheapo	Digital Camera (Basic)	12649	9655	4
+1274112	Wernham	Digital Camera (Basic)	13049	11205	4
+1274113	ElCheapo	Digital Camera (Basic)	13049	10029	4
+1274114	McDowell	Digital Camera (Pro-Am)	20119	14537	5
+1274115	Artie	Digital Camera (Pro-Am)	20759	16765	5
+1274116	ARCAM	Digital Camera (Professional)	38769	28983	7
+1274117	Argo	Camcorder (VHS)	29439	21491	8
+1274118	ARCAM	Camcorder (VHS)	30999	25802	8
+1274119	McDowell	Camcorder (Betamax)	31749	27616	9
+1274120	Artie	Camcorder (Betamax)	31219	26177	9
+1274121	Artie	Camcorder (Digital)	41939	41007	6
+1274122	Wernham	Camcorder (Digital)	43309	36426	6
+1274123	Overtop	5.25" Drive Bay Adapter	1309	1194	1
+1274124	Sparky	5.25" Drive Bay Adapter	1309	1297	1
+1274125	Ultramegaco	5.25" Drive Bay Adapter	1299	1148	1
+1274126	Ultramegaco	3.5" Drive Bay Adapter	1529	1332	1
+1274127	Overtop	3.5" Drive Bay Adapter	1509	1374	1
+1274128	BuckLogix	3.5" Drive Bay Adapter	1509	1493	1
+1274129	XYZ	6-Pin Video Card Extension 12 inch	809	757	1
+1274130	Overtop	6-Pin Video Card Extension 12 inch	789	769	1
+1274131	BDT	ATX 24-Pin Extension 12 inch	389	356	1
+1274132	TPS	ATX 24-Pin Extension 12 inch	379	352	1
+1274133	Overtop	Fan Adapter Cable - 10 inch	309	305	1
+1274134	Orion	Fan Adapter Cable - 10 inch	299	296	1
+1274135	XYZ	Fan Adapter Cable - 16 inch	399	371	1
+1274136	ElCheapo	Fan Adapter Cable - 16 inch	409	409	1
+1274137	TPS	Fan Adapter Cable - 16 inch	399	373	1
+1274138	Sparky	Fan Adapter Cable - 16 inch	409	373	1
+1274139	BuckLogix	Fan Adapter Cable - 22 inch	499	472	2
+1274140	Sparky	Fan Adapter Cable - 22 inch	509	468	2
+1274141	Electrosaurus	Fan Adapter Cable - 22 inch	509	505	2
+1274142	ACME	Molex to SATA Power Adapter	579	542	1
+1274143	Overtop	Molex to SATA Power Adapter	579	531	1
+1274144	ElCheapo	USB 3.0 Card Reader	829	749	1
+1274145	XYZ	USB 3.0 Card Reader	839	741	1
+1274146	United Digistuff	USB 3.0 Card Reader	829	765	1
+1274147	BDT	USB 3.0 Front Panel - 2 Port	1279	1160	1
+1274148	Dualcore	USB 3.0 Front Panel - 2 Port	1289	1142	1
+1274149	Overtop	USB 3.0 Front Panel - 4 Port	1509	1394	1
+1274150	ACME	USB 3.0 Front Panel - 4 Port	1519	1429	1
+1274151	Overtop	USB 3.0 Front Panel - 4 Port	1529	1527	1
+1274152	ACME	USB 3.0 Front Panel - 4 Port	1479	1308	1
+1274153	ElCheapo	USB 3.0 Front Panel - 4 Port	1489	1437	1
+1274154	ACME	2.5" External USB 3.0 HDD Case	1309	1299	2
+1274155	Electrosaurus	2.5" External USB 3.0 HDD Case	1289	1268	2
+1274156	ElCheapo	2.5" External USB 3.0 HDD Case	1309	1210	2
+1274157	Orion	Air Filter (Washable, 120mm) 	609	576	1
+1274158	XYZ	Air Filter (Washable, 120mm) 	609	607	1
+1274159	Orion	Air Filter (Washable, 120mm) 	599	567	1
+1274160	Megachango	Air Filter (Washable, 120mm) 	609	604	1
+1274161	XYZ	Air Filter (Washable, 120mm) 	609	552	1
+1274162	Orion	Air Filter (Washable, 120mm) 	609	539	1
+1274163	XYZ	Air Filter (Washable, 120mm) 	609	601	1
+1274164	Electrosaurus	Hard Disk Anti-Vibration Screws	409	384	1
+1274165	Dualcore	Hard Disk Anti-Vibration Screws	409	372	1
+1274166	Overtop	Hard Disk Anti-Vibration Screws	399	373	1
+1274167	ElCheapo	HDD Bracket	809	713	2
+1274168	Overtop	HDD Bracket	809	806	2
+1274169	XYZ	DVD Burner (OEM)	2009	1991	2
+1274170	TPS	22X DVD RW SATA Drive	3929	3697	3
+1274171	Orion	22X DVD RW SATA Drive	3909	3801	3
+1274172	TPS	22X DVD RW SATA Drive	3969	3763	3
+1274173	Ultramegaco	Black 8X BD-ROM 16X DVD-ROM	8059	7025	2
+1274174	Dualcore	Black 8X BD-ROM 16X DVD-ROM	7909	7054	2
+1274175	Megachango	Beige 8X BD-ROM 16X DVD-ROM	8059	7022	2
+1274176	Megachango	Beige 8X BD-ROM 16X DVD-ROM	8109	7129	2
+1274177	United Digistuff	Black 16X DVD-ROM	2509	2290	3
+1274178	TPS	Black 16X DVD-ROM	2529	2281	3
+1274179	Sparky	Beige 16X DVD-ROM	2509	2422	3
+1274180	Megachango	Beige 16X DVD-ROM	2499	2421	3
+1274181	Dualcore	Black 16X DVD-RW	3519	3491	3
+1274182	Dualcore	Black 16X DVD-RW	3529	3294	3
+1274183	Electrosaurus	Beige 16X DVD-RW	3449	3119	3
+1274184	BuckLogix	Beige 16X DVD-RW	3529	3479	3
+1274185	Ultramegaco	ATX Computer Case	6039	5697	12
+1274186	ACME	ATX Computer Case	6049	5861	12
+1274187	ElCheapo	ATX Computer Case	5929	5403	12
+1274188	ElCheapo	ATX Computer Case	6039	5426	12
+1274189	Megachango	ATX Computer Case	6009	5826	12
+1274190	United Digistuff	ATX Computer Case	6049	5703	12
+1274191	Orion	ATX Computer Case	5909	5491	12
+1274192	Electrosaurus	ATX Computer Case	6099	6052	12
+1274193	ElCheapo	AT Computer Case	7919	7423	14
+1274194	BuckLogix	AT Computer Case	8119	7246	14
+1274195	BuckLogix	ITX Computer Case	4059	3727	10
+1274196	United Digistuff	ITX Computer Case	3949	3517	10
+1274197	Overtop	A3000 Gaming Cabinet	9869	9209	15
+1274198	XYZ	Mid Tower Computer Case	7879	7630	11
+1274199	SuperGamer	Mid Tower Computer Case	8029	7147	11
+1274200	BuckLogix	Mid Tower Computer Case	7949	6987	11
+1274201	BDT	Mid Tower Computer Case	8009	7001	11
+1274202	BuckLogix	Mid Tower Computer Case	7899	7210	11
+1274203	Orion	Mid Tower Computer Case	7959	7459	11
+1274204	Electrosaurus	Full Tower Computer Case	13089	12575	13
+1274205	Megachango	Full Tower Computer Case	12829	12498	13
+1274206	Electrosaurus	Full Tower Computer Case	13039	12053	13
+1274207	Ultramegaco	Full Tower Computer Case	12879	12236	13
+1274208	XYZ	Full Tower Computer Case	12849	12575	13
+1274209	BuckLogix	XTREME Motherboard	17789	16451	3
+1274210	Sparky	PERTURB Motherboard	16239	15969	3
+1274211	Sparky	DISGRUNT Motherboard	12939	12853	2
+1274212	SuperGamer	3.0GHz CPU	12899	12121	2
+1274213	Electrosaurus	3.0GHz CPU	13129	12480	2
+1274214	Sparky	3.2GHz CPU	16239	14279	2
+1274215	ACME	3.2GHz CPU	15739	14668	2
+1274216	Dualcore	3.2GHz CPU	16229	14723	2
+1274217	United Digistuff	3.4GHz CPU	17919	17545	2
+1274218	TPS	3.4GHz CPU	17769	16699	2
+1274219	Dualcore	3.4GHz CPU	18059	17869	2
+1274220	Electrosaurus	3.6GHz CPU	22049	21314	2
+1274221	ElCheapo	3.6GHz CPU	22199	19722	2
+1274222	Overtop	3.6GHz CPU	22289	21377	2
+1274223	ElCheapo	3.8GHz CPU	28319	27988	2
+1274224	Orion	3.8GHz CPU	28079	26746	2
+1274225	ACME	3.8GHz CPU	27829	27702	2
+1274226	XYZ	Power Supply (500W)	2529	2276	5
+1274227	Megachango	Power Supply (500W)	2529	2344	5
+1274228	TPS	Power Supply (500W)	2499	2242	5
+1274229	BDT	Power Supply (500W)	2509	2197	5
+1274230	Electrosaurus	Power Supply (600W)	2799	2599	5
+1274231	TPS	Power Supply (600W)	2779	2689	5
+1274232	Sparky	Power Supply (600W)	2819	2580	5
+1274233	XYZ	Power Supply (700W)	2969	2792	6
+1274234	United Digistuff	Power Supply (700W)	2969	2729	6
+1274235	BuckLogix	Power Supply (700W)	2989	2868	6
+1274236	Electrosaurus	Fireware 400 Card (PCI)	4969	4470	2
+1274237	BDT	Fireware 400 Card (PCI)	5019	4519	2
+1274238	Sparky	Fireware 800 Card (PCI)	7089	6699	2
+1274239	ACME	Fireware 800 Card (PCI)	6929	6097	2
+1274240	Ultramegaco	Fireware 800 Card (PCI)	7089	6283	2
+1274241	BDT	Fireware 800 Card (PCI)	6999	6315	2
+1274242	United Digistuff	SCSI Expansion Card (PCI)	7939	6983	2
+1274243	ElCheapo	SCSI Expansion Card (PCI)	7909	7565	2
+1274244	United Digistuff	SCSI Expansion Card (PCI)	7889	7643	2
+1274245	Electrosaurus	TV Tuner Card (PCI)	4949	4773	1
+1274246	Dualcore	TV Tuner Card (PCI)	4999	4767	1
+1274247	TPS	TV Tuner Card w/HDMI Output (PCI)	10149	9838	1
+1274248	ElCheapo	TV Tuner Card w/HDMI Output (PCI)	10159	9223	1
+1274249	XYZ	TV Tuner Card w/HDMI Output (PCI)	10089	9329	1
+1274250	United Digistuff	16MB VESA Graphics Card	1969	1835	1
+1274251	Electrosaurus	16MB VESA Graphics Card	1979	1856	1
+1274252	ACME	64MB PCI Graphics Card	2989	2922	1
+1274253	Orion	64MB PCI Graphics Card	2999	2638	1
+1274254	XYZ	64MB PCI Graphics Card	3019	2997	1
+1274255	Sparky	128MB AGP Graphics Card	5939	5560	1
+1274256	Electrosaurus	128MB AGP Graphics Card	5829	5135	1
+1274257	ElCheapo	128MB AGP Graphics Card	5819	5139	1
+1274258	Electrosaurus	512MB PCI-X Graphics Card (OEM)	7919	7910	2
+1274259	Ultramegaco	512MB PCI-X Graphics Card (OEM)	7959	7040	2
+1274260	BuckLogix	512MB PCI-X Graphics Card (OEM)	7819	7372	2
+1274261	Megachango	512MB PCI-X Graphics Card (OEM)	7929	7841	2
+1274262	ElCheapo	512MB PCI-X Graphics Card (OEM)	7979	7332	2
+1274263	BuckLogix	512MB PCI-X Graphics Card (OEM)	7919	7710	2
+1274264	Sparky	512MB PCI-X Graphics Card (OEM)	7869	7195	2
+1274265	Electrosaurus	1024MB PCI-X Graphics Card with HDMI output (OEM)	9919	9833	2
+1274266	Sparky	1024MB PCI-X Graphics Card with HDMI output (OEM)	9959	9641	2
+1274267	XYZ	1024MB PCI-X Graphics Card with HDMI output (OEM)	10009	9100	2
+1274268	Electrosaurus	1024MB PCI-X Graphics Card with HDMI output (OEM)	9939	9181	2
+1274269	Ultramegaco	1024MB PCI-X Graphics Card with HDMI output (OEM)	9939	8765	2
+1274270	TPS	1024MB PCI-X Graphics Card with HDMI output (OEM)	9829	9027	2
+1274271	Sparky	1024MB PCI-X Graphics Card with HDMI output (OEM)	9769	8956	2
+1274272	XYZ	2GB Super Gamer Graphics Card	18899	16697	3
+1274273	SuperGamer	2GB Super Gamer Graphics Card	18949	17467	3
+1274274	TPS	2x2GB DDR3 1600MHz Desktop RAM	20669	20279	2
+1274275	XYZ	2x2GB DDR3 1600MHz Desktop RAM	20789	19241	2
+1274276	ACME	2x2GB DDR3 1600MHz Desktop RAM	20969	18295	2
+1274277	XYZ	2x2GB DDR3 1600MHz Desktop RAM	21029	20680	2
+1274278	Ultramegaco	2x2GB DDR3 1600MHz Desktop RAM	21179	19318	2
+1274279	ACME	4x2GB DDR3 1333MHz Triple Channel Desktop RAM	37929	35857	2
+1274280	BDT	4x2GB DDR3 1333MHz Triple Channel Desktop RAM	38609	36627	2
+1274281	ElCheapo	2x1GB Value DDR2 - 667 RAM	13169	12977	2
+1274282	Ultramegaco	2x1GB Value DDR2 - 667 RAM	13079	12847	2
+1274283	BuckLogix	1GB DDR 400 Desktop RAM	8109	7602	1
+1274284	Sparky	1GB DDR 400 Desktop RAM	7939	7110	1
+1274285	TPS	1GB DDR 400 Desktop RAM	8099	7846	1
+1274286	TPS	1GB DDR2 667 Laptop RAM	9909	8700	1
+1274287	Overtop	1GB DDR2 667 Laptop RAM	10009	9191	1
+1274288	SuperGamer	1GB DDR2 667 Laptop RAM	10019	8943	1
+1274289	SuperGamer	1GB DDR2 800 Desktop RAM	13199	11686	1
+1274290	BDT	1GB DDR2 800 Desktop RAM	13169	11676	1
+1274291	BuckLogix	2GB DDR2 667 RAM	15029	14475	1
+1274292	Megachango	2GB DDR2 667 RAM	15239	14474	1
+1274293	Sparky	2GB DDR2 800MHz Laptop RAM	18989	17462	1
+1274294	Orion	Professional DDR3 Motherboard	18189	17830	5
+1274295	Megachango	Professional DDR3 Motherboard	17939	15648	5
+1274296	ACME	Professional DDR3 Motherboard	17759	16678	5
+1274297	XYZ	Desktop Motherboard	8029	7388	2
+1274298	Overtop	Desktop Motherboard	7929	7253	2
+1274299	TPS	Server Motherboard	26919	24837	6
+1274300	Orion	Server Motherboard	27319	25924	6
+1274301	BDT	Soundcard (Basic)	1299	1296	2
+1274302	United Digistuff	Soundcard (Basic)	1319	1218	2
+1274303	United Digistuff	Soundcard (Basic)	1289	1202	2
+1274304	ACME	Soundcard (Premium Multimedia)	8889	7735	2
+1274305	Electrosaurus	Soundcard (Premium Multimedia)	8979	7995	2
+1274306	United Digistuff	Server (2U rackmount, eight-core, 64GB, 12TB)	597049	533263	121
+1274307	Krustybitz	Server (2U rackmount, eight-core, 64GB, 12TB)	599319	542497	121
+1274308	Gigabux	Server (2U rackmount, eight-core, 64GB, 12TB)	614559	556183	121
+1274309	Yoyodyne	Server (1U rackmount, quad-core, 4GB, 2TB)	299969	279724	111
+1274310	Electrosaurus	Server (1U rackmount, quad-core, 4GB, 2TB)	295269	255067	111
+1274311	Yoyodyne	Server (1U rackmount, quad-core, 4GB, 2TB)	300969	292904	111
+1274312	Krustybitz	Server (1U rackmount, hex-core, 8GB, 4TB)	409949	392967	88
+1274313	Olde-Gray	Server (1U rackmount, hex-core, 8GB, 4TB)	393989	322686	88
+1274314	Lemmon	Server (1U rackmount, hex-core, 8GB, 4TB)	397159	363389	88
+1274315	Sparky	Server (1U rackmount, hex-core, 16GB, 8TB)	470019	378842	79
+1274316	Dualcore	Server (1U rackmount, hex-core, 16GB, 8TB)	448239	389307	79
+1274317	Krustybitz	Server (1U rackmount, hex-core, 16GB, 8TB)	459179	434635	79
+1274318	BuckLogix	Server (1U rackmount, hex-core, 32GB, 8TB)	483989	437453	82
+1274319	BuckLogix	Server (1U rackmount, hex-core, 32GB, 8TB)	478489	389929	82
+1274320	Sparky	Server (1U rackmount, hex-core, 32GB, 8TB)	478459	417093	82
+1274321	Byteweasel	Hadoop Cluster, Economy (4-node)	975149	952934	570
+1274322	Olde-Gray	Home Media Server	62469	59514	19
+1274323	Dualcore	Home Media Server	62139	61255	19
+1274324	Krustybitz	Basic Desktop	61989	61174	18
+1274325	Dualcore	Basic Desktop	63409	62230	18
+1274326	Olde-Gray	Basic Desktop	63639	53193	18
+1274327	Yoyodyne	Professional Series Desktop	91889	88609	22
+1274328	Dualcore	Professional Series Desktop	90989	89208	22
+1274329	Homertech	Professional Series Desktop	88319	71033	22
+1274330	Olde-Gray	Premium Gamer Desktop	129219	127994	28
+1274331	Dualcore	Premium Gamer Desktop	131539	113953	28
+1274332	Sparky	All-in-one Desktop (21 in. display)	173989	144618	34
+1274333	Electrosaurus	All-in-one Desktop (21 in. display)	173069	160162	34
+1274334	Bitmonkey	All-in-one Desktop (24 in. display)	194389	191913	39
+1274335	Bitmonkey	All-in-one Desktop (24 in. display)	188579	157743	39
+1274336	Bitmonkey	Basic Desktop	43459	39281	14
+1274337	Yoyodyne	Basic Desktop	44119	35772	14
+1274338	Orion	Basic Desktop	43929	37232	14
+1274339	Krustybitz	Professional Series Notebook	71159	66223	11
+1274340	SuperGamer	Professional Series Notebook	70069	69664	11
+1274341	Orion	Professional Series Notebook	68829	62360	11
+1274342	Lemmon	Premium Gamer Notebook	91819	86729	13
+1274343	SuperGamer	Premium Gamer Notebook	87729	74141	13
+1274344	Byteweasel	Ultra-portable Notebook	79099	75743	7
+1274345	Orion	Ultra-portable Notebook	81959	79543	7
+1274346	Olde-Gray	Economy Netbook	30639	29855	6
+1274347	Homertech	Economy Netbook	29249	28309	6
+1274348	Byteweasel	Tablet PC (10 in. display, 64 GB)	37999	38103	4
+1274349	United Digistuff	Tablet PC (10 in. display, 64 GB)	49579	39743	4
+1274350	Orion	Tablet PC (10 in. display, 64 GB)	49069	40923	4
+1274351	Orion	Tablet PC (10 in. display, 32 GB)	43869	42781	4
+1274352	Orion	Tablet PC (10 in. display, 32 GB)	41969	38475	4
+1274353	Orion	Tablet PC (10 in. display, 32 GB)	42869	40620	4
+1274354	Byteweasel	Tablet PC (10 in. display, 16 GB)	38949	38672	4
+1274355	Orion	Tablet PC (10 in. display, 16 GB)	37449	35527	4
+1274356	Orion	Tablet PC (10 in. display, 16 GB, WiFi-only)	35889	29524	4
+1274357	Homertech	Tablet PC (7 in. display, 32 GB)	40989	39316	3
+1274358	Orion	Tablet PC (7 in. display, 32 GB)	42939	38437	3
+1274359	United Digistuff	Tablet PC (7 in. display, 16 GB, WiFi-only)	32589	30510	3
+1274360	Olde-Gray	Tablet PC (7 in. display, 16 GB, WiFi-only)	32589	27615	3
+1274361	Homertech	Tablet PC (7 in. display, 16 GB)	35219	30957	3
+1274362	Electrosaurus	Tablet PC (7 in. display, 16 GB)	35019	30769	3
+1274363	BuckLogix	Tablet PC (7 in. display, 8 GB)	31439	26138	3
+1274364	Sparky	Tablet PC (7 in. display, 8 GB, WiFI-only)	30359	27213	3
+1274365	Sprite	19" Wide Screen LCD Monitor	13389	10492	21
+1274366	Ultramegaco	19" Wide Screen LCD Monitor	13359	12511	21
+1274367	Olde-Gray	20" Wide Screen LCD Monitor	14909	10635	22
+1274368	Lemmon	20" Wide Screen LCD Monitor	15119	14510	22
+1274369	ElCheapo	20" Wide Screen LCD Monitor	15559	12160	22
+1274370	Wernham	22" Wide Screen LCD Monitor	17829	14284	24
+1274371	ACME	22" Wide Screen LCD Monitor	17989	17552	24
+1274372	Sprite	22" Wide Screen LCD Monitor	18039	13234	24
+1274373	Argo	22" Wide Screen LCD Monitor	17719	17482	24
+1274374	Argo	22" Wide Screen LCD Monitor	17769	17666	24
+1274375	ElCheapo	24" Wide Screen LCD Monitor	23639	17968	25
+1274376	Ultramegaco	24" Wide Screen LCD Monitor	22909	19777	25
+1274377	Wernham	24" Wide Screen LCD Monitor	22169	20576	25
+1274378	Olde-Gray	24" Wide Screen LCD Monitor	22579	21198	25
+1274379	ElCheapo	24" Wide Screen LCD Monitor	23539	19184	25
+1274380	Dualcore	24" Wide Screen LCD Monitor	22719	17318	25
+1274381	Wernham	24" Wide Screen LCD Monitor	23809	18760	25
+1274382	Wernham	27" Wide Screen LCD Monitor	36139	29468	29
+1274383	Lemmon	27" Wide Screen LCD Monitor	36159	31177	29
+1274384	ElCheapo	27" Wide Screen LCD Monitor	37739	31379	29
+1274385	Wernham	27" Wide Screen LCD Monitor	36119	31583	29
+1274386	Wernham	30" Wide Screen LCD Monitor	49419	43872	35
+1274387	Olde-Gray	30" Wide Screen LCD Monitor	50349	39288	35
+1274388	ElCheapo	30" Wide Screen LCD Monitor	49949	37119	35
+1274389	ACME	24" Ultra-Premium LCD Monitor	46939	39453	27
+1274390	Olde-Gray	24" Ultra-Premium LCD Monitor	46479	33479	27
+1274391	Ultramegaco	21" LED Backlit Monitor	24859	19146	23
+1274392	Sprite	24" LED Backlit Monitor	29619	22503	25
+1274393	Olde-Gray	24" LED Backlit Monitor	29579	21554	25
+1274394	Olde-Gray	40" Large-Format LCD Display	86159	80220	51
+1274395	Olde-Gray	40" Large-Format LCD Display	85219	68994	51
+1274396	Olde-Gray	40" Large-Format LCD Display	85979	74526	51
+1274397	Gigabux	24" Wide Screen TV	23899	14509	31
+1274398	Electrosaurus	24" Wide Screen TV	24139	20806	31
+1274399	Chestnut	27" Wide Screen TV	27589	17211	33
+1274400	Sprite	27" Wide Screen TV	25799	24587	33
+1274401	Artie	27" Wide Screen TV	27829	16054	33
+1274402	Wernham	32" Wide Screen TV	36059	31347	36
+1274403	Lemmon	32" Wide Screen TV	36069	34101	36
+1274404	Lemmon	32" Wide Screen TV	36909	29945	36
+1274405	Argo	32" Wide Screen TV	37739	35492	36
+1274406	Artie	32" Wide Screen TV	38019	22535	36
+1274407	Lemmon	36" Wide Screen TV	43129	38375	41
+1274408	Sprite	36" Wide Screen TV	45309	38017	41
+1274409	Tyrell	36" Wide Screen TV	47669	35793	41
+1274410	Weisenheimer	36" Wide Screen TV	42289	41202	41
+1274411	McDowell	36" Wide Screen TV	42859	32469	41
+1274412	ARCAM	42" Wide Screen TV	55559	48583	46
+1274413	Electrosaurus	42" Wide Screen TV	58279	39539	46
+1274414	Chestnut	42" Wide Screen TV	59789	42719	46
+1274415	McDowell	42" Wide Screen TV	58029	55306	46
+1274416	Lemmon	42" Wide Screen TV	55169	52343	46
+1274417	McDowell	42" Wide Screen TV	56919	45340	46
+1274418	McDowell	42" Wide Screen TV	55649	40255	46
+1274419	McDowell	48" Wide Screen TV	64909	41632	51
+1274420	Wolfpack	48" Wide Screen TV	72369	62586	51
+1274421	Electrosaurus	48" Wide Screen TV	68489	49386	51
+1274422	Wolfpack	48" Wide Screen TV	72699	42075	51
+1274423	Tyrell	48" Wide Screen TV	66759	51478	51
+1274424	Chestnut	48" Wide Screen TV	70939	64467	51
+1274425	Wernham	48" Wide Screen TV	66309	53563	51
+1274426	Gigabux	61" Wide Screen TV	122919	104101	76
+1274427	Whiteacre	61" Wide Screen TV	130799	118902	76
+1274428	Lemmon	61" Wide Screen TV	131149	122584	76
+1274429	Wernham	61" Wide Screen TV	128579	89674	76
+1274430	Tyrell	DVD Player	5909	3702	6
+1274431	Whiteacre	DVD Player	5899	4951	6
+1274432	Whiteacre	DVD Player	6369	5887	6
+1274433	Wernham	Blu-Ray Player	13299	7753	5
+1274434	Artie	Blu-Ray Player	13269	9564	5
+1274435	Chestnut	Blu-Ray Player	12529	9310	5
+1274436	Wernham	Video Cassette Recorder	12959	12314	14
+1274437	Lemmon	Video Cassette Recorder	13669	10906	14
+1274438	Sprite	Video Cassette Recorder (Betamax format)	12549	8170	13
+1274439	Whiteacre	Video Cassette Recorder (Betamax format)	12729	7156	13
+1274440	Wolfpack	LaserDisc Player	10639	6986	11
+1274441	Wolfpack	LaserDisc Player	10919	7979	11
+1274442	Sprite	Gaming Console	35649	21511	9
+1274443	McDowell	Gaming Console	36599	31904	9
+1274444	Weisenheimer	Gaming Console	35559	19702	9
+1274445	Sprite	Gaming Console (WiFi)	39699	28387	10
+1274446	ARCAM	Gaming Console (WiFi)	40599	36249	10
+1274447	Tyrell	Digital Video Recorder (500 GB)	30079	17319	10
+1274448	Lemmon	Digital Video Recorder (500 GB)	29089	25408	10
+1274449	Argo	Digital Video Recorder (750 GB)	32439	24949	11
+1274450	Wolfpack	Digital Video Recorder (750 GB)	35229	21442	11
+1274451	Lemmon	Digital Video Recorder (750 GB)	34449	30350	11
+1274452	Gigabux	Digital Video Recorder (1.0 TB)	38389	37073	11
+1274453	Wolfpack	Digital Video Recorder (1.0 TB)	39309	38699	11
+1274454	McDowell	Digital Video Recorder (1.0 TB)	39719	26697	11
+1274455	McDowell	Digital Video Recorder (1.0 TB)	38489	37402	11
+1274456	Whiteacre	Digital Video Recorder (1.5 TB)	48139	35702	11
+1274457	McDowell	Digital Video Recorder (1.5 TB)	47449	42185	11
+1274458	McDowell	Digital Video Recorder (1.5 TB)	47309	37034	11
+1274459	Chestnut	Digital Video Recorder (2.0 TB)	60519	35874	12
+1274460	Electrosaurus	3D Digital TV Glasses	7599	7062	2
+1274461	Wernham	3D Digital TV Glasses	8369	8141	2
+1274462	Whiteacre	3D Digital TV Glasses	8469	6547	2
+1274463	Bigdeal	Dual Band Wireless Range Extender	12559	11208	3
+1274464	Bigdeal	Dual Band Wireless Range Extender	13219	10808	3
+1274465	TPS	ADSL Modem + Wireless N Router	8989	7179	2
+1274466	Dualcore	ADSL Modem + Wireless N Router	9139	8195	2
+1274467	Duff	ADSL Modem + Wireless N Router	8969	8639	2
+1274468	TPS	ADSL2 Modem + Wireless G Router	10179	8628	2
+1274469	Texi	ADSL2 Modem + Wireless G Router	10059	9373	2
+1274470	TPS	Basic Wireless Modem Router	6869	6028	2
+1274471	Homertech	Basic Wireless Modem Router	7109	6413	2
+1274472	Wolfpack	Wireless N Modem Router	10309	9062	2
+1274473	Dualcore	Wireless N Modem Router	9869	8785	2
+1274474	Wolfpack	Wireless N Modem Router	9839	9267	2
+1274475	Dualcore	Wireless G Router	8249	7910	2
+1274476	Dualcore	Wireless G Router	8249	7899	2
+1274477	Texi	Wireless G USB Adapter	5609	5394	1
+1274478	Homertech	Wireless G USB Adapter	5839	5069	1
+1274479	BDT	Wireless G USB Adapter	5859	5455	1
+1274480	Dualcore	Wireless N Router	6889	5528	2
+1274481	Bigdeal	Wireless N Router	6959	5850	2
+1274482	Dualcore	Wireless N USB Adapter	6559	5897	1
+1274483	Homertech	Wireless N USB Adapter	6629	5709	1
+1274484	Wolfpack	Wireless N USB Adapter	6739	6012	1
+1274485	Duff	Wireless N USB Adapter	6489	5317	1
+1274486	Foocorp	Wireless G Access Point	8669	7402	3
+1274487	Wolfpack	Wireless G Access Point	8749	8629	3
+1274488	Texi	Wireless G Access Point	8599	7331	3
+1274489	BDT	Cable Modem	6639	5085	1
+1274490	Texi	Cable Modem	6829	6286	1
+1274491	Texi	DSL Modem	6779	6675	1
+1274492	Foocorp	DSL Modem	6879	6185	1
+1274493	TPS	Firewall	27339	22016	1
+1274494	Foocorp	Firewall	27029	20215	1
+1274495	Wolfpack	Firewall	28039	23650	1
+1274496	BDT	Firewall	27909	23378	1
+1274497	Homertech	VPN Appliance (16 Client license)	23019	18263	1
+1274498	Dualcore	VPN Appliance (16 Client license)	22699	21178	1
+1274499	Duff	VPN Appliance (50 Clienti license)	50029	46269	1
+1274500	Dualcore	VPN Appliance (50 Clienti license)	48049	45578	1
+1274501	TPS	VPN Appliance (50 Clienti license)	50159	40551	1
+1274502	BuckLogix	VPN Appliance (250 Clienti license)	227269	179375	1
+1274503	Foocorp	VPN Appliance (250 Clienti license)	229329	188813	1
+1274504	Texi	Network Hub (10 MBps, 4-port)	1949	1847	1
+1274505	Foocorp	Network Hub (10 MBps, 8-port)	2989	2754	1
+1274506	BDT	Network Hub (10 MBps, 16-port)	4109	3220	1
+1274507	XYZ	Network Switch (100 MBps, 4-port)	4169	4013	1
+1274508	Bigdeal	Network Switch (100 MBps, 4-port)	4199	4019	1
+1274509	Bigdeal	Network Switch (100 MBps, 8-port)	4509	3513	1
+1274510	Bigdeal	Network Switch (100 MBps, 8-port)	4519	3607	1
+1274511	BDT	Network Switch (100 MBps, 16-port)	4949	4617	1
+1274512	XYZ	Network Switch (Gigabit, 8-port)	7029	5709	1
+1274513	Duff	Network Switch (Gigabit, 8-port)	6639	5125	1
+1274514	Dualcore	Network Switch (Gigabit, 8-port)	6899	6292	1
+1274515	Wolfpack	Network Switch (Gigabit, 16-port)	7799	7717	1
+1274516	Wolfpack	Network Switch (Gigabit, 16-port)	7889	7780	1
+1274517	BDT	Network Switch (Gigabit, 16-port)	7869	6055	1
+1274518	BDT	Network Switch (Gigabit, 16-port)	7669	7156	1
+1274519	Duff	Network Switch (Gigabit, 16-port)	7989	6729	1
+1274520	Duff	Network Switch (Gigabit, 24-port)	12789	10339	1
+1274521	Wolfpack	Network Switch (Gigabit, 24-port)	12929	11978	1
+1274522	BuckLogix	Network Switch (Gigabit, 24-port)	12729	10446	1
+1274523	Duff	Network Switch (Gigabit, 24-port)	13159	12967	1
+1274524	XYZ	Dial-up Modem (14.4K)	1939	1489	1
+1274525	TPS	Dial-up Modem (33.6K)	2389	2228	1
+1274526	Texi	Dial-up Modem (56K)	4019	3865	1
+1274527	BDT	Ethernet NIC (100 MBps)	4319	3583	1
+1274528	BuckLogix	Ethernet NIC (Gigabit)	5929	4795	1
+1274529	Dualcore	Ethernet NIC (Gigabit)	6139	4762	1
+1274530	Homertech	Ethernet NIC (Gigabit)	6039	5625	1
+1274531	TPS	Ethernet NIC (Gigabit)	5979	4993	1
+1274532	Foocorp	Ethernet NIC (Gigabit)	6039	4594	1
+1274533	BDT	Ethernet NIC (Gigabit)	6179	5122	1
+1274534	BuckLogix	Ethernet NIC (Gigabit)	6139	4732	1
+1274535	Homertech	Ethernet NIC (Gigabit)	5909	5661	1
+1274536	Dualcore	Ethernet NIC (10 Gigabit)	18939	17366	1
+1274537	Foocorp	Ethernet NIC (10 Gigabit)	18319	14880	1
+1274538	ACME	Dot Matrix Printer	29719	27447	41
+1274539	Olde-Gray	Daisy Wheel Printer	27839	20810	34
+1274540	McDowell	Inkjet Printer	17649	16764	9
+1274541	Tyrell	Inkjet Printer	18539	16732	9
+1274542	McDowell	Inkjet Printer	17729	13552	9
+1274543	Tyrell	Inkjet Printer	17689	17310	9
+1274544	ACME	Inkjet Printer	18169	13605	9
+1274545	Tyrell	Inkjet Printer	18439	18053	9
+1274546	McDowell	Inkjet Printer	17699	15673	9
+1274547	Olde-Gray	Inkjet Printer	17669	14038	9
+1274548	Tyrell	Inkjet Printer	17799	17270	9
+1274549	Tyrell	Inkjet Printer	18579	17973	9
+1274550	Tyrell	Inkjet Printer	17999	14019	9
+1274551	McDowell	Inkjet Printer	17839	14788	9
+1274552	McDowell	Inkjet Photo Printer	23419	17431	7
+1274553	Tyrell	Inkjet Photo Printer	24129	18002	7
+1274554	ACME	Laser Printer (Black-and-White)	39279	31674	31
+1274555	McDowell	Laser Printer (Black-and-White)	39019	36876	31
+1274556	Olde-Gray	Laser Printer (Black-and-White)	38189	37088	31
+1274557	Tyrell	Laser Printer (Black-and-White)	37969	28523	31
+1274558	ACME	Laser Printer (Black-and-White)	40059	38784	31
+1274559	McDowell	Laser Printer (Black-and-White)	39579	29910	31
+1274560	ACME	Laser Printer (Black-and-White)	38319	34530	31
+1274561	McDowell	Laser Printer (Black-and-White)	40399	39837	31
+1274562	McDowell	Laser Printer (Black-and-White)	37629	29410	31
+1274563	Tyrell	Laser Printer (Black-and-White)	39689	33816	31
+1274564	McDowell	Laser Printer (Black-and-White)	39559	31085	31
+1274565	Olde-Gray	Laser Printer (Black-and-White)	37899	36642	31
+1274566	ACME	Laser Printer (Black-and-White)	37839	32607	31
+1274567	ACME	Laser Printer (Black-and-White)	37889	37628	31
+1274568	McDowell	Laser Printer (Black-and-White, Duplex)	66679	59875	45
+1274569	Tyrell	Laser Printer (Black-and-White, Duplex)	71149	62077	45
+1274570	Tyrell	Laser Printer (Black-and-White, Duplex)	69899	54866	45
+1274571	Tyrell	Laser Printer (Color)	39309	35057	36
+1274572	Tyrell	Laser Printer (Color)	38059	34921	36
+1274573	ACME	Laser Printer (Color)	38849	33450	36
+1274574	ACME	Laser Printer (Color)	38459	37690	36
+1274575	McDowell	Laser Printer (Color, Duplex)	47229	37531	49
+1274576	ACME	Laser Printer (Color, Duplex)	48039	43947	49
+1274577	McDowell	Wide Format Printer	87719	74148	97
+1274578	Olde-Gray	Wide Format Printer	87619	81846	97
+1274579	ACME	Scanner	27769	24312	12
+1274580	McDowell	Scanner	28309	21912	12
+1274581	Tyrell	Scanner	27549	21920	12
+1274582	Olde-Gray	Scanner	27979	21917	12
+1274583	Olde-Gray	Scanner	27349	22603	12
+1274584	McDowell	Scanner	28349	21925	12
+1274585	Olde-Gray	All-in-one Print/Fax/Scan/Copy	28059	21258	16
+1274586	McDowell	All-in-one Print/Fax/Scan/Copy	27729	24100	16
+1274587	Olde-Gray	All-in-one Print/Fax/Scan/Copy	27379	26297	16
+1274588	Olde-Gray	All-in-one Print/Fax/Scan/Copy	27569	23156	16
+1274589	McDowell	All-in-one Print/Scan/Copy	23029	18112	14
+1274590	ACME	All-in-one Print/Scan/Copy	23369	18610	14
+1274591	Byteweasel	Virus Scanner (incl. updates for one year)	2859	2369	1
+1274592	DevNull	Virus Scanner (incl. updates for one year)	2919	2169	1
+1274593	DevNull	Virus Scanner (incl. updates for one year)	2849	2254	1
+1274594	DevNull	Virus Scanner (incl. updates for two years)	3759	3743	1
+1274595	DevNull	Virus Scanner (incl. updates for two years)	3619	3066	1
+1274596	Weebits	Virus Scanner (incl. updates for three years)	4629	4352	1
+1274597	Byteweasel	Virus Scanner (incl. updates for three years)	4869	3568	1
+1274598	Byteweasel	Office Suite (Student Edition)	13519	8724	2
+1274599	Bytefortress	Office Suite (Home Edition)	23259	14413	2
+1274600	Byteweasel	Office Suite (Basic Edition)	33989	33012	2
+1274601	Bitbucket	Office Suite (Basic Edition)	32149	31914	2
+1274602	DevNull	Office Suite (Enterprise Edition)	50539	43694	2
+1274603	Dorx	6 GB IDE Disk	5209	4428	2
+1274604	Krustybitz	20 GB PATA Disk	6219	5933	2
+1274605	United Digistuff	60 GB PATA Disk	8719	6381	2
+1274606	DevNull	9.1 GB SCSI Disk	8229	8069	3
+1274607	Byteweasel	SCSI Terminator	4109	2969	2
+1274608	Homertech	SCSI Terminator	3909	2981	2
+1274609	Dorx	SCSI Terminator	4059	3713	2
+1274610	United Digistuff	173 GB SAS Disk	49459	47647	3
+1274611	United Digistuff	173 GB SAS Disk	47419	41755	3
+1274612	Krustybitz	173 GB SAS Disk	48519	36508	3
+1274613	Megachango	173 GB SAS Disk	48709	43041	3
+1274614	United Digistuff	500 GB SATA3 Disk	8579	6768	2
+1274615	Orion	500 GB SATA3 Disk	8989	8904	2
+1274616	Homertech	500 GB SATA3 Disk	9159	8613	2
+1274617	Krustybitz	750 GB SATA3 Disk	10399	7262	2
+1274618	Krustybitz	750 GB SATA3 Disk	10209	8771	2
+1274619	United Digistuff	750 GB SATA3 Disk	10469	7147	2
+1274620	Orion	750 GB SATA3 Disk	9919	8547	2
+1274621	Spindown	1.0 TB SATA3 Disk	10509	8230	2
+1274622	Megachango	1.0 TB SATA3 Disk	11159	10860	2
+1274623	Lemmon	1.0 TB SATA3 Disk	10679	6812	2
+1274624	Krustybitz	1.0 TB SATA3 Disk	10749	9021	2
+1274625	Spindown	1.0 TB SATA3 Disk	11089	8371	2
+1274626	United Digistuff	1.0 TB SATA3 Disk (10K RPM)	15219	9661	2
+1274627	Tortoise	1.0 TB SATA3 Disk (10K RPM)	15619	11821	2
+1274628	ACME	1.0 TB SATA3 Disk (10K RPM)	15029	13405	2
+1274629	Bitbucket	1.5 TB SATA3 Disk	13319	8687	2
+1274630	United Digistuff	1.5 TB SATA3 Disk	12619	8110	2
+1274631	United Digistuff	1.5 TB SATA3 Disk	12369	8179	2
+1274632	Homertech	1.5 TB SATA3 Disk	13219	8704	2
+1274633	Dualcore	1.5 TB SATA3 Disk	13419	11894	2
+1274634	Dualcore	1.5 TB SATA3 Disk	12619	9867	2
+1274635	Dualcore	1.5 TB SATA3 Disk	13059	8496	2
+1274636	Wolfpack	2.0 TB SATA3 Disk	14409	9501	2
+1274637	Byteweasel	2.0 TB SATA3 Disk	14939	12627	2
+1274638	Dorx	2.0 TB SATA3 Disk	14469	13328	2
+1274639	DevNull	2.0 TB SATA3 Disk	14289	11133	2
+1274640	ACME	2.0 TB SATA3 Disk	14759	10138	2
+1274641	Tortoise	2.0 TB SATA3 Disk	14289	11368	2
+1274642	Tortoise	2.0 TB SATA3 Disk (10K RPM)	19429	17315	2
+1274643	ACME	2.0 TB SATA3 Disk (10K RPM)	19219	15418	2
+1274644	Tortoise	2.0 TB SATA3 Disk (10K RPM)	19319	12342	2
+1274645	Megachango	3.0 TB SATA3 Disk	18789	17066	2
+1274646	Wolfpack	3.0 TB SATA3 Disk	18229	13020	2
+1274647	Bitbucket	3.0 TB SATA3 Disk	18799	12989	2
+1274648	Dorx	3.0 TB SATA3 Disk	18879	16672	2
+1274649	DevNull	3.0 TB SATA3 Disk	18379	13935	2
+1274650	Orion	4 GB USB Flash Drive 	1979	1610	1
+1274651	Orion	4 GB USB Flash Drive 	2009	1908	1
+1274652	Dorx	4 GB USB Flash Drive 	1929	1917	1
+1274653	Bitbucket	4 GB USB Flash Drive 	2029	1436	1
+1274654	Homertech	4 GB USB Flash Drive 	1949	1944	1
+1274655	Lemmon	4 GB USB Flash Drive 	2039	1567	1
+1274656	Spindown	8 GB USB Flash Drive 	2759	2176	1
+1274657	DevNull	8 GB USB Flash Drive 	2849	2680	1
+1274658	United Digistuff	8 GB USB Flash Drive 	2799	2788	1
+1274659	Bitbucket	8 GB USB Flash Drive 	2779	2325	1
+1274660	ElCheapo	8 GB USB Flash Drive 	2679	2269	1
+1274661	United Digistuff	8 GB USB Flash Drive 	2939	2500	1
+1274662	Bitbucket	8 GB USB Flash Drive 	2679	2107	1
+1274663	Dorx	8 GB USB Flash Drive 	2879	2545	1
+1274664	Byteweasel	16 GB USB Flash Drive	4039	2826	1
+1274665	Dorx	16 GB USB Flash Drive	4019	2642	1
+1274666	Bitbucket	16 GB USB Flash Drive	3929	2774	1
+1274667	ElCheapo	16 GB USB Flash Drive	4059	3320	1
+1274668	Spindown	16 GB USB Flash Drive	3949	3703	1
+1274669	Byteweasel	16 GB USB Flash Drive	3989	2934	1
+1274670	Spindown	16 GB USB Flash Drive	3859	3447	1
+1274671	Homertech	16 GB USB Flash Drive	4079	3631	1
+1274672	ACME	16 GB USB Flash Drive	4049	3864	1
+1274673	Orion	16 GB USB Flash Drive (Red)	42999	4001	1
+1274674	Orion	16 GB USB Flash Drive (Green)	4299	4001	1
+1274675	Orion	16 GB USB Flash Drive (Blue)	4299	4001	1
+1274676	Dorx	32 GB USB Flash Drive	5639	5479	1
+1274677	Homertech	32 GB USB Flash Drive	6199	4365	1
+1274678	Tortoise	32 GB USB Flash Drive	5839	4907	1
+1274679	Megachango	32 GB USB Flash Drive	5629	4040	1
+1274680	Lemmon	32 GB USB Flash Drive	5869	5849	1
+1274681	Krustybitz	32 GB USB Flash Drive	5779	5193	1
+1274682	Tortoise	32 GB USB Flash Drive (High Performance)	6929	6905	1
+1274683	Megachango	32 GB USB Flash Drive (High Performance)	6919	4362	1
+1274684	Megachango	64 GB USB Flash Drive	8799	6378	1
+1274685	Megachango	64 GB USB Flash Drive	8959	6389	1
+1274686	Dorx	64 GB USB Flash Drive	8669	8414	1
+1274687	Byteweasel	64 GB USB Flash Drive	9169	5906	1
+1274688	Krustybitz	64 GB USB Flash Drive	9339	9308	1
+1274689	Dorx	1 TB NAS Server	16769	14689	12
+1274690	Orion	1 TB NAS Server	16239	11587	12
+1274691	Wolfpack	4 TB NAS Server	29799	22652	13
+1274692	Megachango	4 TB NAS Server	31159	20263	13
+1274693	Lemmon	8 TB NAS Server	46179	40997	14
+1274694	Lemmon	DLT-III Tape Backup Drive (SCSI)	58159	39502	10
+1274695	Dualcore	DLT-III Tape Backup Drive (SCSI)	62179	50389	10
+1274696	Dorx	LTO Tape Backup Drive (SCSI)	79969	52545	9
+1274697	Spindown	LTO Tape Backup Drive (SCSI)	79959	58132	9
+1274698	ACME	500 GB Portable External USB 2.0 Disk	7609	7155	3
+1274699	DevNull	500 GB Portable External USB 2.0 Disk	8299	7776	3
+1274700	Megachango	500 GB Portable External USB 3.0 Disk	9929	6865	3
+1274701	Wolfpack	500 GB Portable External USB 3.0 Disk	9539	7776	3
+1274702	ElCheapo	500 GB Portable External USB 3.0 Disk	10489	7629	3
+1274703	Megachango	500 GB Portable External USB 3.0 Disk	10489	9530	3
+1274704	Dualcore	750 GB Portable External USB 3.0 Disk	12409	11733	3
+1274705	Bitbucket	750 GB Portable External USB 3.0 Disk	12889	10524	3
+1274706	Krustybitz	750 GB Portable External USB 3.0 Disk	12729	10127	3
+1274707	Bitbucket	32 GB SSD Disk	15599	10195	2
+1274708	Homertech	32 GB SSD Disk	14789	12061	2
+1274709	Krustybitz	32 GB SSD Disk	14699	10569	2
+1274710	ElCheapo	32 GB SSD Disk	15129	14216	2
+1274711	DevNull	64 GB SSD Disk	21509	20806	2
+1274712	Krustybitz	64 GB SSD Disk	21619	17181	2
+1274713	Tortoise	64 GB SSD Disk	22109	19570	2
+1274714	Megachango	64 GB SSD Disk	22829	18154	2
+1274715	Megachango	64 GB SSD Disk	22479	15069	2
+1274716	ACME	64 GB SSD Disk	21929	18968	2
+1274717	United Digistuff	64 GB SSD Disk	22129	14043	2
+1274718	Bitbucket	128 GB SSD Disk	40539	35401	2
+1274719	Spindown	128 GB SSD Disk	38689	32068	2
+1274720	Spindown	1 GB Compact Flash	1199	957	1
+1274721	Orion	2 GB Compact Flash	1939	1442	1
+1274722	Spindown	2 GB Compact Flash	1889	1287	1
+1274723	Krustybitz	2 GB Compact Flash	1949	1285	1
+1274724	Megachango	4 GB Compact Flash	2689	1745	1
+1274725	Spindown	4 GB Compact Flash	2699	1958	1
+1274726	Megachango	1 GB Micro SD	799	544	1
+1274727	Dualcore	2 GB Micro SD	979	709	1
+1274728	Megachango	2 GB Micro SD	1019	774	1
+1274729	Orion	4 GB Micro SD	1239	1123	1
+1274730	Krustybitz	4 GB Micro SD	1329	908	1
+1274731	Tortoise	4 GB Micro SD	1259	1022	1
+1274732	Byteweasel	4 GB Micro SD	1279	1064	1
+1274733	Megachango	8 GB Micro SD	2989	2119	1
+1274734	Dorx	8 GB Micro SD	2959	2584	1
+1274735	Dualcore	8 GB Micro SD	2809	2541	1
+1274736	ACME	8 GB Micro SD	2829	2590	1
+1274737	Wolfpack	8 GB Micro SD	2819	2148	1
+1274738	DevNull	8 GB Micro SD	2849	2409	1
+1274739	Dorx	8 GB Micro SD	2839	2658	1
+1274740	ElCheapo	16 GB Micro SD	4289	3136	1
+1274741	Dorx	16 GB Micro SD	4329	3442	1
+1274742	Bitbucket	16 GB Micro SD	4579	3662	1
+1274743	Dualcore	16 GB Micro SD	4309	3893	1
+1274744	United Digistuff	16 GB Micro SD	4479	3170	1
+1274745	ACME	16 GB Micro SD (High Performance)	5849	4418	1
+1274746	DevNull	16 GB Micro SD (High Performance)	5619	4691	1
+1274747	DevNull	32 GB Micro SD	6059	5643	1
+1274748	Lemmon	32 GB Micro SD	6009	5939	1
+1274749	United Digistuff	32 GB Micro SD	5989	5949	1
+1274750	Megachango	32 GB Micro SD (High Performance)	7089	5924	1
+1274751	Krustybitz	32 GB Micro SD (High Performance)	7219	5798	1
+1274752	Dorx	64 GB Micro SD	9859	8419	1
+1274753	Homertech	64 GB Micro SD	9809	9738	1
+1274754	Wolfpack	64 GB Micro SD	10209	7785	1
