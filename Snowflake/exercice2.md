@@ -118,19 +118,23 @@ DESC INTEGRATION citibike_snowpipe_integration;
 
 6. Create table first
 ```
-CREATE OR REPLACE TABLE MANAGE_DB.PUBLIC.movie_titles (
-  show_id STRING,
-  type STRING,
-  title STRING,
-  director STRING,
-  cast STRING,
-  country STRING,
-  date_added STRING,
-  release_year STRING,
-  rating STRING,
-  duration STRING,
-  listed_in STRING,
-  description STRING )
+create or replace table TRIPS_NEW
+(tripduration integer,
+starttime timestamp,
+stoptime timestamp,
+start_station_id integer,
+start_station_name string,
+start_station_latitude float,
+start_station_longitude float,
+end_station_id integer,
+end_station_name string,
+end_station_latitude float,
+end_station_longitude float,
+bikeid integer,
+membership_type string,
+usertype string,
+birth_year integer,
+gender integer);
 ```
 7. Create file format object
 
@@ -155,7 +159,7 @@ CREATE OR REPLACE stage MANAGE_DB.external_stages.csv_folder
 9. Use Copy command   
 
 ```    
-COPY INTO MANAGE_DB.PUBLIC.movie_titles
+COPY INTO MANAGE_DB.PUBLIC.TRIPS_NEW
     FROM @MANAGE_DB.external_stages.csv_folder
 ``` 
     
