@@ -167,7 +167,7 @@ COPY INTO MANAGE_DB.PUBLIC.TRIPS_NEW
 10. Update file format object
 
 ```
-CREATE OR REPLACE file format MANAGE_DB.file_formats.csv_fileformat
+CREATE OR REPLACE file format csv_fileformat
     type = csv
     field_delimiter = ','
     skip_header = 1
@@ -185,7 +185,7 @@ truncate MANAGE_DB.PUBLIC.movie_titles
 
 ```    
 COPY INTO MANAGE_DB.PUBLIC.movie_titles
-    FROM @MANAGE_DB.external_stages.csv_folder
+    FROM @csv_folder
 ```
 
 13. Read table
