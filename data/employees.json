@@ -1,0 +1,72 @@
+[
+  {
+    "first-name": "Emily",
+    "last-name": "Carter",
+    "birth-date": "1988-05-14",
+    "job-title": "Software Engineer",
+    "location": "San Francisco, CA"
+  },
+  {
+    "first-name": "Liam",
+    "last-name": "Nguyen",
+    "birth-date": "1992-11-02",
+    "job-title": "Data Analyst",
+    "location": "New York, NY"
+  },
+  {
+    "first-name": "Ava",
+    "last-name": "Martinez",
+    "birth-date": "1990-07-23",
+    "job-title": "UX Designer",
+    "location": "Austin, TX"
+  },
+  {
+    "first-name": "Noah",
+    "last-name": "Kim",
+    "birth-date": "1985-09-30",
+    "job-title": "Project Manager",
+    "location": "Seattle, WA"
+  },
+  {
+    "first-name": "Sophia",
+    "last-name": "Patel",
+    "birth-date": "1993-03-12",
+    "job-title": "Marketing Specialist",
+    "location": "Chicago, IL"
+  },
+  {
+    "first-name": "James",
+    "last-name": "Smith",
+    "birth-date": "1987-01-18",
+    "job-title": "DevOps Engineer",
+    "location": "Denver, CO"
+  },
+  {
+    "first-name": "Isabella",
+    "last-name": "Brown",
+    "birth-date": "1995-06-04",
+    "job-title": "HR Coordinator",
+    "location": "Boston, MA"
+  },
+  {
+    "first-name": "Lucas",
+    "last-name": "Johnson",
+    "birth-date": "1989-10-09",
+    "job-title": "Financial Analyst",
+    "location": "Atlanta, GA"
+  },
+  {
+    "first-name": "Mia",
+    "last-name": "Davis",
+    "birth-date": "1991-12-27",
+    "job-title": "Content Strategist",
+    "location": "Portland, OR"
+  },
+  {
+    "first-name": "Benjamin",
+    "last-name": "Lee",
+    "birth-date": "1986-08-21",
+    "job-title": "IT Support Specialist",
+    "location": "Los Angeles, CA"
+  }
+]
