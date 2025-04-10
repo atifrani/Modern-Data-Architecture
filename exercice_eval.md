@@ -221,7 +221,7 @@ Avec autant de données, le potentiel d'exploration de cet ensemble de données 
 Une fois que vous avez correctement chargé les fichiers dans votre base de données, vous allez pouvoir commencez à les analyser et répondre à quelques questions :  
 
 1.	Quel est le top 10 de job titles les plus postés ?  
-2.	Quel est le job titles les mieux rémunéré (tenir compte de la devise) ?  
+2.	Quel est le job titles le mieux rémunéré (tenir compte de la devise) ?  
 3.	Quelle est la réparation des offres d’emploi par taille d’entreprise ?  
 4.	Quelle est la réparation des offres d’emploi par type d’industrie ?  
 5.	Quelle est la réparation des offres d’emploi par type d’emploi (full-time, intership, part-time) ?  
