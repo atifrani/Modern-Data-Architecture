@@ -110,7 +110,6 @@ Présentation du jeux de données:
 |pay_period	|Pay period for salary (Hourly, Monthly, Yearly)|
 |currency	|Currency in which the salary is provided|
 |compensation_type	|Type of compensation for the job (Fixed, Variable, etc)|
-|salary_id	|The salary ID|
 
 
 **Benefits :** 
