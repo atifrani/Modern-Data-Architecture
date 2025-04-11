@@ -226,12 +226,14 @@ Une fois que vous avez correctement chargé les fichiers dans votre base de donn
 3.	Quelle est la réparation des offres d’emploi par taille d’entreprise ?  
 4.	Quelle est la réparation des offres d’emploi par type d’industrie ?  
 5.	Quelle est la réparation des offres d’emploi par type d’emploi (full-time, intership, part-time) ?  
-6.	Toute nouvelle suggestion d’analyse est la bienvenue et sera considérée comme un bonus.  
+
+* Pour chaqu'une des question ci-dessus, créez un graphique pour illustrer le resultat en utilisant streamlit.
 
 ## Livrable:
 
 Le livrable attendu pour ce projet est un document qui détaille chaque étape du projet :
--	Les commandes SQL utilisées et les résultats obtenus.  
+-	Les commandes SQL utilisées et les résultats obtenus.
+-   Le codes streamlit de chaque visulaisation.  
 -	Le problèmes/erreurs rencontré(e)s.  
 -	La solution mise en place pour corriger/résoudre le problème/erreur.  
 -   Les commentaires pour expliquer chaque étapes.  
