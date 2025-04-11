@@ -93,7 +93,7 @@ Présentation du jeu de données :
 |application_type	       | Type of application process (offsite, complex/simple onsite)  |
 |expiry	                   | Expiration date or time for the job listing  |
 |closed_time	           |     Time to close job listing  |
-|formatted_experience_level	Job | experience level (entry, associate, executive, etc)  |
+|formatted_experience_level | experience level (entry, associate, executive, etc)  |
 |skills_desc	           |    Description detailing required skills for job  |
 |listed_time	           |   Time when the job was listed  |
 |posting_domain	           | Domain of the website with application  |
