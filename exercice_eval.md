@@ -74,6 +74,25 @@ Présentation du jeu de données :
 
 |Column |                      Description  |
 |--------|-----------------------------------|  
+job_ID               |    Unique identifier for each job posting.                  |
+job    |   The title of the job posting.                   |
+location            |     The location of the job posting.                 |
+company_id            |    The unique identifier for the company offering the job.                   |
+company_name                |    The name of the company offering the job.                  |
+work_type        |     The type of work offered (e.g. full-time, part-time, etc.).                 |
+full_time_remote              |  Indicates if the job is a full-time remote position.                    |
+no_of_employ                |     The number of employees at the company offering the job.                 |
+no_of_application           |   The number of applications received for the job.                   |
+posted_day_ago             |   The number of days ago the job was posted.                   |
+alumni            |     Indicates if the job posting is for alumni of a certain organization.                  |
+Hiring_person         |    The name of the person responsible for hiring for the job.                  |
+linkedin_followers        |   The number of LinkedIn followers of the hiring person.                   |
+hiring_person_link              |      A link to the LinkedIn profile of the hiring person.                |
+job_details               |     Detailed information about the job, including responsibilities and requirements.                 |
+
+
+
+
 |job_id                    | The job ID as defined by LinkedIn (https://www.linkedin.com/jobs/view/{job_id})|
 |company_id	               | Identifier for the company associated with the job posting (maps to companies.csv)  |
 |title	                   | Job title  |
