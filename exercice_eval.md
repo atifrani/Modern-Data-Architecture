@@ -110,7 +110,6 @@ Présentation du jeux de données:
 |pay_period	|Pay period for salary (Hourly, Monthly, Yearly)|
 |currency	|Currency in which the salary is provided|
 |compensation_type	|Type of compensation for the job (Fixed, Variable, etc)|
-|salary_id	|The salary ID|
 
 
 **Benefits :** 
@@ -226,8 +225,7 @@ Une fois que vous avez correctement chargé les fichiers dans votre base de donn
 3.	Quelle est la réparation des offres d’emploi par taille d’entreprise ?  
 4.	Quelle est la réparation des offres d’emploi par type d’industrie ?  
 5.	Quelle est la réparation des offres d’emploi par type d’emploi (full-time, intership, part-time) ?  
-
-* Pour chaqu'une des question ci-dessus, créez un graphique pour illustrer le resultat en utilisant streamlit.
+6.	Toute nouvelle suggestion d’analyse est la bienvenue et sera considérée comme un bonus.  
 
 ## Livrable:
 
@@ -239,4 +237,5 @@ Le livrable attendu pour ce projet est un document qui détaille chaque étape d
 -   Les commentaires pour expliquer chaque étapes.  
 
 Le travail doit être réalisé par groupe de 2 et la charge répartie de manière équitable entre les membres du groupe.  
-Les groupes qui me fourniront des livrables identiques seront sanctionnés.   
+Les groupes qui me fourniront des livrables identiques seront sanctionnés. 
+Envoyez votre travail sur cette adresse: **axel@logbrain.fr**
