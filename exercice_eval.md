@@ -88,39 +88,7 @@ alumni            |     Indicates if the job posting is for alumni of a certain 
 Hiring_person         |    The name of the person responsible for hiring for the job.                  |
 linkedin_followers        |   The number of LinkedIn followers of the hiring person.                   |
 hiring_person_link              |      A link to the LinkedIn profile of the hiring person.                |
-job_details               |     Detailed information about the job, including responsibilities and requirements.                 |
-
-
-
-
-|job_id                    | The job ID as defined by LinkedIn (https://www.linkedin.com/jobs/view/{job_id})|
-|company_id	               | Identifier for the company associated with the job posting (maps to companies.csv)  |
-|title	                   | Job title  |
-|description	           |     Job description  |
-|max_salary	               | Maximum salary  |
-|med_salary	               | Median salary  |
-|min_salary	               | Minimum salary  |
-|pay_period	               | Pay period for salary (Hourly, Monthly, Yearly)  |
-|formatted_work_type	   |     Type of work (Fulltime, Parttime, Contract)  |
-|location	               | Job location  |
-|applies	               |     Number of applications that have been submitted  |
-|original_listed_time	   | Original time the job was listed  |
-|remote_allowed	           | Whether job permits remote work  |
-|views	                   | Number of times the job posting has been viewed  |
-|job_posting_url	       |     URL to the job posting on a platform  |
-|application_url	       |     URL where applications can be submitted |  
-|application_type	       | Type of application process (offsite, complex/simple onsite)  |
-|expiry	                   | Expiration date or time for the job listing  |
-|closed_time	           |     Time to close job listing  |
-|formatted_experience_level | experience level (entry, associate, executive, etc)  |
-|skills_desc	           |    Description detailing required skills for job  |
-|listed_time	           |   Time when the job was listed  |
-|posting_domain	           | Domain of the website with application  |
-|sponsored	               |Whether the job listing is sponsored or promoted  |
-|work_type	               | Type of work associated with the job  |
-|currency	               | Currency in which the salary is provided  |
-|compensation_type	       | Type of compensation for the job  |
-|scraped	               |     Has been scraped by details_retriever  |
+job_details               |     Detailed information about the job, including responsibilities and requirements.|
 
 
 **Salaries :**
@@ -241,17 +209,15 @@ Avec un tel volume, le potentiel d’analyse est vaste : exploration des postes,
 
 Une fois les fichiers correctement chargés dans les tables, vous pourrez commencer à analyser les données et répondre aux questions suivantes :
 
-1. Quel est le top 10 des titres de postes les plus publiés par industrié ?
+1. Quel est le top 10 des jobs les plus publiés par industrié ?
 
-2. Quel est le top 10 des postes les mieux rémunérés par industrié ?
+2. Quelle est la répartition des offres d’emploi par taille d’entreprise ?
 
-3. Quelle est la répartition des offres d’emploi par taille d’entreprise ?
+3. Quelle est la répartition des offres d’emploi par type de presénce (Remote vs On-site) ?
 
-4. Quelle est la répartition des offres d’emploi par secteur d’activité ?
+4. Quelle est la répartition des offres d’emploi par type d’emploi (temps plein, stage, temps partiel) ?
 
-5. Quelle est la répartition des offres d’emploi par type d’emploi (temps plein, stage, temps partiel) ?
-
-6. Pour chacune des questions ci-dessus, créez un graphique avec Streamlit pour illustrer les résultats.
+5. Pour chacune des questions ci-dessus, créez un graphique avec Streamlit pour illustrer les résultats.
 
 ## Livrable :
 
@@ -270,4 +236,4 @@ Le livrable attendu pour ce projet est un document détaillant chaque étape :
 Le projet doit être réalisé par groupes de deux, avec une répartition équitable de la charge de travail.
 Les groupes présentant des livrables identiques seront sanctionnés.
 
-Le livrable doit être envoyé sur cette adresse: **axel@logbrain.fr**.
+Le livrable doit être envoyé sur cette adresse **axel@logbrain.fr** avec le titre **Eval_architecure_Data_ESG** et le noms des membres du groupe dans le mail.
