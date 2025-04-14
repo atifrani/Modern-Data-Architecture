@@ -614,3 +614,41 @@ order by 2 desc
 limit 20;
 
 ```
+
+## Streamlit example:
+
+```
+import streamlit as st
+from snowflake.snowpark.context import get_active_session
+
+# Write directly to the app
+st.title("Analyse des données Trips par condition meteo")
+st.write(
+    """Cette applicaiton illustre le nombre de deplacement a Velo
+    """
+)
+option = st.selectbox(
+     'What is your favorite day of week?',
+     ('Tue','Thu','Fri','Wed','Mon','Sat','Sun'))
+
+# Get the current credentials
+session = get_active_session()
+
+# execute sql statement
+sql = f"select start_station_name, count(*) nbtrips from CITIBIKE.PUBLIC.TRIPS  where dayname(starttime)= '{option}' group by start_station_name order by nbtrips limit 10"
+# Execute the query and convert it into a Pandas dataframe
+#queried_data = data.to_pandas()
+data = session.sql(sql).collect()
+
+# Create a simple bar chart
+# See docs.streamlit.io for more types of charts
+st.subheader("Number of high-fives")
+st.bar_chart(data=data, x="START_STATION_NAME", y="NBTRIPS")
+
+sql_new = f"select dayname(starttime) day_of_week, count(*) nb_trips from trips group by dayname(starttime)"
+
+data_new = session.sql(sql_new).collect()
+
+st.subheader("Number of trips by day of week")
+st.bar_chart(data=data_new, x="DAY_OF_WEEK", y="NB_TRIPS")
+```
