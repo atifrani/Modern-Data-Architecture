@@ -197,7 +197,13 @@ Dans la feuille de calcul, exécutez la commande suivante pour créer le format 
 
 
 ```
-CREATE FILE FORMAT csv TYPE = 'CSV' FIELD_DELIMITER = ',' RECORD_DELIMITER = '\n' SKIP_HEADER = 1;
+CREATE or replace FILE FORMAT csv 
+TYPE = 'CSV' 
+FIELD_DELIMITER = ',' 
+RECORD_DELIMITER = '\n' 
+SKIP_HEADER = 1
+field_optionally_enclosed_by = '\042'
+null_if = ('');
 
 ```  
 
