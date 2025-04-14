@@ -54,7 +54,7 @@ Rendez-vous sur ce lien : https://trial.snowflake.com pour créer un compte grat
 
 Pour ce lab, choisissez :
 
-* L'édition Standard Edition,
+* L'édition Entreprise Edition,
 
 * Le fournisseur de cloud AWS,
 
