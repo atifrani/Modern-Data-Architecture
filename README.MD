@@ -457,8 +457,7 @@ Dans ces deux méthodes on commence par l’extraction des données provenant d�
 ### Résumé des différences : ETL versus ELT
 |Catégorie   | ETL   | ELT    |
 -------------|-------|--------|
-| Signification | Extraction, transformation et chargement |
-Extraction, chargement et transformation |  
+| Signification | Extraction, transformation et chargement | Extraction, chargement et transformation |  
 | Traitement |   Prend des données brutes, les transforme dans un format prédéterminé, puis les charge dans l'entrepôt de données cible. | Prend des données brutes, les charge dans l'entrepôt de données cible, puis les transforme juste avant l'analyse. |
 | Lieux de transformation et de chargement | La transformation s'effectue sur un serveur de traitement secondaire. | 
 La transformation a lieu dans l'entrepôt de données cible. |
