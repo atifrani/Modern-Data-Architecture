@@ -1,6 +1,6 @@
 # Présentation du lab 1:
 
-Ce premier lab vous présente l'interface utilisateur et les fonctionnalités de base de Snowflake. Il est spécialement conçu pour être utilisé avec Snowflake, essai grahttps://github.com/atifrani/Modern-Data-Architecture/blob/main/Snowflake/exercice1.mdtuit de 30 jours sur https://trial.snowflake.com. Une fois le laboratoire terminé, vous devriez être prêt à charger vos propres données dans Snowflake et à découvrir ses fonctionnalités plus avancées.
+Ce premier lab vous présente l'interface utilisateur et les fonctionnalités de base de Snowflake. Il est spécialement conçu pour être utilisé avec Snowflake, essai gratuit https://github.com/atifrani/Modern-Data-Architecture/blob/main/Snowflake/exercice1.md de 30 jours sur https://trial.snowflake.com. Une fois le laboratoire terminé, vous devriez être prêt à charger vos propres données dans Snowflake et à découvrir ses fonctionnalités plus avancées.
 
 ## Conditions préalables:  
 * Utilisation de l'environnement d'essai gratuit de 30 jours de Snowflake.  
