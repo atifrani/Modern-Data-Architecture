@@ -1,0 +1,92 @@
+[
+  {
+    "cust_id": "CUST001",
+    "fname": "John",
+    "lname": "Doe",
+    "address": "123 Maple Street",
+    "city": "Springfield",
+    "state": "IL",
+    "zipcode": "62704"
+  },
+  {
+    "cust_id": "CUST002",
+    "fname": "Jane",
+    "lname": "Smith",
+    "address": "456 Oak Avenue",
+    "city": "Madison",
+    "state": "WI",
+    "zipcode": "53703"
+  },
+  {
+    "cust_id": "CUST003",
+    "fname": "Robert",
+    "lname": "Johnson",
+    "address": "789 Pine Lane",
+    "city": "Austin",
+    "state": "TX",
+    "zipcode": "73301"
+  },
+  {
+    "cust_id": "CUST004",
+    "fname": "Emily",
+    "lname": "Clark",
+    "address": "101 Elm Drive",
+    "city": "Denver",
+    "state": "CO",
+    "zipcode": "80201"
+  },
+  {
+    "cust_id": "CUST005",
+    "fname": "Michael",
+    "lname": "Brown",
+    "address": "202 Birch Blvd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "zipcode": "85001"
+  },
+  {
+    "cust_id": "CUST006",
+    "fname": "Sarah",
+    "lname": "Miller",
+    "address": "303 Cedar Court",
+    "city": "Atlanta",
+    "state": "GA",
+    "zipcode": "30301"
+  },
+  {
+    "cust_id": "CUST007",
+    "fname": "David",
+    "lname": "Wilson",
+    "address": "404 Spruce Street",
+    "city": "Seattle",
+    "state": "WA",
+    "zipcode": "98101"
+  },
+  {
+    "cust_id": "CUST008",
+    "fname": "Laura",
+    "lname": "Davis",
+    "address": "505 Willow Road",
+    "city": "Portland",
+    "state": "OR",
+    "zipcode": "97201"
+  },
+  {
+    "cust_id": "CUST009",
+    "fname": "James",
+    "lname": "Anderson",
+    "address": "606 Ash Terrace",
+    "city": "Columbus",
+    "state": "OH",
+    "zipcode": "43085"
+  },
+  {
+    "cust_id": "CUST010",
+    "fname": "Olivia",
+    "lname": "Martinez",
+    "address": "707 Chestnut Parkway",
+    "city": "Charlotte",
+    "state": "NC",
+    "zipcode": "28202"
+  }
+]
