@@ -10,7 +10,8 @@ Ce premier lab vous présente l'interface utilisateur et les fonctionnalités de
 
 ## Préparez votre environnement de lab:
 
-Si ce n'est pas encore fait, inscrivez-vous pour un essai gratuit de Snowflake de 30 jours sur https://trial.snowflake.com. 
+Si ce n'est pas encore fait, inscrivez-vous pour un essai gratuit de Snowflake de 30 jours sur https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=handsonessentials&utm_campaign=uni-dww#
+
 * Utilisez l'addresse mail dans l'école.
 * Pour le nom de l'entreprise, utilisez **MBAESG**.  
 * Pour le role, choisissez **Etudiant**.
