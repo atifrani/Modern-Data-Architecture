@@ -203,3 +203,33 @@ select "obsTime"  from weather.public.weather_condition;
 
 
 
+
+```
+# Import python packages
+import streamlit as st
+from snowflake.snowpark.context import get_active_session
+
+# Write directly to the app
+st.title(f"Correlation trajets velo vs la méteo")
+st.write(
+  """Ce tableau de bord résume la correlation qui
+  pourrait exister entre les usagers de Vélo en fonction
+  des conditions méteo.
+  """
+)
+
+# Get the current credentials
+session = get_active_session()
+
+query="select * from trips_weather"
+
+data = session.sql(query).collect()
+
+# Create a simple bar chart
+# See docs.streamlit.io for more types of charts
+st.subheader("Number of high-fives")
+st.bar_chart(data=data, x="WEATHERCONDITION", y="NUM_TRIPS")
+
+
+```
+
