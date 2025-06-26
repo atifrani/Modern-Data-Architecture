@@ -144,3 +144,62 @@ FROM
 
 select * from analyse_day_week;
 
+
+create or replace database weather;
+
+create table json_weather_data (v variant);
+
+
+create stage nyc_weather url = 's3://logbrain-datalake/datasets/weather-nyc-json';
+
+ 
+
+list @nyc_weather;
+
+copy into json_weather_data from @nyc_weather file_format = (type=json);
+
+select * from json_weather_data;
+
+
+select   v:country from json_weather_data;
+
+select   v[1]:country from json_weather_data;
+
+CREATE or REPLACE file format json 
+type = 'JSON'
+STRIP_OUTER_ARRAY=TRUE;
+
+truncate json_weather_data;
+
+copy into json_weather_data from @nyc_weather file_format = json;
+
+
+select * from json_weather_data;
+
+
+create or replace view weather_condition as
+select v:country::varchar as "country",
+        v:latitude::float as "latitude",
+        v:longitude::float as "longitude",
+        v:obsTime::timestamp as "obsTime",
+        v:weatherCondition::varchar as "weatherCondition"
+from json_weather_data;
+
+
+select * from weather_condition;
+
+select "weatherCondition" as weather_condition ,count(*) as num_trips
+from 
+    citibike.public.trips a
+left outer join 
+    weather.public.weather_condition b
+on date("obsTime") = date(starttime)
+where "weatherCondition" is not null
+group by 1 order by 2 desc;
+
+
+
+select "obsTime"  from weather.public.weather_condition;
+
+
+
