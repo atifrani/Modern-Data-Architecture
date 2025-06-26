@@ -221,15 +221,13 @@ st.write(
 # Get the current credentials
 session = get_active_session()
 
-query="select * from trips_weather"
+query="select * from weather.public.trips_weather"
 
 data = session.sql(query).collect()
 
 # Create a simple bar chart
 # See docs.streamlit.io for more types of charts
 st.subheader("Number of high-fives")
-st.bar_chart(data=data, x="WEATHERCONDITION", y="NUM_TRIPS")
-
-
+st.bar_chart(data=data, x="WEATHER_CONDITION", y="NUM_TRIPS")
 ```
 
