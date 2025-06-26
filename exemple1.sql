@@ -188,6 +188,7 @@ from json_weather_data;
 
 select * from weather_condition;
 
+create or replace view trips_weather as
 select "weatherCondition" as weather_condition ,count(*) as num_trips
 from 
     citibike.public.trips a
