@@ -8,27 +8,22 @@ Les fichiers sont disponibles dans le bucket S3 public suivant : **s3://snowflak
 
 Vous y trouverez les fichiers suivants :
 
-* benefits.csv
+* benefits.csv : Ce fichier contient les avantages associés à chaque offre d'emploi.
 
-* companies.json
+* companies.json : Ce fichier fournit des informations détaillées sur chaque entreprise ayant publié une offre d'emploi, incluant le nom de l'entreprise, son site web, sa description, sa taille, sa localisation, et d'autres détails pertinents.
 
-* company_industries.json
+* company_industries.json : Ce fichier répertorie les secteurs d'activité associés à chaque entreprise.
 
-* company_specialities.json
+* company_specialities.json : Ce fichier liste les spécialités associées à chaque entreprise.
 
-* employee_counts.csv
+* employee_counts.csv : Ce fichier contient le nombre d'employés et de followers pour chaque entreprise.
 
-* industries.json
+* job_industries.json : Ce fichier indique les secteurs d'activité associés à chaque offre d'emploi.
 
-* job_industries.json
+* job_postings.csv : Ce fichier fournit des informations détaillées sur chaque offre d'emploi, incluant le titre du poste, la description, le salaire, le type de contrat, la localisation, et d'autres informations pertinentes.
 
-* job_postings.csv
+* job_skills.csv : Ce fichier contient les compétences associées à chaque offre d'emploi.
 
-* job_skills.csv
-
-* salaries.csv
-
-* skills.csv
 
 Chaque fichier contient des informations spécifiques détaillées dans la description des colonnes ci-dessous.  
 
@@ -37,12 +32,10 @@ Chaque fichier contient des informations spécifiques détaillées dans la descr
 |Column |                      Description  |
 |--------|-----------------------------------|  
 |job_id                    | The job ID as defined by LinkedIn (https://www.linkedin.com/jobs/view/{job_id})|
-|company_id	               | Identifier for the company associated with the job posting (maps to companies.csv)  |
+|company_name               | nmae for the company associated with the job posting (maps to companies.csv)  |
 |title	                   | Job title  |
 |description	           |     Job description  |
 |max_salary	               | Maximum salary  |
-|med_salary	               | Median salary  |
-|min_salary	               | Minimum salary  |
 |pay_period	               | Pay period for salary (Hourly, Monthly, Yearly)  |
 |formatted_work_type	   |     Type of work (Fulltime, Parttime, Contract)  |
 |location	               | Job location  |
@@ -63,21 +56,8 @@ Chaque fichier contient des informations spécifiques détaillées dans la descr
 |work_type	               | Type of work associated with the job  |
 |currency	               | Currency in which the salary is provided  |
 |compensation_type	       | Type of compensation for the job  |
-|scraped	               |     Has been scraped by details_retriever  |
 
 
-**Salaries :**
-
-|Column |                      Description  |
-|--------|-----------------------------------|  
-|salary_id	        |The salary ID|
-|job_id	            |The job ID (references jobs table)|
-|max_salary	        |Maximum salary|
-|med_salary    	    |Median salary|
-|min_salary	        |Minimum salary|
-|pay_period	        |Pay period for salary (Hourly, Monthly, Yearly)|
-|currency	        |Currency in which the salary is provided|
-|compensation_type	|Type of compensation for the job (Fixed, Variable, etc)|
 
 
 **Benefits :** 
@@ -85,8 +65,9 @@ Chaque fichier contient des informations spécifiques détaillées dans la descr
 |Column |                      Description  |
 |--------|-----------------------------------|  
 |job_id	    |The job ID|
-|type	    |Type of benefit provided (401K, Medical Insurance, etc)|
 |inferred	|Whether the benefit was explicitly tagged or inferred through text by LinkedIn|
+|type	    |Type of benefit provided (401K, Medical Insurance, etc)|
+
 
 
 **Companies :**
@@ -97,20 +78,13 @@ Chaque fichier contient des informations spécifiques détaillées dans la descr
 |name	        |Company name|
 |description	|Company description|
 |company_size	|Company grouping based on number of employees (0 Smallest - 7 Largest)|
-|country	    |Country of company headquarters|
 |state	        |State of company headquarters|
+|country	    |Country of company headquarters|
 |city	        |City of company headquarters|
 |zip_code	    |ZIP code of company's headquarters|
 |address	    |Address of company's headquarters|
 |url	        |Link to company's LinkedIn page|
 
-
-**Skills :**
-
-|Column |                      Description  |
-|--------|-----------------------------------|  
-|skill_abr	|The skill abbreviation (primary key)|
-|skill_name	|The skill name|
 
 
 **Employee_counts :**   
@@ -130,13 +104,6 @@ Chaque fichier contient des informations spécifiques détaillées dans la descr
 |job_id	    |The job ID (references jobs table and primary key)|
 |skill_abr	|The skill abbreviation (references skills table)|
 
-
-**Industries :** 
-
-|Column |                      Description  |
-|--------|-----------------------------------| 
-|industry_id	|The industry ID (primary key)|
-|industry_name	|The industry name|
 
 
 **Job_Industries :**  
