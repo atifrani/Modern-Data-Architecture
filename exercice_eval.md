@@ -41,6 +41,8 @@ Chaque fichier contient des informations spécifiques détaillées dans la descr
 |title	                   | Job title  |
 |description	           |     Job description  |
 |max_salary	               | Maximum salary  |
+|med_salary	               | Medium salary  |
+|min_salary	               | Minimum salary  |
 |pay_period	               | Pay period for salary (Hourly, Monthly, Yearly)  |
 |formatted_work_type	   |     Type of work (Fulltime, Parttime, Contract)  |
 |location	               | Job location  |
