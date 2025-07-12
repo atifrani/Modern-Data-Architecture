@@ -1,5 +1,10 @@
 
 # 🧊 Projet : Analyse des Offres d'Emploi LinkedIn avec Snowflake
+
+Chaque jour, des milliers d'entreprises et de particuliers se tournent vers LinkedIn à la recherche de talents.
+Le jeu de données que vous allez explorer contient plusieurs milliers d'offres d’emploi.
+Pour pouvoir interagir avec les différents jeux de données aux formats CSV et JSON, vous commencerez par charger chaque fichier dans une table de la base de données Snowflake.
+
 ## 🎯 Objectif
 Ce projet vise à évaluer votre capacité à manipuler des données en utilisant Snowflake et streamlit. Vous exploiterez un ensemble de données provenant de LinkedIn pour effectuer des analyses pertinentes sur le marché de l'emploi.
 
