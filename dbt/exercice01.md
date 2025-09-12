@@ -88,7 +88,7 @@ pip install virtualenv
 python -m venv venv
 
 # Activate environment and install dependency libraries
-.venv\Scripts\activate.ps1
+.\venv\Scripts\activate.ps1
 ```
 
 ### Étape 2 — Installer les librairies dbt-core et dbt-snowflake avec pip
