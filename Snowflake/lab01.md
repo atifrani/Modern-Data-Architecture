@@ -464,22 +464,39 @@ select count(*) from trips
    file_format = json;
    ```
 6. **Vue lisible** :
+   
    ```sql
-   create or replace view JSON_WEATHER_DATA_VIEW as
-   select
-     v:country::string          as country,
-     v:latitude::float          as latitude,
-     v:longitude::float         as longitude,
-     v:name::string             as city_name,
-     v:obsTime::timestamp       as obs_time,
-     v:region::string           as region_name,
-     v:weatherCondition::string as weather_condition
-   from JSON_WEATHER_DATA;
+     create or replace table weather as
+       select 
+      v:"coco"::STRING as "coco" ,
+      v:"country"::STRING as "country",
+      v:"dwpt"::FLOAT as "dwpt",
+      v:"elevation"::STRING as "elevation",
+      v:"icao"::STRING as "icao",
+      v:"latitude"::DECIMAL as "latitude",
+      v:"longitude"::DECIMAL as "longitude",
+      v:"name"::STRING as "name",
+      v:"obsTime"::TIMESTAMP as "obsTime",
+      v:"prcp"::STRING as "prcp" ,
+      v:"pres"::DECIMAL as "pres",
+      v:"region"::STRING as "region",
+      v:"rhum"::STRING as "rhum",
+      v:"snow"::STRING as "snow",
+      v:"station"::STRING as "station",
+      v:"temp"::DECIMAL "temp",
+      v:"timezone"::STRING as "timezone",
+      v:"tsun"::STRING as "tsun",
+      v:"wdir"::STRING as "wdir",
+      v:"weatherCondition"::STRING as "weatherCondition",
+      v:"wmo"::STRING as "wmo",
+      v:"wpgt"::STRING as "wpgt",
+      v:"wspd"::DECIMAL as "wspd"
+    from json_weather_data;
    ```
 7. **Filtre d’exemple** :
    ```sql
    select *
-   from JSON_WEATHER_DATA_VIEW
+   from WEATHER
    where date(obs_time) = '2018-01-01'
    limit 20;
    ```
@@ -494,12 +511,12 @@ use schema PUBLIC;
 use warehouse ANALYTICS_WH;
 
 select
-  w.weather_condition,
+  "weatherCondition",
   count(*) as num_trips
-from CITIBIKE.PUBLIC.TRIPS t
-left join CITIBIKE.PUBLIC.JSON_WEATHER_DATA_VIEW w
-  on date(w.obs_time) = date(t.starttime)
-where w.weather_condition is not null
+from CITIBIKE.PUBLIC.TRIPS
+left join CITIBIKE.PUBLIC.WEATHER
+  on date("obsTime") = date(starttime)
+where "weatherCondition" is not null
 group by 1
 order by 2 desc;
 ```
