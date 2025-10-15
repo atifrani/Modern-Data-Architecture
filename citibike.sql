@@ -58,34 +58,99 @@ copy into json_weather_data from @nyc_weather file_format = json;
 
 select * from json_weather_data;
 
-create table weather as
+create or replace table weather as
     select 
-      v:"coco" as "coco",
-      v:"country" as "country",
-      v:"dwpt" as "dwpt",
-      v:"elevation" as "elevation",
-      v:"icao" as "icao",
-      v:"latitude" as "latitude",
-      v:"longitude" as "longitude",
-      v:"name" as "name",
-      v:"obsTime" as "obsTime",
-      v:"prcp" as "prcp" ,
-      v:"pres" as "pres",
-      v:"region" as "region",
-      v:"rhum" as "rhum",
-      v:"snow" as "snow",
-      v:"station" as "station",
-      v:"temp" "temp",
-      v:"timezone" as "timezone",
-      v:"tsun" as "tsun",
-      v:"wdir" as "wdir",
-      v:"weatherCondition" as "weatherCondition",
-      v:"wmo" as "wmo",
-      v:"wpgt" as "wpgt",
-      v:"wspd" as "wspd"
+      v:"coco"::STRING as "coco" ,
+      v:"country"::STRING as "country",
+      v:"dwpt"::FLOAT as "dwpt",
+      v:"elevation"::STRING as "elevation",
+      v:"icao"::STRING as "icao",
+      v:"latitude"::DECIMAL as "latitude",
+      v:"longitude"::DECIMAL as "longitude",
+      v:"name"::STRING as "name",
+      v:"obsTime"::TIMESTAMP as "obsTime",
+      v:"prcp"::STRING as "prcp" ,
+      v:"pres"::DECIMAL as "pres",
+      v:"region"::STRING as "region",
+      v:"rhum"::STRING as "rhum",
+      v:"snow"::STRING as "snow",
+      v:"station"::STRING as "station",
+      v:"temp"::DECIMAL "temp",
+      v:"timezone"::STRING as "timezone",
+      v:"tsun"::STRING as "tsun",
+      v:"wdir"::STRING as "wdir",
+      v:"weatherCondition"::STRING as "weatherCondition",
+      v:"wmo"::STRING as "wmo",
+      v:"wpgt"::STRING as "wpgt",
+      v:"wspd"::DECIMAL as "wspd"
     from json_weather_data;
 
+select "weatherCondition" from weather;
+
+create or replace warehouse ANALYTICS_WH
+  warehouse_size = 'LARGE'
+  auto_suspend = 5
+  auto_resume = true
+  initially_suspended = true;
+
+  
+use warehouse ANALYTICS_WH;
+
+
+select
+  date_trunc('day', starttime) as "date",
+  count(*)                           as "num trips",
+  avg(tripduration)/60               as "avg duration (mins)",
+  avg(haversine(
+    start_station_latitude, start_station_longitude,
+    end_station_latitude,  end_station_longitude
+  ))                                 as "avg distance (km)"
+from TRIPS
+group by 1
+order by 1;
 
 
 
-select * from weather;
+select
+  dayname(starttime) as "day of week",
+  count(*)           as "num trips"
+from TRIPS
+group by 1
+order by 2 desc;
+
+select  case 
+            when dayname(starttime) = 'Tue' then 'Mardi'
+            when dayname(starttime) = 'Thu' then 'Jeudi'
+            when dayname(starttime) = 'Fri' then 'Vendredi'
+            when dayname(starttime) = 'Wed' then 'Mercredi'
+            when dayname(starttime) = 'Mon' then 'Lundi' 
+            when dayname(starttime) = 'Sat' then 'Samedi'
+            when dayname(starttime) = 'Sun' then 'Dimanche'
+            else 'Jour inconnu'
+            end as "Jour_semaine",
+            count(*) as "nombre_trajet"
+        from trips
+        group by 1
+        order by 2 desc;
+
+
+create or replace table TRIPS_DEV clone TRIPS;
+
+
+
+use database CITIBIKE;  
+use schema PUBLIC;
+use warehouse ANALYTICS_WH;
+
+select
+  "weatherCondition",
+  count(*) as num_trips
+from CITIBIKE.PUBLIC.TRIPS
+left join CITIBIKE.PUBLIC.WEATHER
+  on date("obsTime") = date(starttime)
+where "weatherCondition" is not null
+group by 1
+order by 2 desc;
+
+
+select weatherCondition from  CITIBIKE.PUBLIC.WEATHER;
