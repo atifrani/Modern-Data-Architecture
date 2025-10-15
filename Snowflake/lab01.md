@@ -384,7 +384,7 @@ select count(*) from trips
    ```sql
    create or replace warehouse ANALYTICS_WH
      warehouse_size = 'LARGE'
-     auto_suspend = 60
+     auto_suspend = 5
      auto_resume = true
      initially_suspended = true;
    ```
