@@ -7,7 +7,8 @@ Découvrir l’interface Snowflake, créer les premiers objets (DB, table, stage
 
 ## 0) Prérequis
 
-- Compte Snowflake d’essai (**étudiants : 120 jours**) – inscrivez-vous avec l’adresse **de l’école**, société **MBAESG**, rôle **Étudiant**, **Edition : Enterprise**, **Cloud : AWS**, **Région : us-west-2**.  
+- Compte Snowflake d’essai (**étudiants : 120 jours**) – inscrivez-vous avec l’adresse **de l’école**, société **MBAESG**, rôle **Étudiant**, **Edition : Enterprise**, **Cloud : AWS**, **Région : us-west-2**.
+- lien pour créer votre compte:  https://signup.snowflake.com/?trial=student&cloud=aws&region=us-west-2&utm_source=handsonessentials&utm_campaign=uni-dww# 
 - Bases de SQL (DDL/DML) et objets (database, schema, table…).  
 - Connaissance des formats **CSV** et **JSON**.
 
