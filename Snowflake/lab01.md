@@ -399,7 +399,7 @@ select count(*) from trips
    *(la fonction `HAVERSINE` calcule une distance géodésique approx. en km)*  
    ```sql
    select
-     date_trunc('hour', starttime) as "date",
+     date_trunc('hour', starttime) as "Hour",
      count(*)                           as "num trips",
      avg(tripduration)/60               as "avg duration (mins)",
      avg(haversine(
