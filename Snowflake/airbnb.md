@@ -107,5 +107,5 @@ SNOWFLAKE.CORTEX.SENTIMENT(comments) AS SENTIMENT_GENERATED,
 from (select comments from raw_reviews limit 10);
 
 
-
+https://github.com/atifrani/Snowflake-workshop-escp
 
