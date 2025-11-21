@@ -17,3 +17,36 @@ Voici la liste des fihciers csv à charger:
    * créer un stage vers les données sur aws
    * créer un file format pour les données CSV
    * Créer un table pour stocker chaque fichier.
+ 
+## Descriptif des tables:
+
+* Table Reviews:
+  listing_id,
+  date,
+  reviewer_name,
+  comments,
+  sentiment
+
+* Table seed_full_moon_date:
+  full_moon_date
+
+* Table Listings:
+  id,
+  listing_url,
+  name,
+  room_type,
+  minimum_nights,
+  host_id,
+  price,
+  created_at,
+  updated_at
+
+
+* Table Hosts
+  id,
+  name,
+  is_superhost,
+  created_at,
+  updated_at
+
+
