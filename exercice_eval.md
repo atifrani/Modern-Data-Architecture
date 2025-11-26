@@ -109,7 +109,7 @@ Chaque fichier contient des informations spécifiques détaillées dans la descr
 |Column |                      Description  |
 |--------|-----------------------------------| 
 |job_id	    |The job ID (references jobs table and primary key)|
-|skill_abr	|The skill abbreviation (references skills table)|
+|skill_abr	|The skill abbreviation|
 
 
 
@@ -118,7 +118,7 @@ Chaque fichier contient des informations spécifiques détaillées dans la descr
 |Column |                      Description  |
 |--------|-----------------------------------| 
 |job_id	        |The job ID (references jobs table and primary key)|
-|industry_id	|The industry ID (references industries table)|
+|industry_id	|The industry ID |
 
 
 **Company_specialities :**
@@ -134,7 +134,7 @@ Chaque fichier contient des informations spécifiques détaillées dans la descr
 |Column |                      Description  |
 |--------|-----------------------------------| 
 |company_id	|The company ID (references companies table and primary key)|
-|industry	|The industry ID (references industries table)|
+|industry	|The industry ID |
 
 
 
