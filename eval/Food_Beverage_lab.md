@@ -9,7 +9,8 @@ Malgré une réputation solide et une distribution internationale de produits pr
 Dans le même temps, le marché est devenu beaucoup plus concurrentiel avec l’arrivée de marques *digital-first* et de startups en vente directe au consommateur (D2C). Ces nouveaux acteurs proposent des produits comparables à des prix inférieurs de 5 à 15 %, s’appuyant sur des chaînes logistiques optimisées et des stratégies marketing fortement pilotées par la donnée.
 Résultat : la part de marché d’AnyCompany est passée de **28 % à 22 % en seulement huit mois**.
 
----
+![alt text](../images/fb1.png)
+
 
 ## Initiative de transformation digitale
 
@@ -43,6 +44,8 @@ Ce lab reproduit les premières étapes de cette transformation data-driven, dep
 
 **Bon à savoir – Crédits**  
 Conservez **Auto-Suspend** activé et utilisez une **taille d’entrepôt raisonnable** pour éviter d’épuiser vos crédits.  
+
+![alt text](../images/fb2.png)
 
 # Phase 1 – Data Preparation & Ingestion
 
