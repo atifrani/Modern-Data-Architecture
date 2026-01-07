@@ -305,7 +305,7 @@ Développer des modèles ML pour soutenir les décisions marketing.
 * Prédire l’impact d’une promotion sur les ventes
 
 
-**Partie 3.4 – Interprétation et recommandations business**
+**Partie 3.4 – Interprétation et recommandations business** --> OPTIONNELLE
 
 Pour chaque modèle :
 
