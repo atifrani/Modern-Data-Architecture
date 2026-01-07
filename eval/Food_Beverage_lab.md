@@ -84,8 +84,8 @@ Les fichiers suivants sont mis à disposition pour le lab :
 * `promotions-data.csv` – données de promotions
 * `marketing_campaigns.csv` – campagnes marketing
 * `product_reviews.csv` – avis et notes produits
-* `inventory.csv` – niveaux de stock
-* `store_locations.csv` – informations géographiques des magasins
+* `inventory.json` – niveaux de stock
+* `store_locations.json` – informations géographiques des magasins
 * `logistics_and_shipping.csv` – données logistiques
 * `supplier_information.csv` – informations fournisseurs
 * `employee_records.csv` – données organisationnelles
@@ -212,9 +212,113 @@ Pour chaque table du schéma `SILVER` :
    * Impact des délais de livraison
 
 
+## Phase 3 – Data Product & Machine Learning
+
+L’objectif de cette phase est de transformer les analyses exploratoires en actifs data réutilisables, puis de développer des modèles Machine Learning permettant de soutenir concrètement les décisions marketing.
+
+À l’issue de cette phase, vous devrez être capable de :
+
+* Concevoir un data product analytique (Une table/view qui contient les KPIs nécessaires pour piloter l'activité) prêt à être consommé
+
+* Construire et évaluer des modèles ML orientés marketing
+
+* Relier les résultats techniques à des cas d’usage business concrets
+
+Cette phase correspond au travail d’une équipe Analytics Engineering & Data Science.
+
+* **Contexte**:
+
+À l’issue de la Phase 2, l’équipe analytics a identifié plusieurs insights clés :
+
+* Les promotions influencent significativement certaines catégories
+
+* Certains segments clients présentent un fort potentiel de croissance
+
+* Les performances varient fortement selon les régions et les campagnes
+
+Ces constats doivent maintenant être industrialisés sous forme :
+
+* de tables analytiques stables
+
+* de features réutilisables
+
+* de modèles ML exploitables par les équipes marketing
+
+* **Travail demandé – Phase 3**
+
+**Partie 3.1 – Création du Data Product**
+
+Créer un produit data centralisé combinant ventes, promotions, marketing et dimensions clés, prêt à être consommé par des outils analytiques et des modèles ML.
+
+**Tâches**:
+
+1. Concevoir une ou plusieurs tables analytiques dans Snowflake (schéma ANALYTICS) :
+
+* Table ventes enrichies
+
+* Table promotions actives
+
+* Table clients enrichis
+
+2. Mettre en place :
+
+* Des clés de jointure claires
+
+* Une granularité maîtrisée (vente, client, produit, date)
+
+* Une documentation du schéma et des champs
+
+3. Vérifier :
+
+* La cohérence métier
+
+**Partie 3.2 – Feature Engineering** --> OPTIONNELLE
+
+Préparer des features ML à partir du data product.
+
+**Exemples de features attendues**
+
+* Nombre de promotions actives au moment de l’achat
+
+* Historique d’achat client (fréquence, panier moyen)
+
+* Variables temporelles (saisonnalité, récence)
+
+**Partie 3.3 – Modélisation Machine Learning** --> OPTIONNELLE
+
+Développer des modèles ML pour soutenir les décisions marketing.
+
+**Cas d’usage proposés (au choix)**
+
+1. Segmentation clients
+
+* Clustering basé sur comportement d’achat
+
+* Identification de segments à fort potentiel
+
+2. Modèle de propension à l’achat
+
+* Probabilité qu’un client achète un produit
+
+3. Réponse aux promotions
+
+* Prédire l’impact d’une promotion sur les ventes
+
+
+**Partie 3.4 – Interprétation et recommandations business**
+
+Pour chaque modèle :
+
+* Évaluer les performances (metrics adaptées)
+
+* Interpréter les résultats (features importantes)
+
+* Traduire les résultats en recommandations marketing concrètes
+
+
 ## Livrable attendu – Projet GitHub
 
-Le livrable des phase 1 et phase 2 doit être un **projet GitHub structuré**, contenant :
+Le livrable des phase 1, 2 et 3 doit être un **projet GitHub structuré**, contenant :
 
 ### 0. SQL ETL
 
@@ -235,7 +339,14 @@ Le livrable des phase 1 et phase 2 doit être un **projet GitHub structuré**, c
 * Code stocké dans `streamlit/`
 * Visualisations claires et orientées décision
 
-### 3. Synthèse des constats business
+### 3. Visualisations Streamlit
+
+* Scripts SQL de création des tables analytiques (analytics/)
+* Documentation du data product
+* Notebooks ou scripts Python (ml/)
+* Un document dédié (ml_insights.md) contenant les résultats des modèles et leur interprétation métier.
+
+### 4. Synthèse des constats business
 
 Un document (`README.md` ou `business_insights.md`) présentant :
 
@@ -257,6 +368,10 @@ project-name/
 │   ├── sales_dashboard.py
 │   ├── promotion_analysis.py
 │   └── marketing_roi.py
+├── ml/
+│   ├── customer_segmentation.ipynb
+│   ├── purchase_propensity.ipynb
+│   └── promotion_response_model.ipynb
 ├── README.md
 └── business_insights.md
 ```
