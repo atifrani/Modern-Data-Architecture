@@ -79,17 +79,135 @@ Les données proviennent de plusieurs domaines métier : ventes, promotions, mar
 Les fichiers suivants sont mis à disposition pour le lab :
 
 * `customer_demographics.csv` – données démographiques clients
+```
+| customer_id | name              | date_of_birth | gender | region | country   | city          | marital_status | annual_income |
+| ----------- | ----------------- | ------------- | ------ | ------ | --------- | ------------- | -------------- | ------------- |
+| 5911743     | Lisa Fowler       | 1983-05-29    | Male   | Asia   | Sri Lanka | Gonzalesport  | Widowed        | 49 526        |
+| 6494773     | Donald Lambert    | 1946-04-07    | Male   | Europe | Italy     | West James    | Married        | 193 290       |
+| 6500166     | Michelle Gonzalez | 1978-01-04    | Female | Europe | Italy     | North Joshua  | Divorced       | 78 877        |
+| 7519735     | Kirsten White     | 1947-05-11    | Male   | Europe | Italy     | North Anthony | Divorced       | 159 820       |
+| 5708869     | Ashley Johnson    | 1961-03-17    | Other  | Europe | France    | Mckenziehaven | Married        | 50 226        |
+```
 * `customer_service_interactions.csv` – interactions avec le service client
+```
+| interaction_id | interaction_date | interaction_type | issue_category  | description                                       | duration_minutes | resolution_status | follow_up_required | customer_satisfaction |
+| -------------- | ---------------- | ---------------- | --------------- | ------------------------------------------------- | ---------------- | ----------------- | ------------------ | --------------------- |
+| CSI5042956     | 2012-08-19       | Phone            | Complaints      | Listen beat tonight other. Pm eye down its fin... | 59               | Pending           | Yes                | 3                     |
+| CSI7596382     | 2015-08-05       | Phone            | Complaints      | Commercial attorney soon possible successful...   | 45               | Resolved          | No                 | 4                     |
+| CSI2063198     | 2022-04-10       | Phone            | Returns         | Whole benefit stock. Popular ready enjoy land...  | 41               | Resolved          | Yes                | 4                     |
+| CSI5112324     | 2013-07-18       | Email            | Returns         | Art tend manager their happy could. Sense nor...  | 44               | Pending           | No                 | 4                     |
+| CSI4198852     | 2011-11-06       | Chat             | Product Inquiry | Mr week four. Challenge local phone ten.          | 8                | Escalated         | Yes                | 5                     |
+```
 * `financial_transactions.csv` – transactions de ventes
-* `promotions-data.csv` – données de promotions
-* `marketing_campaigns.csv` – campagnes marketing
-* `product_reviews.csv` – avis et notes produits
-* `inventory.json` – niveaux de stock
-* `store_locations.json` – informations géographiques des magasins
-* `logistics_and_shipping.csv` – données logistiques
-* `supplier_information.csv` – informations fournisseurs
-* `employee_records.csv` – données organisationnelles
+```
+| transaction_id | transaction_date | transaction_type | amount   | payment_method | entity                      | region        | account_code |
+| -------------- | ---------------- | ---------------- | -------- | -------------- | --------------------------- | ------------- | ------------ |
+| TRX7743665     | 2015-12-13       | Investment       | 513.22   | Bank Transfer  | Hartman, Martinez and Huff  | Oceania       | YAZJGBI2     |
+| TRX7009965     | 2019-11-13       | Refund           | 5 648.71 | Bank Transfer  | Salas-Le                    | Asia          | GYFRGB7I     |
+| TRX2049301     | 2015-02-23       | Tax Payment      | 8 588.94 | PayPal         | Roberts, Waters and Lindsey | Africa        | KDXAGBBP     |
+| TRX2827313     | 2012-04-28       | Sale             | 7 784.09 | Credit Card    | Nguyen, Wise and Cannon     | North America | FNNQGB6G     |
+| TRX9053105     | 2017-01-14       | Investment       | 970.64   | Bank Transfer  | Hawkins, Huff and Vargas    | Europe        | ACCBGB61     |
+```
 
+* `promotions-data.csv` – données de promotions
+```
+| promotion_id | product_category  | promotion_type   | discount_percentage | start_date | end_date   | region                       |
+| ------------ | ----------------- | ---------------- | ------------------- | ---------- | ---------- | ---------------------------- |
+| PROMO55666   | Organic Beverages | Beverage Bonanza | 0.15                | 2022-02-22 | 2022-03-12 | Middle East and North Africa |
+| PROMO81620   | Organic Beverages | Sip into Savings | 0.10                | 2024-12-07 | 2024-12-25 | Africa                       |
+| PROMO58220   | Organic Beverages | Juice Jamboree   | 0.20                | 2023-02-06 | 2023-03-03 | Oceania                      |
+| PROMO55882   | Organic Beverages | Autumn Elixir    | 0.12                | 2023-11-20 | 2023-12-07 | Africa                       |
+| PROMO35148   | Organic Beverages | Spring Refresh   | 0.08                | 2022-06-15 | 2022-07-02 | Oceania                      |
+
+```
+* `marketing_campaigns.csv` – campagnes marketing
+```
+| campaign_id | campaign_name                  | campaign_type     | product_category | target_audience | start_date | end_date   | region                       | budget     | reach   | conversion_rate |
+| ----------- | ------------------------------ | ----------------- | ---------------- | --------------- | ---------- | ---------- | ---------------------------- | ---------- | ------- | --------------- |
+| CAMP45204   | Allen, Hughes and Mitchell     | Print             | Electronics      | Families        | 2015-10-24 | 2015-11-06 | South America                | 106 162.48 | 713 532 | 0.0614          |
+| CAMP32929   | Robinson-Clark                 | Print             | Personal Care    | Seniors         | 2016-07-25 | 2016-08-02 | Africa                       | 477 223.66 | 265 229 | 0.0504          |
+| CAMP79923   | Diaz-Willis                    | Email             | Beverages        | Professionals   | 2015-03-30 | 2015-04-04 | Middle East and North Africa | 468 146.23 | 921 472 | 0.0804          |
+| CAMP77067   | Craig-Robertson                | Email             | Beverages        | Families        | 2017-06-04 | 2017-06-09 | Europe                       | 444 889.42 | 788 091 | 0.0739          |
+| CAMP28254   | Johnson, Ferguson and Garrison | Content Marketing | Baby Food        | Young Adults    | 2016-09-26 | 2016-10-04 | Oceania                      | 438 735.03 | 745 935 | 0.0795          |
+
+```
+* `product_reviews.csv` – avis et notes produits
+```
+| review_id | product_id | reviewer_id    | reviewer_name   | rating | review_date | review_title | review_text                                            | product_category              |
+| --------- | ---------- | -------------- | --------------- | ------ | ----------- | ------------ | ------------------------------------------------------ | ----------------------------- |
+| 1         | B001EO5QW8 | A2GHZ2UTV2B0CD | JERRY REITH     | 4      | 2014-08-19  | it's oatmeal | What else do you need to know? Oatmeal...              | Organic Beverages             |
+| 2         | B001EO5QW8 | AQLL2R1PPR46X  | grumpyrainbow   | 3      | 2013-06-12  | decent       | dairy-free alternative, but texture could be better... | Organic Beverages             |
+| 3         | B0026Y3YBK | A38BUM0OXH38VK | singlewinder    | 5      | 2015-01-03  | excellent    | creamy and convenient, works well with cereal...       | Plant-based Milk Alternatives |
+| 4         | B001IUKD76 | A2KVCXTQVN18KI | A. Martin       | 4      | 2016-09-18  | good product | fortified with essential vitamins and minerals...      | Baby Food                     |
+| 5         | B001ELL6O8 | A1PTPN5SY7C7SW | Leonard Kocurek | 2      | 2014-11-02  | disappointed | expected better taste, not worth the price...          | Snacks                        |
+
+```
+* `inventory.json` – niveaux de stock
+```
+[
+  {
+    "product_id": "PROD726146",
+    "product_category": "Personal Care",
+    "region": "Middle East and North Africa",
+    "country": "Turkey",
+    "warehouse": "Martin-Fuentes",
+    "current_stock": 6569,
+    "reorder_point": 288,
+    "lead_time": 19,
+    "last_restock_date": "2025-01-12"
+  }
+]
+```
+* `store_locations.json` – informations géographiques des magasins
+```
+[
+  {
+    "store_id": "STR102",
+    "store_name": "Hernandez Group",
+    "store_type": "Supermarket",
+    "region": "Africa",
+    "country": "Ghana",
+    "city": "Port Kyleton",
+    "address": "850 Maria Corner Suite 332",
+    "postal_code": 52228,
+    "square_footage": 6924.88,
+    "employee_count": 37
+  }
+]
+```
+* `logistics_and_shipping.csv` – données logistiques
+```
+| shipment_id | order_id  | ship_date  | estimated_delivery | shipping_method | status     | shipping_cost | destination_region           | destination_country | carrier                 |
+| ----------- | --------- | ---------- | ------------------ | --------------- | ---------- | ------------- | ---------------------------- | ------------------- | ----------------------- |
+| SHP3906092  | 871839849 | 2015-01-17 | 2015-01-19         | Standard        | Shipped    | 8.91          | Europe                       | Colombia            | Preston and Sons        |
+| SHP7311779  | 535657542 | 2015-06-20 | 2015-06-25         | Express         | Returned   | 24.21         | Middle East and North Africa | Argentina           | Nielsen, Mann and Gross |
+| SHP7775247  | 622528708 | 2018-09-20 | 2018-09-25         | Express         | Delivered  | 60.76         | South America                | UK                  | Montes-Boyer            |
+| SHP8373435  | 529834260 | 2021-05-19 | 2021-05-30         | Next Day        | In Transit | 5.93          | Middle East and North Africa | France              | David-Fields            |
+| SHP3799770  | 504874920 | 2018-11-25 | 2018-12-09         | Next Day        | Delivered  | 37.           |                              |                     |                         |
+
+```
+* `supplier_information.csv` – informations fournisseurs
+```
+| supplier_id | supplier_name                  | product_category | region        | country        | city               | lead_time | reliability_score | quality_rating |
+| ----------- | ------------------------------ | ---------------- | ------------- | -------------- | ------------------ | --------- | ----------------- | -------------- |
+| SUPP88746   | Wilson, Washington and Herring | Baby Food        | South America | Argentina      | North Robert       | 24        | 0.86              | A              |
+| SUPP71209   | Hill-Hubbard                   | Snacks           | South America | Brazil         | Martinezview       | 11        | 0.86              | C              |
+| SUPP40724   | Pierce-Powell                  | Household        | Africa        | Nigeria        | Angelside          | 17        | 0.80              | A              |
+| SUPP34583   | Robinson-Scott                 | Electronics      | South America | Brazil         | South Anthonyshire | 12        | 0.81              | C              |
+| SUPP48499   | Brown, Calderon and Ingram     | Snacks           | Europe        | Czech Republic | Smithfurt          | 11        | 0.64              | A              |
+
+```
+* `employee_records.csv` – données organisationnelles
+```
+| employee_id | name            | date_of_birth | hire_date  | department | job_title                | salary     | region        | country     | email                                                         |
+| ----------- | --------------- | ------------- | ---------- | ---------- | ------------------------ | ---------- | ------------- | ----------- | ------------------------------------------------------------- |
+| EMP81111    | Richard Mendoza | 1984-02-15    | 2004-09-08 | Sales      | Manager Customer Service | 119 350.91 | South America | Mexico      | [nyoung@example.net](mailto:nyoung@example.net)               |
+| EMP68614    | Denise Higgins  | 1992-07-30    | 2011-02-18 | Sales      | Manager Sales            | 146 941.63 | South America | Peru        | [castrodorothy@example.com](mailto:castrodorothy@example.com) |
+| EMP71675    | Rhonda Smith    | 1968-04-15    | 2004-05-06 | Finance    | Director Operations      | 91 676.49  | Europe        | North Korea | [gholland@example.org](mailto:gholland@example.org)           |
+| EMP47352    | Robert Reynolds | 1972-06-27    | 2015-12-22 | Sales      | Specialist Finance       | 129 516.03 | Oceania       | Peru        | [edwardsangela@example.com](mailto:edwardsangela@example.com) |
+| EMP15901    | Amy Guzman      | 2004-09-22    | 2010-03-26 | Sales      | Associate Operations     | 114 922.66 | North America | Fiji        | [petersnicole@example.net](mailto:petersnicole@example.net)   |
+
+```
 ## Travail demandé – Phase 1
 
 ### Étape 1 – Préparation de l’environnement Snowflake
