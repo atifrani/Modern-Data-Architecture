@@ -457,7 +457,7 @@ Le livrable des phase 1, 2 et 3 doit être un **projet GitHub structuré**, cont
 * Code stocké dans `streamlit/`
 * Visualisations claires et orientées décision
 
-### 3. Visualisations Streamlit
+### 3. Machine Learning
 
 * Scripts SQL de création des tables analytiques (analytics/)
 * Documentation du data product
