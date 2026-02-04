@@ -241,7 +241,7 @@ Pour chaque fichier :
 * Inspecter un échantillon (`SELECT * LIMIT 10`)
 * Identifier les colonnes clés (IDs, dates, produits, régions)
 
-### Étape 5 –
+### Étape 5 – Data Cleanning
 
 Créer des tables nettoyées, cohérentes et exploitables dans le schéma **SILVER** à partir des données brutes du schéma **BRONZE**.
 
@@ -265,9 +265,9 @@ Créer les nouvelles tables nettoyées dans le schéma **SILVER**
 
 **Exemples** :
 
-RAW.financial_transactions → SILVER.financial_transactions_clean
+BRONZE.financial_transactions → SILVER.financial_transactions_clean
 
-RAW.promotions_data → SILVER.promotions_clean
+BRONZE.promotions_data → SILVER.promotions_clean
 
 ### Résultat attendu
 
