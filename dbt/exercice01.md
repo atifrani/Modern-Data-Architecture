@@ -73,25 +73,7 @@ https://docs.getdbt.com/docs/core/installation-overview
 
 ![alt text](../images/dbt2.png)
 
-### Step 1 — Create a Virtual Environment
-The first step for us will be to create a virtual environment. Browse to the folder where you want to create the virtual environment and execute the below script.
-
-```
-# Upgrade pip
-python.exe -m pip install --upgrade pip
-pip --version
-
-# Install virtualenv
-pip install virtualenv
-
-# Create a virtual environment
-python -m venv venv
-
-# Activate environment and install dependency libraries
-.\venv\Scripts\activate.ps1
-```
-
-### Étape 2 — Installer les librairies dbt-core et dbt-snowflake avec pip
+### Étape 1 — Installer les librairies dbt-core et dbt-snowflake avec pip
 
 ```
 pip install dbt-core
@@ -105,50 +87,45 @@ Confirmer que l’installation a réussi:
 dbt --version
 ```
 
+### Étape 2: Configurer un dépôt GitHub
 
-## Configurer un dépôt GitHub
-
-### Étape 1 — Créer un dépôt GitHub vide de base
-Créons maintenant un dépôt GitHub simple où nous allons stocker tout notre code.
+### Étape 2.1 — Créer un dépôt GitHub vide de base
+Créons maintenant un dépôt GitHub simple où nous allons stocker tout notre code **dbt-snowflake**.
 
 ![alt text](../images/dbt3.png)
 
-### Étape 1 — Clonnez votre dépôt guithub localement sur votre machine
+### Étape 2.2 — Clonnez votre dépôt guithub localement sur votre machine
 
 ```
-git clone https://github.com/mondépot   (remplacez l'url par celle de votre dépôt github)
+git clone https://github.com/dbt-snowflake 
 ```
 
+### Étape 3: Configurer Snowflake
 
-## Configurer Snowflake
-
-### Étape 1 — Créer une base de données vide dans Snowflake
+### Étape 3.1 — Créer une base de données vide dans Snowflake
 Ensuite, allons dans Snowflake et créons une base de données. C’est là que nous allons stocker nos modèles dbt.
 
 ![alt text](../images/dbt4.png)
 
-
 ![alt text](../images/dbt5.png)
 
-
-### Étape 2 — Récupérer l’URL du compte
+### Étape 3.2 — Récupérer l’URL du compte
 Enregistre l’URL de ton compte. Tu en auras besoin pour configurer ton projet dbt.
 
 ![alt text](../images/dbt6.png)
 
+### Étape 4: Configurer un nouveau projet dbt sur ta machine locale
 
-## Configurer un nouveau projet dbt sur ta machine locale
-
-### Étape 1 — Créer un nouveau projet dbt
+### Étape 4.1 — Créer un nouveau projet dbt
 Exécute la commande suivante pour créer un nouveau projet dbt appelé dbt_demo.
 
 ```
-cd dbt-demo-mbaesg
+cd dbt-snowflake
 
-dbt init dbt-demo
+dbt init dbt-project
 ```
 
-### Étape 2 — Valider la nouvelle structure de dossiers et le fichier profiles.yml
+### Étape 5 — Valider la nouvelle structure de dossiers et le fichier profiles.yml
 
 Structure du dossier du projet
 
@@ -168,10 +145,10 @@ Note que tu peux créer plusieurs **profils** dans le fichier **profiles.yml**, 
 Si tu veux utiliser un fichier de profil différent, tu peux utiliser l’argument **--profiles-dir** pour indiquer à dbt où se trouve le fichier profiles.yml.
 
 ```
-dbt init dbt_demo_eg --profiles-dir=profiles
+dbt init dbt_project --profiles-dir=profiles
 ```
 
-### Étape 3 — Tester la connexion à Snowflake avec dbt
+### Étape 6 — Tester la connexion à Snowflake avec dbt
 
 Utilise la commande **dbt debug** pour tester la connexion à Snowflake.
 
@@ -180,20 +157,20 @@ Appuie sur Entrée ou clique pour afficher l’image en taille réelle.
 ![alt text](../images/dbt9.png)
 
 
-### Étape 4 — Construire les modèles dbt d’exemple
+### Étape 7 — Construire les modèles dbt d’exemple
 
 Utilise la commande dbt run pour construire les modèles de données fournis avec le nouveau projet.
 
 ![alt text](../images/dbt10.png)
 
-### Étape 5 — Valider les nouvelles tables et vues dans Snowflake
+### Étape 8 — Valider les nouvelles tables et vues dans Snowflake
 
 Appuie sur Entrée ou clique pour afficher l’image en taille réelle.
 
 ![alt text](../images/dbt11.png)
 
 
-### Charger ton code projet sur le dépôt GitHub
+###  Étape 9 - Charger ton code projet sur le dépôt GitHub
 
 Exécute le code ci-dessous pour téléverser ton projet mis à jour vers le dépôt GitHub afin de le conserver pour référence future.
 
@@ -209,8 +186,7 @@ git push
 
 ![alt text](../images/dbt12.png)
 
-
-### Créer la documentation pour ton projet
+###  Étape 10 - Créer la documentation pour ton projet
 
 Pour générer automatiquement la documentation de ton projet, utilise les commandes suivantes :
 
@@ -223,7 +199,6 @@ dbt docs serve
 ![alt text](../images/dbt13.png)
 
 ![alt text](../images/dbt14.png)
-
 
 ## Avantages de l’utilisation de dbt
 
