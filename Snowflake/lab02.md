@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS AIRBNB.SILVER.FULL_MOON_DATE
 
 -- Copy the data into table
 COPY INTO AIRBNB.SILVER.FULL_MOON_DATE
-FROM @airbnb_stage/full_moon_date.json
+FROM @AIRBNB.BRONZE.airbnb_stage/full_moon_date.json
 FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = '"');
 
 -- Check table
