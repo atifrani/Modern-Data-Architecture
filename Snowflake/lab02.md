@@ -97,14 +97,14 @@ select * from AIRBNB.BRONZE.REVIEWS;
 
 
 -- Create table
-CREATE TABLE IF NOT EXISTSAIRBNB.BRONZE.LISTINGS
+CREATE TABLE IF NOT EXISTS AIRBNB.BRONZE.LISTINGS
                     (data VARIANT
                     );
 
 -- Copy the data into table
 COPY INTO AIRBNB.BRONZE.LISTINGS
 FROM @airbnb_stage/listings.json
-FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = '"');
+FILE_FORMAT = (TYPE = 'JSON');
 
 -- Check table
 select * from AIRBNB.BRONZE.LISTINGS;
