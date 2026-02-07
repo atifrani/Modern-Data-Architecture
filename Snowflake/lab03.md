@@ -8,13 +8,12 @@
 ## 0) Prérequis & contexte
 
 - Compte Snowflake avec rôle **ACCOUNTADMIN**,
-- Accès AWS (console IAM/S3) si vous réalisez la partie intégration de stockage avec **votre** bucket. Dans le cadre du cours, cette partie sera réalisée par votre instructeur.
+- Accès AWS (console IAM/S3) si vous réalisez la partie intégration de stockage avec **votre bucket**. Dans le cadre du cours, cette partie sera réalisée par votre instructeur.
 - Pour le lab, un bucket déjà préparé peut être utilisé :  
   **`s3://logbrain-datalake/datasets/citibike_snowpipe/`**.
 
 > **Rappel** — Snowflake propose :
 
-> - **Streams** : capture **CDC** (Change Data Capture) sur une table (INSERT/UPDATE/DELETE).
 > - **Tasks** : planification d’instructions SQL (timer ou CRON) et **arbres de dépendances**.
 
 ---
@@ -32,16 +31,24 @@ CREATE WAREHOUSE IF NOT EXISTS DATAPIPELINES_WH
   AUTO_SUSPEND = 5
   AUTO_RESUME = TRUE;
 
+-- Créer une base de données
+CREATE DATABASE IF NOT EXISTS CITIBIKE;
+
 -- Contexte d’exécution (DB/Schema/Warehouse)
-USE DATABASE CITIBIKE;
-USE SCHEMA PUBLIC;
 USE WAREHOUSE DATAPIPELINES_WH;
+
+USE DATABASE CITIBIKE;
+
+USE SCHEMA PUBLIC;
+
 ```
 
 **Vérifications :**
 ```sql
 SHOW WAREHOUSES;
+
 SHOW DATABASES;
+
 SELECT CURRENT_ROLE(), CURRENT_WAREHOUSE(), CURRENT_DATABASE(), CURRENT_SCHEMA();
 ```
 
@@ -50,7 +57,7 @@ SELECT CURRENT_ROLE(), CURRENT_WAREHOUSE(), CURRENT_DATABASE(), CURRENT_SCHEMA()
 ### 2.1 Créer la table cible
 
 ```sql
-CREATE OR REPLACE TABLE TRIPS_NEW (
+CREATE OR REPLACE TABLE CITIBIKE.PUBLIC.TRIPS_NEW (
   tripduration            INTEGER,
   starttime               TIMESTAMP,
   stoptime                TIMESTAMP,
@@ -73,7 +80,7 @@ CREATE OR REPLACE TABLE TRIPS_NEW (
 ### 2.2 Définir un **file format** CSV
 
 ```sql
-CREATE OR REPLACE FILE FORMAT CITBIKE.FILE_FORMATS.CSV
+CREATE OR REPLACE FILE FORMAT CITBIKE.PUBLIC.CSV_FORMAT
   TYPE = CSV
   FIELD_DELIMITER = ','
   SKIP_HEADER = 1
@@ -85,9 +92,8 @@ CREATE OR REPLACE FILE FORMAT CITBIKE.FILE_FORMATS.CSV
 ### 2.3 Créer le **stage** externe S3 (lié à l’intégration)
 
 ```sql
-CREATE OR REPLACE STAGE CITIBIKE.EXTERNAL_STAGES.CSV_FOLDER
-  URL = 's3://logbrain-datalake/datasets/citibike_snowpipe/'
-  FILE_FORMAT = CITIBIKE.FILE_FORMATS.CSV;
+CREATE OR REPLACE STAGE CITIBIKE.PUBLIC.CSV_STAGE
+  URL = 's3://logbrain-datalake/datasets/citibike_snowpipe/';
 
 -- Vérifier le contenu
 LIST @CSV_FOLDER;
@@ -97,11 +103,12 @@ LIST @CSV_FOLDER;
 
 ```sql
 COPY INTO CITIBIKE.PUBLIC.TRIPS_NEW
-  FROM @CITIBIKE.EXTERNAL_STAGES.CSV_FOLDER
-  PATTERN = '.*\.csv.*';
+  FROM @CITIBIKE.PUBLIC.CSV_STAGE
+  FILE_FORMAT = CSV_FORMAT;
 ```
 
 **Contrôle :**
+
 ```sql
 SELECT COUNT(*) FROM CITIBIKE.PUBLIC.TRIPS_NEW;
 ```
@@ -110,6 +117,7 @@ SELECT COUNT(*) FROM CITIBIKE.PUBLIC.TRIPS_NEW;
 > (Dans ce lab, nous conservons un seul file format cohérent pour éviter toute confusion.)
 
 > ! Le stage est pour le moment vide car aucun fichier n'est déposé dans le dépôt **s3://logbrain-datalake/datasets/citibike_snowpipe/**
+
 > Nous allons déposer un premier fichier et relancer la commande **Copy**
 
 
@@ -119,7 +127,7 @@ SELECT COUNT(*) FROM CITIBIKE.PUBLIC.TRIPS_NEW;
 
 ```sql
 
-CREATE OR REPLACE TABLE CUSTOMERS (
+CREATE OR REPLACE TABLE CITIBIKE.PUBLIC.CUSTOMERS (
   CUSTOMER_ID INT AUTOINCREMENT START = 1 INCREMENT = 1,
   FIRST_NAME  VARCHAR(40) DEFAULT 'JENNIFER',
   CREATE_DATE TIMESTAMP
@@ -129,16 +137,18 @@ CREATE OR REPLACE TABLE CUSTOMERS (
 ### 3.2 Créer une **task** récurrente (toutes les minutes)
 
 ```sql
-CREATE OR REPLACE TASK CUSTOMER_INSERT
+CREATE OR REPLACE TASK CITIBIKE.PUBLIC.CUSTOMER_INSERT
   WAREHOUSE = DATAPIPELINES_WH
   SCHEDULE  = 'USING CRON * * * * * UTC'
 AS
-INSERT INTO CUSTOMERS(CREATE_DATE) VALUES (CURRENT_TIMESTAMP);
+INSERT INTO CITIBIKE.PUBLIC.CUSTOMERS(CREATE_DATE) VALUES (CURRENT_TIMESTAMP);
 ```
 
 > **Référence CRON**  
+
 > `min hour day-of-month month day-of-week [timezone]`
-n planificateur CRON comporte 5 champs (parfois 6 si les secondes sont incluses). Dans l’ordre :
+
+Un planificateur CRON comporte 5 champs (parfois 6 si les secondes sont incluses). Dans l’ordre :
 
 * **Minute** → * = chaque minute
 
@@ -156,11 +166,13 @@ n planificateur CRON comporte 5 champs (parfois 6 si les secondes sont incluses)
 
 Le UTC à la fin précise le fuseau horaire dans lequel cette planification est interprétée. Ainsi, la tâche sera déclenchée une fois par minute, en continu, en Temps Universel Coordonné (UTC).
 
-Activer / suspendre et contrôler :
+**Activer / suspendre et contrôler** :
+
 ```sql
 SHOW TASKS;
 
 ALTER TASK CUSTOMER_INSERT RESUME;   -- démarrer
+
 SELECT * FROM CUSTOMERS;
 
 ALTER TASK CUSTOMER_INSERT SUSPEND;  -- arrêter
@@ -170,26 +182,26 @@ ALTER TASK CUSTOMER_INSERT SUSPEND;  -- arrêter
 
 ```sql
 -- Tous les jours à 06:00 UTC
-ALTER TASK CUSTOMER_INSERT SET SCHEDULE = 'USING CRON 0 6 * * * UTC';
+ALTER TASK CITIBIKE.PUBLIC.CUSTOMER_INSERT SET SCHEDULE = 'USING CRON 0 6 * * * UTC';
 
 -- Toutes les heures de 9h à 17h (UTC)
-ALTER TASK CUSTOMER_INSERT SET SCHEDULE = 'USING CRON 0 9-17 * * * UTC';
+ALTER TASK CITIBIKE.PUBLIC.CUSTOMER_INSERT SET SCHEDULE = 'USING CRON 0 9-17 * * * UTC';
 
 -- Tous les dimanches à la minute 0 de chaque heure (America/Los_Angeles)
-ALTER TASK CUSTOMER_INSERT SET SCHEDULE = 'USING CRON 0 * * * SUN America/Los_Angeles';
+ALTER TASK CITIBIKE.PUBLIC.CUSTOMER_INSERT SET SCHEDULE = 'USING CRON 0 * * * SUN America/Los_Angeles';
 ```
 
 ### 3.4 Arbre de tasks (dépendances)
 
 ```sql
 -- Table 2 et 3
-CREATE OR REPLACE TABLE CUSTOMERS2 (
+CREATE OR REPLACE TABLE CITIBIKE.PUBLIC.CUSTOMERS2 (
   CUSTOMER_ID INT, 
   FIRST_NAME VARCHAR(40), 
   CREATE_DATE TIMESTAMP
 );
 
-CREATE OR REPLACE TABLE CUSTOMERS3 (
+CREATE OR REPLACE TABLE CITIBIKE.PUBLIC.CUSTOMERS3 (
   CUSTOMER_ID INT, 
   FIRST_NAME VARCHAR(40), 
   CREATE_DATE TIMESTAMP,
@@ -197,57 +209,67 @@ CREATE OR REPLACE TABLE CUSTOMERS3 (
 );
 
 -- Task enfant, après CUSTOMER_INSERT
-CREATE OR REPLACE TASK CUSTOMER_INSERT2
+CREATE OR REPLACE TASK CITIBIKE.PUBLIC.CUSTOMER_INSERT2
   WAREHOUSE = DATAPIPELINES_WH
-  AFTER CUSTOMER_INSERT
+  AFTER CITIBIKE.PUBLIC.CUSTOMER_INSERT
 AS
-INSERT INTO CUSTOMERS2 SELECT * FROM CUSTOMERS;
+INSERT INTO CITIBIKE.PUBLIC.CUSTOMERS2 SELECT * FROM CITIBIKE.PUBLIC.CUSTOMERS;
 
 -- Task enfant (niveau 2), après CUSTOMER_INSERT2
-CREATE OR REPLACE TASK CUSTOMER_INSERT3
+CREATE OR REPLACE TASK CITIBIKE.PUBLIC.CUSTOMER_INSERT3
   WAREHOUSE = DATAPIPELINES_WH
-  AFTER CUSTOMER_INSERT2
+  AFTER CITIBIKE.PUBLIC.CUSTOMER_INSERT2
 AS
-INSERT INTO CUSTOMERS3 (CUSTOMER_ID, FIRST_NAME, CREATE_DATE)
-SELECT CUSTOMER_ID, FIRST_NAME, CREATE_DATE FROM CUSTOMERS2;
+INSERT INTO CITIBIKE.PUBLIC.CUSTOMERS3 (CUSTOMER_ID, FIRST_NAME, CREATE_DATE)
+SELECT CUSTOMER_ID, FIRST_NAME, CREATE_DATE FROM CITIBIKE.PUBLIC.CUSTOMERS2;
 
 -- Démarrage de la chaîne (on relance la racine)
 ALTER TASK CUSTOMER_INSERT   RESUME;
+
 ALTER TASK CUSTOMER_INSERT2  RESUME;
+
 ALTER TASK CUSTOMER_INSERT3  RESUME;
 
 -- Contrôle
 SHOW TASKS;
+
 SELECT * FROM CUSTOMERS2;
+
 SELECT * FROM CUSTOMERS3;
 
 -- Stopper
 ALTER TASK CUSTOMER_INSERT   SUSPEND;
+
 ALTER TASK CUSTOMER_INSERT2  SUSPEND;
+
 ALTER TASK CUSTOMER_INSERT3  SUSPEND;
 ```
 
 ### 3.5 Ingestion en continue:
+
 Nous allons utliser les tasks pour simuler une ingestion continue des données CITIBIKE. Pour cela nous allons créer une task qui va exécuter la commande **Copy** toutes les deux minutes.
 
 ```sql
-CREATE OR REPLACE TASK CITIBIKE_COPY
+CREATE OR REPLACE TASK CITIBIKE.PUBLIC.CITIBIKE_COPY
   WAREHOUSE = DATAPIPELINES_WH
   SCHEDULE  = 'USING CRON 2 * * * * UTC'
 AS
-COPY INTO CITIBIKE.PUBLIC.TRIPS_NEW FROM @CITIBIKE.EXTERNAL_STAGES.CSV_FOLDER   PATTERN = '.*\.csv.*';
+COPY INTO CITIBIKE.PUBLIC.TRIPS_NEW
+  FROM @CITIBIKE.PUBLIC.CSV_STAGE
+  FILE_FORMAT = CSV_FORMAT;
 ```
 
 **Contrôle :**
+
 ```sql
 SELECT COUNT(*) FROM CITIBIKE.PUBLIC.TRIPS_NEW;
 ```
 
-> ! il faut déposer des nouveaux fichier dans le bucket data-lake.
+> ! il faut déposer des nouveaux fichier dans le bucket **s3://logbrain-datalake/datasets/citibike_snowpipe**.
 
 ## 4) Checklist de fin
  
-- [ ] **Stage** externe + **File Format** opérationnels.  
+- [ ] **Stage** + **File Format** opérationnels.  
 - [ ] **COPY** batch initial exécuté vers `TRIPS_NEW`.  
 - [ ] **Tasks** : planification, exécution, dépendances testées.  
 

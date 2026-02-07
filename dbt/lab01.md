@@ -57,49 +57,65 @@ Interface en ligne de commande, exécutée via un terminal. C’est un package o
 
 * Un compte Snowflake en version d’essai (ou payant)
 
-* Python 3.5+ installé sur ta machine locale
-
 * Un compte GitHub gratuit
 
-* Git pour Windows installé sur ta machine locale
+### Étape 1: Configurer un dépôt GitHub
 
-Maintenant, créons un projet dbt…
-
-
-### Installer dbt sur une machine locale
-
-D’après la documentation officielle de dbt, il existe 4 méthodes pour installer dbt Core en ligne de commande.
-https://docs.getdbt.com/docs/core/installation-overview
-
-![alt text](../images/dbt2.png)
-
-### Étape 1 — Installer les librairies dbt-core et dbt-snowflake avec pip
-
-```
-pip install dbt-core
-
-pip install dbt-snowflake
-```
-
-Confirmer que l’installation a réussi:
-
-```
-dbt --version
-```
-
-### Étape 2: Configurer un dépôt GitHub
-
-### Étape 2.1 — Créer un dépôt GitHub vide de base
+### Étape 1.1 — Créer un dépôt GitHub vide de base
 Créons maintenant un dépôt GitHub simple où nous allons stocker tout notre code **dbt-snowflake**.
 
-![alt text](../images/dbt3.png)
+![alt text](../images/git1.png)
 
-### Étape 2.2 — Clonnez votre dépôt guithub localement sur votre machine
+
+### Étape 2 — Clonnez votre dépôt guithub 
+
+### Étape 2.1 : Créez une intégration git:
+
+* Création de git secret:
 
 ```
-git clone https://github.com/dbt-snowflake 
+-- Create a secret to store a password
+CREATE OR REPLACE SECRET git_secret
+    TYPE = password
+    USERNAME = 'atifrani'
+    PASSWORD = '********'
+```
+Pour récuperer le password, vous devez générer un token depuis votre compte github.
+
+![alt text](../images/git2.png)
+
+![alt text](../images/git3.png)
+
+![alt text](../images/git4.png)
+
+![alt text](../images/git5.png)
+
+![alt text](../images/git6.png)
+
+* Création de API integration:
+
+```
+-- Create api integration
+CREATE OR REPLACE API INTEGRATION git_api_integration
+    API_PROVIDER = git_https_api
+    API_ALLOWED_PREFIXES = ('https://github.com/atifrani')
+    ALLOWED_AUTHENTICATION_SECRETS = (git_secret)
+    ENABLED = TRUE;
 ```
 
+* Creation du Repository stage
+```
+-- Create git stage
+CREATE OR REPLACE GIT REPOSITORY db-snowflake
+    API_INTEGRATION = git_api_integration
+    GIT_CREDENTIALS = git_secret
+    ORIGIN = 'https://github.com/atifrani/dbt-snowflake.git'
+``` 
+
+* Synchronisation avec Github
+|```
+ALTER GIT REPOSITORY db-snowflake FETCH;
+```
 ### Étape 3: Configurer Snowflake
 
 ### Étape 3.1 — Créer une base de données vide dans Snowflake

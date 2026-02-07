@@ -29,8 +29,6 @@ Pour commencer, nous allons examiner un exemple simple.
 select SNOWFLAKE.CORTEX.TRANSLATE('Hello Everyone', '', 'fr') AS greeting;
 ```
 
-
-
 * **CORTEX SENTIMENTS :**
 
 ```sql
@@ -40,7 +38,7 @@ select SNOWFLAKE.CORTEX.SENTIMENT('This course is amazing') AS greeting;
 * **EXTRACT_ANSWER :**
 
 ```sql
-select SNOWFLAKE.CORTEX.EXTRACT_ANSWER('The motto of France is Liberty, Equality, Fraternity.It originated during the French Revolution of 1789 and embodies the fundamental values of the French Republic.', 'what is the motto france') AS response;
+select SNOWFLAKE.CORTEX.EXTRACT_ANSWER('The motto of France is Liberty, Equality, Fraternity. It originated during the French Revolution of 1789 and embodies the fundamental values of the French Republic.', 'what is the motto france') AS response;
 ```
 
 * **COMPLETE :**
@@ -56,7 +54,8 @@ USE WAREHOUSE CORTEX_WH;
 
 select SNOWFLAKE.CORTEX.COMPLETE('mistral-large2', 'Quelle est la capitale de la France?') as response_to_prompt;
 ```
-Une autre maniére d'écrire:
+
+**Une autre maniére d'écrire**:
 
 ```sql
 SET prompt ='Quelle est la capitale de la France?';
@@ -64,12 +63,13 @@ SET prompt ='Quelle est la capitale de la France?';
 select SNOWFLAKE.CORTEX.COMPLETE('mistral-large2', $prompt) as response_to_prompt;
 ```
 
-Maintenant nous allons ecrire un prompt pour analyser les données de CITIBIKE, pour faire vite on va tester sur un échantillion des données.
+Maintenant nous allons ecrire un prompt pour analyser les données de **CITIBIKE**, pour faire vite on va tester sur un échantillion des données.
 
 ```sql
 SET prompt ='What is the total number of trips?';
 
-select SNOWFLAKE.CORTEX.COMPLETE('mistral-large2', $prompt) as response_to_prompt from trips;
+select SNOWFLAKE.CORTEX.COMPLETE('mistral-large2', $prompt) as response_to_prompt from 
+CITIBIKE.PUBLIC.TRIPS_NEW;
 ```
 
 
