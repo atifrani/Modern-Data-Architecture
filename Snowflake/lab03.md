@@ -273,3 +273,90 @@ SELECT COUNT(*) FROM CITIBIKE.PUBLIC.TRIPS_NEW;
 - [ ] **COPY** batch initial exécuté vers `TRIPS_NEW`.  
 - [ ] **Tasks** : planification, exécution, dépendances testées.  
 
+
+## Les tables dynamiques:
+
+Les tables dynamiques sont des tables qui s’actualisent automatiquement en fonction d’une requête définie et du niveau d’actualisation de la cible, ce qui simplifie la transformation des données et la gestion du pipeline sans nécessiter de mises à jour manuelles ou de planification personnalisée.
+
+![alt text](../images/dynamic.png)
+
+Les tables dynamiques sont idéales dans les cas suivants :
+
+* Vous souhaitez matérialiser les résultats de requêtes sans écrire de code personnalisé.
+
+* Vous voulez éviter le suivi manuel des dépendances de données et la gestion des plannings de rafraîchissement. Les tables dynamiques permettent de définir les résultats d’un pipeline de manière déclarative, sans avoir à gérer manuellement les étapes de transformation.
+
+* Vous souhaitez enchaîner plusieurs tables pour réaliser des transformations de données au sein d’un pipeline.
+
+* Vous n’avez pas besoin d’un contrôle fin des fréquences de rafraîchissement et il vous suffit de définir un objectif de fraîcheur des données pour le pipeline. Snowflake se charge alors de l’orchestration des rafraîchissements, y compris la planification et l’exécution, en fonction de vos exigences de fraîcheur.
+
+Commençons avec une table de base simple **base_orders** et une table dynamique **dynamic_base_orders**.
+
+```
+CREATE OR REPLACE TABLE CITIBIKE.PUBLIC.base_orders (
+  order_id INT,
+  customer_id INT,
+  order_amount NUMBER
+);
+
+INSERT INTO CITIBIKE.PUBLIC.base_orders (order_id, customer_id, order_amount) VALUES
+(1, 101, 250.50),
+(2, 102, 100.00),
+(3, 103, 75.75);
+```
+
+Nous allons maintenant créer une table dynamique:
+
+```
+CREATE OR REPLACE DYNAMIC TABLE CITIBIKE.PUBLIC.dynamic_base_orders
+  TARGET_LAG = '1 minute'
+  WAREHOUSE = DATAPIPELINES_WH
+  AS SELECT * FROM CITIBIKE.PUBLIC.base_orders;  
+```
+
+Vérifions le résultat:
+
+```
+SELECT * FROM CITIBIKE.PUBLIC.dynamic_base_orders
+```
+
+Insérons de nouvelles valeurs dans le table 
+
+```
+INSERT INTO CITIBIKE.PUBLIC.base_orders (order_id, customer_id, order_amount) VALUES
+(4, 104, 150.50),
+(6, 104, 80.00),
+(6, 106, 65.75);
+```
+
+Vérifions le résultat:
+
+```
+SELECT * FROM CITIBIKE.PUBLIC.dynamic_base_orders
+```
+
+Voici un exemple de code montrant comment nous pourrions créer une table dynamique en utilisant notre table **TRIPS_NEW** comme base. Parcourez-le, et nous le détaillerons ensuite.
+
+```
+# Your Dynamic Table parameters
+CREATE OR REPLACE Dynamic Table CITIBIKE.PUBLIC.TRIPS_AGG_START_STATION
+  TARGET_LAG = '1 minutes'
+  WAREHOUSE = 'DATAPIPELINES_WH'
+  REFRESH_MODE = auto
+  INITIALIZE = on_create
+  AS
+# Your SQL query for the table itself
+  SELECT
+    start_station_name,
+    COUNT(*) AS NB_TRIPS,
+  FROM CITIBIKE.PUBLIC.TRIPS_NEW
+  GROUP BY start_station_name;
+```
+
+* **TARGET_LAG** : spécifie l’exigence de fraîcheur. Vous pouvez définir une durée ici, ou indiquer **"DOWNSTREAM"** si une autre table dynamique consomme déjà ces données.
+
+* **WAREHOUSE** : détermine les ressources de calcul. Veillez à sélectionner le bon *warehouse* Snowflake afin de disposer de suffisamment de ressources pour générer la table de manière rentable.
+
+* **REFRESH_MODE** : peut être défini explicitement sur **INCREMENTAL** ou **FULL**. J’ai choisi **AUTO** pour laisser Snowflake déterminer la méthode optimale.
+
+* **INITIALIZE** : détermine quand la table est initialisée. **ON_CREATE** signifie que la table est initialisée immédiatement. En le réglant sur **ON_SCHEDULE**, la table sera initialisée une fois que la première période de **TARGET_LAG** sera atteinte.
