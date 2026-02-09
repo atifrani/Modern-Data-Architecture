@@ -497,7 +497,7 @@ select count(*) from trips
    ```sql
    select *
    from WEATHER
-   where date(obs_time) = '2018-01-01'
+   where date("obstime") = '2018-01-01'
    limit 20;
    ```
 
