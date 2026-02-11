@@ -72,7 +72,7 @@ df.write.mode("overwrite").save_as_table("TRIPS")
 ```
 
 ```sql
--- Preview the newly created APP_ORDER table
+-- Preview the newly created TRIPS table
 SELECT * from TRIPS;
 ```
 
@@ -95,6 +95,105 @@ df.groupBy('"start_station_name"').count()
 
 ## Charger les données de méteo:
 
+nous allons créer un nouveau stage pour les données météo
+
+```
+
+USE DATABASE CITBIKE;
+
+CREATE STAGE IF NOT EXISTS WEATHER_STAGE 
+	URL = 's3://logbrain-datalake/datasets/weather-nyc-json/';
+```
+
+## Vérifier les fichiers présents dans le stage
+
+```
+LS @WEATHER_STAGE;
+```
+
+## Charger le fichier CSV avec Snowpark
+
+Nous pouvons utiliser Snowpark DataFrameReader pour lire le fichier JSON.
+
+En utilisant l’option infer_schema = True, Snowflake déduira automatiquement le schéma à partir des types de données présents dans le fichier JSON, ce qui évite de devoir le définir manuellement.
+
+```
+# Create a DataFrame that is configured to load data from the json file.
+df = session.read.options({"infer_schema":True}).csv('@WEATHER_STAGE/hourlyData-2018-1.json.gz')
+```
+
+```
+df
+```
+## Travailler avec le DataFrame Snowpark
+ 
+```
+df.describe()
+```
+
+## Écrire le DataFrame dans une table Snowflake
+
+```
+df.write.mode("overwrite").save_as_table("WEATHER_JSON")
+```
+
+```
+-- Preview the newly created weather table
+SELECT * from WEATHER_JSON;
+```
+
+## Relire la table dans Snowpark
+
+```
+df = session.table("WEATHER_JSON")
+df
+```
+
+##  Process the JSON data
+
+```
+USE DATABASE CITBIKE;
+
+CREATE TABLE IF NOT EXISTS weather as
+select 
+   v:"coco"::STRING as "coco" ,
+   v:"country"::STRING as "country",
+   v:"dwpt"::FLOAT as "dwpt",
+   v:"elevation"::STRING as "elevation",
+   v:"icao"::STRING as "icao",
+   v:"latitude"::DECIMAL as "latitude",
+   v:"longitude"::DECIMAL as "longitude",
+   v:"name"::STRING as "name",
+   v:"obsTime"::TIMESTAMP as "obsTime",
+   v:"prcp"::STRING as "prcp" ,
+   v:"pres"::DECIMAL as "pres",
+   v:"region"::STRING as "region",
+   v:"rhum"::STRING as "rhum",
+   v:"snow"::STRING as "snow",
+   v:"station"::STRING as "station",
+   v:"temp"::DECIMAL "temp",
+   v:"timezone"::STRING as "timezone",
+   v:"tsun"::STRING as "tsun",
+   v:"wdir"::STRING as "wdir",
+   v:"weatherCondition"::STRING as "weatherCondition",
+   v:"wmo"::STRING as "wmo",
+   v:"wpgt"::STRING as "wpgt",
+   v:"wspd"::DECIMAL as "wspd"
+ from WEATHER_JSON;
+
+```
+
+```
+-- Preview the newly created weather table
+SELECT * from WEATHER;
+```
+
+## Relire la table dans Snowpark
+
+```
+df = session.table("WEATHER")
+df
+```
 
 ## Nettoyage des ressources
 
@@ -103,9 +202,11 @@ Suppression de la table et du stage créés dans cet exemple :
 ```sql
 -- Teardown table and stage created as part of this example
 DROP TABLE TRIPS;
+DROP TABLE WEATHER;
+DROP TABLE WEATHER_JSON;
 DROP STAGE CITIBIKE_STAGE;
 DROP DATABASE CITIKIE;
 ```
 ## Conclusion
 
-Dans cet exemple, nous avons vu comment charger un fichier CSV depuis un stage externe afin de traiter et interroger les données dans un notebook à l’aide de Snowpark.
+Dans cet exemple, nous avons vu comment charger des fichiers CSV depuis un stage externe afin de traiter et interroger les données dans un notebook à l’aide de Snowpark.
