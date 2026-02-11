@@ -238,5 +238,5 @@ Un mauvais pipeline data entraîne :
 - Le Data Engineer construit l’infrastructure qui rend tout cela possible.  
 - Il joue un rôle central dans la fiabilité et la performance des systèmes data.  
 
-Nous allons passer à la partique pratique: [text](lab01.md)
+Nous allons passer à la partique pratique: [lab01](lab01.md)
 
