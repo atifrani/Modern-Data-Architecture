@@ -72,7 +72,8 @@ La donnée permet de passer d’une logique réactive à une logique proactive.
 
 La valorisation des données repose sur plusieurs rôles complémentaires.
 
-## 2.1 Le Data Analyst
+## 2.1 Le Data Analyst : <img src="images/da.png" alt="Cute Dog" width="100" height="100">  
+
 
 Mission principale :
 
@@ -93,7 +94,7 @@ Le Data Analyst répond à la question :
 
 Il transforme les données en informations compréhensibles pour le métier.
 
-## 2.2 Le Data Scientist
+## 2.2 Le Data Scientist: <img src="images/ds.png" alt="Cute Dog" width="100" height="100">  
 
 **Mission principale :**
 
@@ -113,7 +114,7 @@ Le Data Scientist répond à la question :
 
 Il utilise des modèles mathématiques pour anticiper.
 
-## 2.3 Le Data Engineer
+## 2.3 Le Data Engineer: <img src="images/de.png" alt="Cute Dog" width="100" height="100">  
 
 Mission principale :
 
