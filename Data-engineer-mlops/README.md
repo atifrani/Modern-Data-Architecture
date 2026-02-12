@@ -336,3 +336,332 @@ Vous pouvez interagir avec l’application en temps réel à partir du notebook.
 
 Nous allons passer à la partique: [lab01](lab01.md)
 
+
+-------------------------------------------------------------------
+
+# Introduction au Machine Learning  
+
+# Objectifs du cours
+
+À la fin de ce cours, vous serez capables de :
+
+- Comprendre ce qu’est le Machine Learning
+- Diffencier IA, Machine Learning et Data Engineering
+- Identifier les principaux types de problèmes en Machine Learning
+- Comprendre le cycle de vie d’un projet ML
+- Comprendre le lien entre données, Data Engineering et Machine Learning
+- Être prêts à réaliser un lab simple dans Snowflake
+
+# Plan du cours
+
+1. Comprendre le Machine Learning  
+2. Les grands types de Machine Learning  
+3. Le cycle de vie d’un projet ML  
+4. Le rôle des données et du Data Engineering  
+5. Introduction au ML dans Snowflake  
+6. Préparation au lab pratique  
+
+# Partie 1 – Comprendre le Machine Learning
+
+## 1.1 Intelligence Artificielle vs Machine Learning
+
+### Intelligence Artificielle (IA)
+
+L’IA est un domaine large qui vise à créer des systèmes capables d’imiter certaines capacités humaines :
+
+![alt text](images/ai.png)
+
+- Comprendre du texte
+- Reconnaître des images
+- Prendre des décisions
+- Résoudre des problèmes
+
+### Machine Learning (ML)
+
+Le Machine Learning est une sous-catégorie de l’IA.
+
+Définition simple :
+
+> Le Machine Learning permet à un système d’apprendre automatiquement à partir de données, sans être programmé avec des règles fixes.
+
+Au lieu d’écrire des règles manuelles, on donne des exemples au système.
+
+## 1.2 Exemple simple
+
+Problème : prédire si un email est un spam.
+
+Approche classique (sans ML) :
+
+- Si le mot "gratuit" apparaît → spam
+- Si le mot "promotion" apparaît → spam
+
+Problème : trop rigide.
+
+Approche Machine Learning :
+
+- On fournit des milliers d’emails déjà classés.
+- Le modèle apprend les patterns automatiquement.
+- Il peut généraliser à de nouveaux emails.
+
+## 1.3 Pourquoi le Machine Learning est devenu important
+
+Trois raisons principales :
+
+1. Explosion des données
+2. Puissance de calcul disponible dans le cloud
+3. Outils accessibles (Python, Snowflake, etc.)
+
+Les entreprises utilisent le ML pour :
+
+- Recommandations (Netflix, Amazon)
+- Détection de fraude
+- Prévision des ventes
+- Segmentation clients
+
+# Partie 2 – Les grands types de Machine Learning
+
+## 2.1 Supervised Learning (Apprentissage supervisé)
+
+Dans ce cas, on possède des données avec une réponse connue.
+
+Exemple :
+
+| Surface | Prix |
+|---------|------|
+| 50 m²   | 150 000 € |
+| 70 m²   | 210 000 € |
+
+On connaît la variable cible (le prix). 
+Le probléme se modélise sous forme d'une équation F(X)= Y. X sont les variable et Y le resultat en sortie.  
+
+Le modèle apprend la relation entre les variables d’entrée et la sortie.
+
+### Deux types principaux
+
+#### 1. Régression
+
+- Sortie numérique
+- Exemple : prédire un prix
+
+#### 2. Classification
+
+- Sortie catégorielle
+- Exemple : spam / non spam
+- Client qui va partir / rester
+
+## 2.2 Unsupervised Learning (Apprentissage non supervisé)
+
+Ici, il n’y a pas de réponse connue.
+
+Le modèle cherche à identifier des structures cachées.
+
+Exemple :
+
+- Segmenter des clients en groupes similaires
+- Identifier des comportements inhabituels
+
+## 2.3 Exemple concret – E-commerce
+
+Données disponibles :
+
+- Nombre d’achats
+- Montant total dépensé
+- Nombre de visites
+- Ancienneté du client
+
+Objectif possible :
+
+- Prédire si le client va arrêter d’acheter (classification)
+- Segmenter les clients (clustering)
+- Prédire le montant futur (régression)
+
+# Partie 3 – Le cycle de vie d’un projet Machine Learning
+
+## 3.1 Étapes principales
+
+Un projet ML suit généralement ces étapes :
+
+1. Définition du problème
+2. Collecte des données
+3. Nettoyage des données
+4. Préparation des variables (feature engineering)
+5. Entraînement du modèle
+6. Évaluation
+7. Déploiement
+
+## 3.2 Point clé
+
+Dans la pratique :
+
+> 70 à 80 % du travail concerne les données (Data engineering).
+
+Nettoyer, transformer et structurer les données est souvent plus long que l’entraînement du modèle lui-même.
+
+C’est ici que le **Data Engineering** joue un rôle essentiel.
+
+# Partie 4 – Lien entre Data Engineering et Machine Learning
+
+## 4.1 Pourquoi les données sont critiques
+
+Un modèle ML dépend de :
+
+- La qualité des données
+- La cohérence des formats
+- L’absence d’erreurs majeures
+
+Si les données sont mauvaises :
+
+- Les prédictions seront mauvaises.
+
+## 4.2 Rôle du Data Engineer dans un projet ML
+
+Le Data Engineer :
+
+- Centralise les données
+- Les nettoie
+- Les structure
+- Les rend accessibles
+- Garantit leur qualité
+
+Sans Data Engineering solide :
+
+- Les Data Scientists ne peuvent pas travailler efficacement.
+- Les modèles ne peuvent pas être mis en production.
+
+# Partie 5 – Machine Learning dans Snowflake
+
+## 5.1 Pourquoi utiliser Snowflake ?
+
+Snowflake est un Data Warehouse cloud.
+
+Il permet :
+
+- Stocker de grandes quantités de données
+- Exécuter des requêtes SQL
+- Effectuer des transformations
+- Intégrer du Machine Learning
+
+## 5.2 Où s’exécute le Machine Learning ?
+
+Deux approches possibles :
+
+1. Extraire les données vers Python (ex : pandas, scikit-learn)
+2. Utiliser Snowpark pour exécuter du code Python directement dans Snowflake
+
+Dans ce cours, nous allons utiliser une approche simple compatible débutant.
+
+## 5.3 Exemple simplifié de pipeline ML
+
+1. Charger un dataset dans Snowflake
+2. Explorer les données avec SQL et Python
+3. Créer une table préparée
+4. Utiliser Python pour entraîner un modèle simple
+5. Géner des prédictions
+
+# Partie 6 – Métriques simples d’évaluation
+
+## 6.1 Accuracy
+
+Pourcentage de bonnes prédictions.
+
+Exemple : Si le modèle prédit correctement 90 cas sur 100 → accuracy = 90 %.
+
+## 6.2 Cas particulier : fraude
+
+Si 95 % des transactions ne sont pas frauduleuses :
+
+Un modèle qui prédit toujours "non fraude" aura 95 % d’accuracy.
+
+Mais il est inutile.
+
+C’est pourquoi d’autres métriques existent (précision, rappel).
+
+## Précision (Precision)
+
+La précision mesure :
+
+> Parmi toutes les prédictions positives faites par le modèle, combien sont réellement correctes ?
+
+Autrement dit :
+
+Si le modèle dit "positif", à quel point peut-on lui faire confiance ?
+
+### Exemple – Détection de fraude
+
+Imaginons :
+
+- Le modèle détecte 20 transactions comme frauduleuses.
+- En réalité, seulement 15 sont vraiment frauduleuses.
+
+Précision = 15 / 20 = 75 %
+
+Cela signifie que 25 % des alertes sont fausses.
+
+Une précision élevée est importante lorsque les faux positifs sont coûteux  
+(ex : bloquer un client légitime).
+
+## Rappel (Recall)
+
+Le rappel mesure :
+
+> Parmi tous les cas réellement positifs, combien le modèle a-t-il réussi à détecter ?
+
+Autrement dit :
+
+Le modèle rate-t-il beaucoup de cas importants ?
+
+### Exemple – Détection de fraude
+
+Imaginons :
+
+- Il y a en réalité 30 transactions frauduleuses.
+- Le modèle en détecte 15.
+
+Rappel = 15 / 30 = 50 %
+
+Cela signifie que le modèle laisse passer 50 % des fraudes.
+
+Un rappel élevé est important lorsque rater un cas est critique  
+(ex : maladie grave, fraude, défaut de paiement).
+
+## Résumé
+
+- **Accuracy** → Globalement, combien de prédictions sont correctes ?
+- **Précision** → Quand le modèle prédit "positif", a-t-il raison ?
+- **Rappel** → Parmi les vrais cas positifs, combien ont été détectés ?
+
+Selon le problème métier, on privilégiera parfois la précision, parfois le rappel.
+
+# Partie 7 – Préparation au Lab
+
+## 7.1 Ce que vous allez faire
+
+Dans le lab Snowflake, vous allez :
+
+- Explorer un dataset client
+- Comprendre les colonnes
+- Créer une table préparée
+- Effectuer des transformations simples en SQL
+- Entraîner un modèle simple en Python
+- Générer des prédictions
+
+## 7.2 Compétences mobilisées
+
+- SQL basique (SELECT, WHERE, GROUP BY)
+- Python basique
+- Compréhension des concepts ML
+
+# Conclusion
+
+Dans ce cours, vous avez appris :
+
+- Ce qu’est le Machine Learning
+- Les principaux types de problèmes
+- Le cycle de vie d’un projet ML
+- Le rôle central des données
+- Le lien entre Data Engineering et ML
+- Comment Snowflake peut servir de plateforme ML
+
+Vous êtes maintenant prêts à passer à la pratique [lab06](lab06.md).
+
+
