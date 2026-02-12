@@ -239,5 +239,100 @@ Un mauvais pipeline data entraîne :
 - Le Data Engineer construit l’infrastructure qui rend tout cela possible.  
 - Il joue un rôle central dans la fiabilité et la performance des systèmes data.  
 
-Nous allons passer à la partique pratique: [lab01](lab01.md)
+
+# 6. Découvrez Snowflake avec les notebooks : 
+
+Snowflake Notebooks est une interface de développement unifiée dans l”Snowsight qui offre un environnement de programmation interactif, basé sur des cellules, pour Python, SQL et Markdown. Dans Notebooks, vous pouvez exploiter vos données Snowflake pour effectuer des analyses de données exploratoires, développer des modèles de machine learning et exécuter d’autres workflows de science et d’ingénierie des données, le tout dans la même interface.
+
+* Explorez et expérimentez les données déjà présentes dans Snowflake, ou chargez de nouvelles données dans Snowflake.
+
+* Écrivez du code SQL ou Python et comparez rapidement les résultats avec le développement et l’exécution cellule par cellule.
+
+* Visualisez vos données de manière interactive à l’aide de visualisations Streamlit intégrées et d’autres bibliothèques comme Altair, Matplotlib ou seaborn.
+
+* Intégrez Git pour collaborer avec un outil de contrôle des versions efficace.
+
+* Contextualisez les résultats et prenez des notes sur les différents résultats à l’aide de cellules et de graphiques Markdown.
+
+* Exécutez votre notebook selon une planification pour automatiser les pipelines
+
+![alt text](images/notebooke.png)
+
+La barre d’outils Snowflake Notebooks présente les commandes utilisées pour gérer le notebook et ajuster les paramètres d’affichage des cellules.
+
+* **Package selector** : sélectionner et installer les paquets à utiliser dans le notebook. Voir Importer des paquets Python à utiliser dans les notebooks.
+	
+* **Start** : Démarrer la session Notebooks. Au démarrage de la session, l’image devient Active.
+
+* **Active** : survolez le bouton pour voir en temps réel les détails de la session et les mesures de consommation des ressources agrégées (les mesures d’utilisation de la mémoire et des CPU/GPU sont affichées pour les notebooks Container Runtime). Sélectionnez la flèche vers le bas pour accéder aux options permettant de redémarrer ou de terminer la session. Sélectionnez Active pour mettre fin à la session en cours.
+
+* **Run All/Stop** : Exécuter toutes les cellules ou arrêter l’exécution des cellules. Voir Exécuter des cellules dans Snowflake Notebooks.
+	
+* **Scheduler** : Définir une planification pour exécuter votre notebook en tant que tâche à l’avenir. Voir Planifier des exécutions de notebooks.
+
+* **Vertical ellipsis menu** : Personnaliser les paramètres du notebook, effacer les sorties de cellules, dupliquer, exporter ou supprimer le notebook.
+
+### Exemple: Streamlit dans les notebooks
+
+Streamlit est livré préinstallé avec l’environnement de Snowflake Notebooks. L’exemple de cette section crée une application de données interactive à l’aide de Streamlit.
+
+1. Connectez-vous à Snowsight (WebUI de Snowflake).
+
+2. Dans le menu de navigation, sélectionnez **Projects** » **Notebooks**.
+
+![alt text](images/notebooke2.png)
+
+3. Ouvrez le notebook que vous souhaitez mettre à jour.
+
+4. Sélectionnez le menu vertical indiqué par une ellipse (Plus d'actions pour la feuille de calcul) en haut à droite de votre notebook.
+
+5. Sélectionnez **Notebook settings**.
+
+![alt text](images/notebooke3.png)
+
+6. Sélectionnez le Runtime.
+
+7. Sélectionnez le paramètre de délai d’inactivité dans la liste déroulante.
+
+8. Redémarrez manuellement la session pour que le nouveau délai d’inactivité prenne effet.
+
+### 1. Importez les bibliothèques nécessaires
+
+```
+import streamlit as st
+import pandas as pd
+```
+### 2.Créez d’abord quelques données d’exemple pour l’application.
+
+```
+species = ["setosa"] * 3 + ["versicolor"] * 3 + ["virginica"] * 3
+measurements = ["sepal_length", "sepal_width", "petal_length"] * 3
+values = [5.1, 3.5, 1.4, 6.2, 2.9, 4.3, 7.3, 3.0, 6.3]
+df = pd.DataFrame({"species": species,"measurement": measurements,"value": values})
+df
+```
+
+### 3.Installez votre curseur interactif à partir de la bibliothèque Streamlit.
+
+```
+st.markdown("""# Interactive Filtering with Streamlit! :balloon:
+            Values will automatically cascade down the notebook cells""")
+value = st.slider("Move the slider to change the filter value 👇", df.value.min(), df.value.max(), df.value.mean(), step = 0.3 )
+```
+
+### 4.Enfin, affichez une table filtrée en fonction de la valeur du curseur.
+```
+df[df["value"]>value].sort_values("value")
+```
+Vous pouvez interagir avec l’application en temps réel à partir du notebook. Voyez la table filtrée changer en fonction de la valeur que vous avez définie sur le curseur.
+
+## Limitations de Notebooks
+
+* Un seul fichier ipynb exécutable est autorisé dans chaque notebook.
+
+* Les composants et widgets Streamlit tels que les valeurs de curseur ne conservent pas leur état si vous actualisez la fenêtre du navigateur, si vous ouvrez le notebook dans un nouvel onglet ou si vous fermez et rouvrez l’onglet actuel.
+
+* Lorsque vous créez un notebook à partir d’un dépôt, seul le notebook sélectionné est exécutable. Tous les autres notebooks du dépôt peuvent être sélectionnés et édités, mais ils ne sont pas exécutables.
+
+Nous allons passer à la partique: [lab01](lab01.md)
 
