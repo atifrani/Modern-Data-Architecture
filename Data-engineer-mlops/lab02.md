@@ -24,7 +24,9 @@ Nous allons maintenant créer un stage externe qui référence des fichiers de d
 
 CREATE DATABASE IF NOT EXISTS CITIBIKE;
 
-USE DATABASE CITBIKE;
+USE DATABASE CITIBIKE;
+
+USE SCHEMA PUBLIC;
 
 CREATE STAGE IF NOT EXISTS CITIBIKE_STAGE 
 	URL = 's3://logbrain-datalake/datasets/citibike-trips-csv/';
