@@ -81,12 +81,12 @@ CREATE OR REPLACE TABLE CITIBIKE.PUBLIC.TRIPS_NEW (
 
 ```sql
 CREATE OR REPLACE FILE FORMAT CITIBIKE.PUBLIC.CSV_FORMAT
-  TYPE = CSV
-  FIELD_DELIMITER = ','
-  SKIP_HEADER = 1
-  NULL_IF = ('NULL','null')
-  FIELD_OPTIONALLY_ENCLOSED_BY = '\042'
-  EMPTY_FIELD_AS_NULL = TRUE;
+  type = 'CSV'
+  field_delimiter = ','
+  record_delimiter = '\n'
+  skip_header = 1
+  field_optionally_enclosed_by = '\042'
+  null_if = (''); 
 ```
 
 ### 2.3 Créer le **stage** externe S3 (lié à l’intégration)
