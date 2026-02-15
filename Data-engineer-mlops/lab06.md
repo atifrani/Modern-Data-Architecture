@@ -1,7 +1,8 @@
+
 # Lab Snowflake – Introduction au Machine Learning  
 ## Cas pratique : Prédiction du churn client
 
-# Objectif du lab
+## Objectif du lab
 
 Dans ce lab, vous allez :
 
@@ -12,15 +13,28 @@ Dans ce lab, vous allez :
 5. Entraîner un modèle simple avec Snowpark Python  
 6. Évaluer ses performances  
 
-Niveau requis : débutant en SQL, Python et Snowflake.
+**Niveau requis :** débutant en SQL, Python et Snowflake.
+
+
 
 # Partie 1 – Préparation de l’environnement
 
+```
+from snowflake.snowpark.context import get_active_session
+session = get_active_session()
+# Add a query tag to the session. This helps with troubleshooting and performance monitoring.
+session.query_tag = {"origin":"axelt", 
+                     "name":"notebook_demo_ml", 
+                     "version":{"major":1, "minor":0},
+                     "attributes":{"is_quickstart":1, "source":"notebook", "vignette":"ml_demo"}}
+print(session)
+```
+
 ## Étape 1 – Création du warehouse, de la base et du schéma
 
-Exécutez les commandes suivantes dans un worksheet SQL :
+Exécutez les commandes suivantes dans un notebook :
 
-```sql
+```
 CREATE OR REPLACE WAREHOUSE ML_WH
   WITH WAREHOUSE_SIZE = 'XSMALL'
   AUTO_SUSPEND = 60
@@ -33,13 +47,14 @@ USE DATABASE ML_LAB_DB;
 
 CREATE OR REPLACE SCHEMA ML_SCHEMA;
 USE SCHEMA ML_SCHEMA;
-````
+```
 
 Vérifiez que vous travaillez bien dans :
 
-* Warehouse : `ML_WH`
-* Database : `ML_LAB_DB`
-* Schema : `ML_SCHEMA`
+* **Warehouse** : ML_WH
+* **Database** : ML_LAB_DB
+* **Schema** : ML_SCHEMA
+
 
 
 # Partie 2 – Création du dataset client pédagogique
@@ -47,7 +62,7 @@ Vérifiez que vous travaillez bien dans :
 ## Description des colonnes
 
 | Colonne               | Description                        |
-| --------------------- | ---------------------------------- |
+|  | - |
 | customer_id           | Identifiant client                 |
 | age                   | Âge                                |
 | tenure_months         | Ancienneté en mois                 |
@@ -56,9 +71,11 @@ Vérifiez que vous travaillez bien dans :
 | support_tickets       | Nombre de tickets support          |
 | churn                 | 1 = client parti, 0 = client actif |
 
+
+
 ## Étape 2 – Création de la table
 
-```sql
+```
 CREATE OR REPLACE TABLE CUSTOMERS (
     customer_id INT,
     age INT,
@@ -70,42 +87,37 @@ CREATE OR REPLACE TABLE CUSTOMERS (
 );
 ```
 
-## Étape 3 – Insertion des données
+## Étape 3 – Chargement des données
 
-```sql
-INSERT INTO CUSTOMERS VALUES
-(1, 25, 3, 45.0, 5, 2, 1),
-(2, 40, 24, 120.0, 18, 0, 0),
-(3, 31, 12, 60.0, 10, 1, 0),
-(4, 22, 2, 30.0, 3, 3, 1),
-(5, 35, 36, 150.0, 25, 0, 0),
-(6, 29, 6, 55.0, 7, 2, 1),
-(7, 45, 48, 200.0, 30, 0, 0),
-(8, 33, 18, 80.0, 12, 1, 0),
-(9, 27, 4, 40.0, 4, 4, 1),
-(10, 38, 30, 130.0, 20, 0, 0);
-```
+1. Téléchargez le fichier [`customers_1000.csv`](../data/customers_1000.csv).
+2. Depuis l’interface web Snowflake :
+
+   * Allez dans **Data → Databases**
+   * Sélectionnez la table `CUSTOMERS`
+   * Cliquez sur **Load Data**
+   * Suivez l’assistant pour importer le fichier CSV
 
 Vérification :
 
-```sql
-SELECT * FROM CUSTOMERS;
+```
+SELECT COUNT(*) FROM CUSTOMERS;
 ```
 
-Le résultat doit contenir 10 lignes.
+Le résultat doit contenir **1000 lignes**.
 
 # Partie 3 – Exploration des données avec SQL
 
 ## Étape 4 – Nombre total de clients
 
-```sql
+```
 SELECT COUNT(*) AS total_clients
 FROM CUSTOMERS;
 ```
 
+
 ## Étape 5 – Répartition churn / non churn
 
-```sql
+```
 SELECT churn, COUNT(*) AS nb_clients
 FROM CUSTOMERS
 GROUP BY churn;
@@ -116,18 +128,19 @@ Interprétation :
 * churn = 1 → client parti
 * churn = 0 → client actif
 
+
 ## Étape 6 – Analyse simple
 
-Dépense moyenne :
+### Dépense mensuelle moyenne
 
-```sql
+```
 SELECT AVG(monthly_spend) AS avg_monthly_spend
 FROM CUSTOMERS;
 ```
 
-Ancienneté moyenne :
+### Ancienneté moyenne
 
-```sql
+```
 SELECT AVG(tenure_months) AS avg_tenure
 FROM CUSTOMERS;
 ```
@@ -136,7 +149,7 @@ FROM CUSTOMERS;
 
 ## Étape 7 – Création d’une vue simplifiée
 
-```sql
+```
 CREATE OR REPLACE VIEW CUSTOMER_FEATURES AS
 SELECT
     age,
@@ -150,39 +163,31 @@ FROM CUSTOMERS;
 
 Vérification :
 
-```sql
+```
 SELECT * FROM CUSTOMER_FEATURES;
 ```
 
 # Partie 5 – Entraînement du modèle avec Snowpark Python
 
-## Étape 8 – Créer un worksheet Python
+## Étape 8 – Charger les données
 
-Dans Snowflake :
-
-* Ouvrez un nouveau Worksheet
-* Sélectionnez le langage **Python (Snowpark)**
-* Vérifiez que vous utilisez la base `ML_LAB_DB` et le schéma `ML_SCHEMA`
-
-## Étape 9 – Charger les données
-
-```python
+```
 df = session.table("CUSTOMER_FEATURES")
 df.show()
 ```
 
-## Étape 10 – Conversion en pandas
+## Étape 9 – Conversion en pandas
 
-```python
+```
 pandas_df = df.to_pandas()
 
 X = pandas_df.drop("CHURN", axis=1)
 y = pandas_df["CHURN"]
 ```
 
-## Étape 11 – Séparation train/test
+## Étape 10 – Séparation train/test
 
-```python
+```
 from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(
@@ -190,18 +195,18 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 ```
 
-## Étape 12 – Entraînement du modèle
+## Étape 11 – Entraînement du modèle
 
-```python
+```
 from sklearn.linear_model import LogisticRegression
 
 model = LogisticRegression()
 model.fit(X_train, y_train)
 ```
 
-## Étape 13 – Prédictions et métriques
+## Étape 12 – Prédictions et métriques
 
-```python
+```
 from sklearn.metrics import accuracy_score, precision_score, recall_score
 
 y_pred = model.predict(X_test)
@@ -215,38 +220,135 @@ accuracy, precision, recall
 
 Les trois valeurs correspondent à :
 
-* Accuracy
-* Précision
-* Rappel
+* **Accuracy**
+* **Précision**
+* **Rappel**
 
 # Partie 6 – Interprétation
 
 Posez-vous les questions suivantes :
 
-* Le modèle détecte-t-il bien les churn ?
-* Fait-il beaucoup de fausses alertes ?
-* Quelle métrique est la plus importante pour le business ?
+* Le modèle détecte-t-il correctement les clients churn ?
+* Génère-t-il beaucoup de fausses alertes ?
+* Quelle métrique est la plus importante pour le métier ?
 
 Dans un cas réel de churn :
 
-* Un faible rappel signifie que vous laissez partir des clients sans les détecter.
-* Une faible précision signifie que vous ciblez des clients qui n’auraient pas quitté.
+* Un **faible rappel** signifie que vous laissez partir des clients sans les détecter.
+* Une **faible précision** signifie que vous ciblez des clients qui n’auraient pas quitté.
 
-# Partie 7 – Génération de prédictions globales
+# Partie 7 – Génération des prédictions globales
 
-```python
+```
 pandas_df["prediction"] = model.predict(X)
 pandas_df
 ```
 
 Vous obtenez maintenant une colonne supplémentaire avec les prédictions.
 
+## Étape 1 – Créer une table de scoring
+
+Après l’entraînement du modèle dans votre worksheet Python, exécutez ce code pour :
+- calculer la **prédiction** pour chaque client
+- écrire les résultats dans une table Snowflake `CUSTOMER_PREDICTIONS`
+
+```
+def age_cat(age: int) -> str:
+    if age < 25:
+        return "<25"
+    elif age < 35:
+        return "25-34"
+    elif age < 45:
+        return "35-44"
+    elif age < 55:
+        return "45-54"
+    else:
+        return "55+"
+
+pandas_df["age_category"] = pandas_df["AGE"].apply(age_cat)
+
+# Convertir en Snowpark dataframe
+sp_df = session.create_dataframe(pandas_df)
+
+# Écrire dans une table Snowflake
+sp_df.write.mode("overwrite").save_as_table("CUSTOMER_PREDICTIONS")
+```
+
+## Étape 2 – Créer une vue d’agrégation (pratique pour Streamlit)
+
+Cette vue calcule le nombre de churn prédits par catégorie d’âge.
+
+```
+CREATE OR REPLACE VIEW CHURN_PRED_BY_AGE_CATEGORY AS
+SELECT
+  "age_category",
+  COUNT(*) AS nb_customers,
+  SUM("prediction") AS nb_churn_predicted,
+  ROUND(100 * SUM("prediction") / COUNT(*), 2) AS churn_predicted_rate_pct
+FROM CUSTOMER_PREDICTIONS
+GROUP BY "age_category"
+ORDER BY
+  CASE "age_category"
+    WHEN '<25' THEN 1
+    WHEN '25-34' THEN 2
+    WHEN '35-44' THEN 3
+    WHEN '45-54' THEN 4
+    ELSE 5
+  END;
+
+```
+
+Vérification:
+
+```
+SELECT * FROM CHURN_PRED_BY_AGE_CATEGORY;
+```
+
+## Étape 3 – Code Streamlit (dataviz + tableau)
+
+
+```
+import streamlit as st
+import pandas as pd
+
+# Snowflake
+from snowflake.snowpark.context import get_active_session
+
+st.set_page_config(page_title="Churn Prediction Dashboard", layout="wide")
+st.title("📊 Prédictions de churn par catégorie d’âge")
+
+session = get_active_session()
+
+# Charger les agrégations
+agg_df = session.table("CHURN_PRED_BY_AGE_CATEGORY").to_pandas()
+
+# KPI simples
+col1, col2, col3 = st.columns(3)
+col1.metric("Catégories d’âge", int(agg_df["AGE_CATEGORY"].nunique()))
+col2.metric("Clients (total)", int(agg_df["NB_CUSTOMERS"].sum()))
+col3.metric("Churn prédit (total)", int(agg_df["NB_CHURN_PREDICTED"].sum()))
+
+st.subheader("Churn prédit par catégorie d’âge")
+
+# Bar chart : churn prédit
+chart_df = agg_df.set_index("AGE_CATEGORY")[["NB_CHURN_PREDICTED"]]
+st.bar_chart(chart_df)
+
+st.subheader("Taux de churn prédit (%) par catégorie d’âge")
+rate_df = agg_df.set_index("AGE_CATEGORY")[["CHURN_PREDICTED_RATE_PCT"]]
+st.line_chart(rate_df)
+
+with st.expander("Voir les données agrégées"):
+    st.dataframe(agg_df, use_container_width=True)
+
+```
+
 # Validation finale
 
 Vérifiez que :
 
 * Les objets Snowflake existent
-* La table contient bien 10 lignes
+* La table contient bien 1000 lignes
 * Les requêtes SQL fonctionnent
 * Le modèle s’entraîne sans erreur
 * Les métriques sont affichées
@@ -259,3 +361,4 @@ Vérifiez que :
 * Utiliser Snowpark Python
 * Entraîner un modèle de classification simple
 * Interpréter accuracy, précision et rappel
+
