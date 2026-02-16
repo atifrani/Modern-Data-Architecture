@@ -24,6 +24,7 @@ CREATE OR REPLACE API INTEGRATION my_git_api_integration
   ENABLED = TRUE;
 ```
 
+
 3. clonez le projet localement sur votre ordinateur et ovrez le dans VSCODE.
 
 4. Copiez collez le [lab02](lab02.ipynb) dans votre projet local sur votre ordinateur.
