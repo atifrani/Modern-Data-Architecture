@@ -1,0 +1,9 @@
+name: app_environment
+channels:
+  - snowflake
+dependencies:
+  - matplotlib=*
+  - seaborn=*
+  - shap=0.48.0
+  - snowflake-ml-python=*
+  - xgboost=2.1.4
