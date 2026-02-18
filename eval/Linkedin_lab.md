@@ -126,7 +126,7 @@ Chaque fichier contient des informations spécifiques détaillées dans la descr
 |Column |                      Description  |
 |--------|-----------------------------------| 
 |company_id	|The company ID (references companies table and primary key)|
-|speciality	|The speciality ID|
+|speciality	|The speciality name|
 
 
 **Company_industries :**
