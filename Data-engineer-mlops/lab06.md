@@ -281,7 +281,7 @@ Cette vue calcule le nombre de churn prédits par catégorie d’âge.
 ```
 CREATE OR REPLACE VIEW CHURN_PRED_BY_AGE_CATEGORY AS
 SELECT
-  "age_category",
+  "age_category" as AGE_CATEGORY,
   COUNT(*) AS nb_customers,
   SUM("prediction") AS nb_churn_predicted,
   ROUND(100 * SUM("prediction") / COUNT(*), 2) AS churn_predicted_rate_pct
@@ -314,7 +314,7 @@ import pandas as pd
 # Snowflake
 from snowflake.snowpark.context import get_active_session
 
-st.set_page_config(page_title="Churn Prediction Dashboard", layout="wide")
+
 st.title("📊 Prédictions de churn par catégorie d’âge")
 
 session = get_active_session()
