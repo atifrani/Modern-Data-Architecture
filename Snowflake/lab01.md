@@ -356,7 +356,7 @@ select count(*) from trips
 
    ```sql
    copy into TRIPS
-   from @citibike_trips
+   from @citibike_csv
    file_format = csv
    pattern = '.*\.csv.*';
    ```
