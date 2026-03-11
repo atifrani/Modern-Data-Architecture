@@ -1,0 +1,81 @@
+id,species,body_mass_kg,shoulder_hump_height_cm,claw_length_cm,snout_length_cm,forearm_circumference_cm,ear_length_cm
+GRZ_01,Grizzly Bear,226.4,11.6,6.5,22.9,45.4,9.4
+GRZ_02,Grizzly Bear,295.8,17.3,8.9,21.1,47.1,8.8
+GRZ_03,Grizzly Bear,235.0,16.1,9.3,25.2,44.1,9.2
+GRZ_04,Grizzly Bear,216.9,14.0,10.2,24.0,56.4,8.4
+GRZ_05,Grizzly Bear,283.2,16.9,10.7,20.6,39.8,7.3
+GRZ_06,Grizzly Bear,256.3,15.4,10.5,26.1,43.4,8.1
+GRZ_07,Grizzly Bear,221.9,14.1,9.8,23.5,42.5,6.9
+GRZ_08,Grizzly Bear,191.1,13.7,9.8,23.6,56.4,7.5
+GRZ_09,Grizzly Bear,263.2,13.9,8.1,27.8,47.1,8.1
+GRZ_10,Grizzly Bear,272.8,12.5,9.5,24.8,45.0,8.5
+GRZ_11,Grizzly Bear,310.2,16.2,9.4,22.5,38.3,9.9
+GRZ_12,Grizzly Bear,358.2,15.3,9.9,26.9,37.1,7.7
+GRZ_13,Grizzly Bear,226.1,13.4,9.9,22.6,40.7,8.2
+GRZ_14,Grizzly Bear,211.2,12.3,11.9,27.1,52.3,7.9
+GRZ_15,Grizzly Bear,226.6,18.2,9.8,27.6,49.1,9.3
+GRZ_16,Grizzly Bear,269.1,12.7,9.3,24.9,41.7,8.7
+GRZ_17,Grizzly Bear,212.5,11.9,10.4,25.9,51.6,8.2
+GRZ_18,Grizzly Bear,307.5,16.1,10.8,28.3,50.6,8.9
+GRZ_19,Grizzly Bear,339.6,14.4,12.1,23.5,43.2,6.9
+GRZ_20,Grizzly Bear,312.4,15.0,10.3,25.9,49.4,8.6
+KDK_01,Kodiak Bear,431.3,20.3,11.5,28.9,57.6,10.3
+KDK_02,Kodiak Bear,535.6,21.7,12.6,28.1,55.4,9.3
+KDK_03,Kodiak Bear,510.4,15.7,9.8,28.0,59.9,9.3
+KDK_04,Kodiak Bear,406.2,18.8,10.9,27.6,63.5,9.6
+KDK_05,Kodiak Bear,415.3,17.7,11.4,29.0,63.1,10.5
+KDK_06,Kodiak Bear,435.0,18.1,11.4,29.3,59.6,8.9
+KDK_07,Kodiak Bear,499.5,18.5,10.6,29.5,64.2,8.6
+KDK_08,Kodiak Bear,606.6,18.8,10.6,26.0,61.2,8.9
+KDK_09,Kodiak Bear,505.4,18.2,12.6,31.0,57.8,9.4
+KDK_10,Kodiak Bear,474.4,18.4,12.5,26.0,61.9,9.2
+KDK_11,Kodiak Bear,490.5,15.9,8.9,27.6,54.8,8.8
+KDK_12,Kodiak Bear,546.3,18.0,11.3,28.1,63.7,9.9
+KDK_13,Kodiak Bear,367.3,14.9,10.8,28.7,57.7,10.8
+KDK_14,Kodiak Bear,482.6,19.6,10.0,28.0,58.0,8.3
+KDK_15,Kodiak Bear,473.7,15.4,10.1,24.3,63.9,9.6
+KDK_16,Kodiak Bear,347.1,15.3,11.4,29.4,66.2,7.5
+KDK_17,Kodiak Bear,298.9,15.0,10.3,28.3,67.0,7.9
+KDK_18,Kodiak Bear,389.0,16.6,10.8,25.5,56.3,8.9
+KDK_19,Kodiak Bear,536.5,17.9,10.1,25.1,54.7,9.9
+KDK_20,Kodiak Bear,437.5,15.6,11.6,29.8,55.5,9.4
+EUR_01,Eurasian Brown Bear,311.2,14.5,9.3,22.4,45.5,8.0
+EUR_02,Eurasian Brown Bear,281.2,13.3,7.3,21.8,44.0,7.5
+EUR_03,Eurasian Brown Bear,299.5,15.0,10.8,22.9,44.4,7.5
+EUR_04,Eurasian Brown Bear,235.3,14.7,11.3,22.5,40.0,9.0
+EUR_05,Eurasian Brown Bear,341.0,12.5,9.5,23.2,39.6,9.0
+EUR_06,Eurasian Brown Bear,243.1,13.7,9.1,22.0,47.1,8.3
+EUR_07,Eurasian Brown Bear,233.0,10.2,9.4,18.3,43.0,7.6
+EUR_08,Eurasian Brown Bear,359.7,16.8,9.6,21.5,53.1,6.6
+EUR_09,Eurasian Brown Bear,262.9,11.8,7.8,22.8,39.3,7.7
+EUR_10,Eurasian Brown Bear,330.0,11.5,8.8,25.3,43.3,8.3
+EUR_11,Eurasian Brown Bear,148.8,9.8,8.8,23.1,44.5,8.3
+EUR_12,Eurasian Brown Bear,318.9,9.8,11.1,23.8,50.0,6.8
+EUR_13,Eurasian Brown Bear,305.6,13.9,8.0,23.8,42.9,8.8
+EUR_14,Eurasian Brown Bear,327.4,17.5,8.3,23.0,44.5,8.3
+EUR_15,Eurasian Brown Bear,301.9,13.8,9.3,22.3,45.4,7.0
+EUR_16,Eurasian Brown Bear,241.5,15.4,8.7,20.8,45.0,5.9
+EUR_17,Eurasian Brown Bear,265.1,14.1,9.0,24.5,44.8,8.3
+EUR_18,Eurasian Brown Bear,337.8,9.6,9.2,23.8,47.0,7.5
+EUR_19,Eurasian Brown Bear,212.6,13.0,9.5,23.0,38.0,9.4
+EUR_20,Eurasian Brown Bear,198.8,10.8,9.3,20.6,41.7,7.4
+ABB_01,American Black Bear,143.2,1.2,5.8,20.3,39.9,12.7
+ABB_02,American Black Bear,162.7,1.0,4.3,17.0,34.9,11.8
+ABB_03,American Black Bear,161.0,1.7,6.0,18.3,38.2,10.2
+ABB_04,American Black Bear,151.9,1.5,4.7,20.2,32.7,11.5
+ABB_05,American Black Bear,204.6,1.6,5.5,21.5,31.4,9.8
+ABB_06,American Black Bear,146.2,1.2,4.9,18.2,34.9,11.0
+ABB_07,American Black Bear,146.8,0.8,5.4,18.0,33.5,11.8
+ABB_08,American Black Bear,151.5,1.4,5.7,17.8,31.3,13.4
+ABB_09,American Black Bear,138.5,1.8,4.2,16.6,43.5,11.9
+ABB_10,American Black Bear,211.8,2.6,5.8,16.6,30.3,11.4
+ABB_11,American Black Bear,134.5,1.7,6.1,19.9,39.1,10.7
+ABB_12,American Black Bear,30.0,0.3,6.8,20.2,39.9,10.7
+ABB_13,American Black Bear,167.2,1.6,5.0,16.4,36.7,11.2
+ABB_14,American Black Bear,34.6,2.4,6.4,20.1,40.0,12.6
+ABB_15,American Black Bear,194.6,1.1,7.0,19.6,35.9,10.4
+ABB_16,American Black Bear,135.5,3.1,4.7,17.4,35.6,10.6
+ABB_17,American Black Bear,138.3,1.8,4.6,17.6,34.8,10.5
+ABB_18,American Black Bear,280.0,0.8,5.3,19.8,35.9,10.2
+ABB_19,American Black Bear,136.5,1.6,6.6,16.6,24.6,11.2
+ABB_20,American Black Bear,138.3,1.9,6.8,20.1,41.0,12.3
