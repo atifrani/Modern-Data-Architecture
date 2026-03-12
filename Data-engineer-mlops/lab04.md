@@ -262,7 +262,16 @@ COPY INTO CITIBIKE.PUBLIC.TRIPS_NEW
 **Contrôle :**
 
 ```sql
+-- Start task
+
+ALTER TASK CITIBIKE_COPY RESUME;
+
+-- Check after 2 minutes
 SELECT COUNT(*) FROM CITIBIKE.PUBLIC.TRIPS_NEW;
+
+-- Stop task
+
+ALTER TASK CITIBIKE_COPY SUSPEND;
 ```
 
 > ! il faut déposer des nouveaux fichier dans le bucket **s3://logbrain-datalake/datasets/citibike_snowpipe**.
