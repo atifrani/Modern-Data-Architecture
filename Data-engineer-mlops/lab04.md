@@ -347,14 +347,14 @@ SELECT * FROM CITIBIKE.PUBLIC.dynamic_base_orders
 Voici un exemple de code montrant comment nous pourrions créer une table dynamique en utilisant notre table **TRIPS_NEW** comme base. Parcourez-le, et nous le détaillerons ensuite.
 
 ```
-# Your Dynamic Table parameters
+-- Your Dynamic Table parameters
 CREATE OR REPLACE Dynamic Table CITIBIKE.PUBLIC.TRIPS_AGG_START_STATION
   TARGET_LAG = '1 minutes'
   WAREHOUSE = 'DATAPIPELINES_WH'
   REFRESH_MODE = auto
   INITIALIZE = on_create
   AS
-# Your SQL query for the table itself
+-- Your SQL query for the table itself
   SELECT
     start_station_name,
     COUNT(*) AS NB_TRIPS,
@@ -369,3 +369,9 @@ CREATE OR REPLACE Dynamic Table CITIBIKE.PUBLIC.TRIPS_AGG_START_STATION
 * **REFRESH_MODE** : peut être défini explicitement sur **INCREMENTAL** ou **FULL**. J’ai choisi **AUTO** pour laisser Snowflake déterminer la méthode optimale.
 
 * **INITIALIZE** : détermine quand la table est initialisée. **ON_CREATE** signifie que la table est initialisée immédiatement. En le réglant sur **ON_SCHEDULE**, la table sera initialisée une fois que la première période de **TARGET_LAG** sera atteinte.
+
+* Il est recommander de nettoyer vos ressoources pour stopper la facturation des tasks et des tables dynamic. Le plus simple est de supprimer le base citibike.
+
+```
+drop database citibike;
+```
